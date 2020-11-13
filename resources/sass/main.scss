@@ -1,0 +1,12 @@
+.card-link{
+    text-decoration: none;
+}
+
+.card-link + .card-link{
+    margin-left: 0;
+}
+
+.card-link>.card-body:hover{
+    font-size: 14pt;
+    transition: 0.2s linear;
+}
