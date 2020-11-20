@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'FrontPageController@redirectToLogin');
 
-Route::get('/auth/{param}', 'FrontPageController@showFrontPage');
+Route::get('/auth/{param}', 'FrontPageController@showFrontPage')->name('login');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Auth::routes();
@@ -26,6 +26,7 @@ Route::get('/simpozij/dashboard', 'HomeController@index')->name('home');
 
 //Štandovi
 Route::get('/simpozij/booth', 'HomeController@showBooths')->name('booths');
+Route::get('/simpozij/booth/{parameter}', 'HomeController@showBooth')->name('booth');
 
 //webinars
 Route::get('/simpozij/webinars', 'HomeController@showWebinars')->name('webinars');
@@ -40,5 +41,8 @@ Route::get('/simpozij/ondemand', 'HomeController@showOnDemand')->name('ondemands
 Route::get('/simpozij/createwebinar', 'SuperAdminController@showCreateWebinarPage');
 Route::get('/simpozij/addpanelist', 'SuperAdminController@showAddPanelistPage');
 Route::get('/simpozij/addadmins', 'SuperAdminController@showAddAdminPage');
+Route::get('/simpozij/addsponsor', 'SuperAdminController@showAddSponsorPage');
 
 //admin post
+Route::post('/simposij/addsponsor/add', 'SuperAdminController@addSponsor')->name('addSponsor');
+Route::post('/simposij/addwebinar/add', 'SuperAdminController@addWebinar')->name('addWebinar');

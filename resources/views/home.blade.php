@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
                     <a href="/simpozij/booth" class="card-link">
@@ -38,6 +38,11 @@
                         <a href="/simpozij/addpanelist" class="card-link">
                             <div class="card-body">
                                 {{ __('Dodaj Paneliste') }}
+                            </div>
+                        </a>
+                        <a href="/simpozij/addsponsor" class="card-link">
+                            <div class="card-body">
+                                {{ __('Dodaj Sponzore') }}
                             </div>
                         </a>
                         @if(Auth::user()->level === 3)

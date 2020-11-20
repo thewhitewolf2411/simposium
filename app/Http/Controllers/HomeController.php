@@ -33,6 +33,12 @@ class HomeController extends Controller
 
     }
 
+    public function showBooth($parameter){
+
+        return view('dashboard.booths.booth')->with(['name'=>$parameter]);
+
+    }
+
 
     //webinars
     public function showWebinars(){

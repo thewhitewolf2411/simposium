@@ -1,29 +1,31 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="collapse navbar-collapse">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="location.href='/simpozij/dashboard'">Navbar</button>
+        <a href='/simpozij/dashboard' class="header-image">
+            <img src="{{asset('/images/header/SWOC white@2x.png')}}">
+        </a>
     </div>
 
     @if(!Auth::user())
 
         @if(isset($parameter) && $parameter == "login")
-        <div class="collapse navbar-collapse">
-            <button class="btn btn-outline-success my-2 my-sm-0" onclick="location.href='/auth/register'" type="submit">Register</button>
+        <div class="collapse navbar-collapse justify-content-end">
+            <button class="btn btn-outline-success my-2 my-sm-0" onclick="location.href='/auth/register'" type="submit">Registracija</button>
         </div>
         @elseif(isset($parameter) && $parameter == "register")
-        <div class="collapse navbar-collapse">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="location.href='/auth/login'">Login</button>
+        <div class="collapse navbar-collapse justify-content-end">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="location.href='/auth/login'">Prijava</button>
         </div>
         @else
-        <div class="collapse navbar-collapse">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="location.href='/auth/login'">Login</button>
+        <div class="collapse navbar-collapse justify-content-end">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="location.href='/auth/login'">Prijava</button>
         </div>
         @endif
 
     @else
-
-        {{ __('Zdravo, ') }} {{Auth::user()->name}}
-        <div class="collapse navbar-collapse">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="location.href='/logout'">Logout</button>
+       
+        <div class="collapse navbar-collapse justify-content-end">
+            <p class="mx-5">{{ __('Zdravo, ') }} {{Auth::user()->name}}</p>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="location.href='/logout'">Odjava</button>
         </div>
     @endif
 </nav>

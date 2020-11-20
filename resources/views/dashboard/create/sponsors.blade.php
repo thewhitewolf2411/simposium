@@ -1,14 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Create Webinar') }}</div>
+                <div class="card-header">{{ __('Dodaj novog sponzora') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('addWebinar') }}">
+                        <form method="POST" action="{{ route('addSponsor') }}">
 
                             @csrf
                             <div class="form-group row">
@@ -57,19 +58,20 @@
                                         <option value="" selected disabled></option>
                                         <option value="true">Da</option>
                                         <option value="false">Ne</option>
-                                        <option value="3"></option>
-                                        <option value="4"></option>
                                     </select>
                                 </div>
                             </div>
+                            
+                            <button type="submit" class="btn btn-outline-success" name="submit" value="Dodaj Sponzora">Dodaj Sponzora</button>
 
-                            <button type="submit" class="btn btn-outline-success" name="submit" value="Dodaj Sponzora">Dodaj Webinar</button>
 
                         </form>
                     </div>
 
+                </div>
             </div>
         </div>
     </div>
 </div>
-@endsection
+
+@endsection('content')
