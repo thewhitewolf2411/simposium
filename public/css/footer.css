@@ -1,4 +1,83 @@
 footer {
   background-image: url("/images/footer/meetting.jpg");
+  padding: 80px 0px 110px 0px;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+#plat-ad img {
+  max-width: 33% !important;
+  width: 33% !important;
+}
+
+#gold-ad img {
+  max-width: 365px !important;
+  width: 365px !important;
+}
+
+#silver-ad img {
+  max-width: 20% !important;
+  width: 20% !important;
+}
+
+#rest-ad img {
+  max-width: 20% !important;
+  width: 20% !important;
+}
+
+.sub-images {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .sub-title {
+  font-size: 32px !important;
+  text-transform: none;
+  color: #ffffff;
+  font-weight: 800;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  transition: color 200ms;
+}
+
+footer .sub-title p {
+  font-size: 32px !important;
+  text-align: center;
+}
+
+footer .title {
+  font-size: 40px !important;
+  text-transform: none;
+  color: #ffffff;
+  font-weight: 800;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  transition: color 200ms;
+  line-height: 48px;
+}
+
+footer .title p {
+  font-size: 40px !important;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1220px !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.ft-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 

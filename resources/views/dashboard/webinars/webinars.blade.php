@@ -7,9 +7,11 @@
             <div class="card">
                 <div class="card-header">{{ __('Webinari') }}</div>
 
+
+                <div id="zoom-meeting"></div>
+
             </div>
 
-            
         </div>
     </div>
 </div>

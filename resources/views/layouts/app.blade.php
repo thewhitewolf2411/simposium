@@ -20,14 +20,22 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+
+    <!-- Zoom -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div id="app">
+<body  onload="myFunction()">
+    <div class="loader-container" id="loader-container">
+        <div class="loader" id="loader"></div> 
+    </div>
+    
+    <div id="app" style="display:none;">
         <header>
             @include('layouts.header')
         </header>
 
-        <main class="py-4">
+        <main class="py-4" id="auth-page">
             @yield('content')
         </main>
 
@@ -36,5 +44,18 @@
         </footer>
         
     </div>
+
+    <script>
+        function myFunction() {
+            setTimeout(function(){
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("loader").style.height = "0";
+                document.getElementById("loader-container").style.height = "0";
+                document.getElementById("app").style.display = "block";
+            }, 300);
+        }
+
+    </script>
+
 </body>
 </html>
