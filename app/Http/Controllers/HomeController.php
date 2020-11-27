@@ -51,8 +51,10 @@ class HomeController extends Controller
 
     }
 
-    public function showWebinar(){
-        return view('app');
+    public function showWebinar($id){
+        $webinar = Webinar::where('id', $id)->first();
+
+        return view('dashboard.webinars.webinar')->with(['webinar'=>$webinar]);
     }
 
 

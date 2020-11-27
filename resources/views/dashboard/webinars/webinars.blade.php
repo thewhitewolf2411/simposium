@@ -2,6 +2,13 @@
 
 @section('content')
 <div class="container">
+    <div class="back-button-container" id="back-webinar">
+        <a href="/simpozij/dashboard">
+            <div class="my-3">
+                <img src="{{url('/images/body/back.svg')}}">
+            </div>
+        </a>
+    </div>
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
@@ -21,13 +28,13 @@
 
                 @foreach($webinars as $webinar)
                     @if($webinar->webinar_date === '2020-12-04')
-                        <a href="/simpozij/booth" class="webinar-link webinar-link-active day1">
+                        <a href="/simpozij/webinars/{{$webinar->id}}" class="webinar-link webinar-link-active day1">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-3">{{ $webinar->webinar_name }}</div>
                                     <div class="col-3">{{ __('Petak') }}<br>{{ \Carbon\Carbon::parse($webinar->webinar_date)->format('d/m/Y') }}</div>
-                                    <div class="col-3">{{ $webinar->webinar_time }}</div>
-                                    <div class="col-3">{{ $webinar->webinar_duration }}</div>
+                                    <div class="col-3">{{ $webinar->webinar_time }}h</div>
+                                    <div class="col-3">{{ $webinar->webinar_duration }}h</div>
                                 </div>
                             </div>
                         </a>
@@ -35,13 +42,13 @@
                 @endforeach
                 @foreach($webinars as $webinar)
                     @if($webinar->webinar_date === '2020-12-05')
-                        <a href="/simpozij/booth" class="webinar-link webinar-link-disabled day2">
+                        <a href="/simpozij/webinars/{{$webinar->id}}" class="webinar-link webinar-link-disabled day2">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-3">{{ $webinar->webinar_name }}</div>
                                     <div class="col-3">{{ __('Subota') }}<br>{{ \Carbon\Carbon::parse($webinar->webinar_date)->format('d/m/Y') }}</div>
-                                    <div class="col-3">{{ $webinar->webinar_time }}</div>
-                                    <div class="col-3">{{ $webinar->webinar_duration }}</div>
+                                    <div class="col-3">{{ $webinar->webinar_time }}h</div>
+                                    <div class="col-3">{{ $webinar->webinar_duration }}h</div>
                                 </div>
                             </div>
                         </a>
@@ -49,13 +56,13 @@
                 @endforeach
                 @foreach($webinars as $webinar)
                     @if($webinar->webinar_date === '2020-12-06')
-                        <a href="/simpozij/booth" class="webinar-link webinar-link-disabled day3">
+                        <a href="/simpozij/webinars/{{$webinar->id}}" class="webinar-link webinar-link-disabled day3">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-3">{{ $webinar->webinar_name }}</div>
                                     <div class="col-3">{{ __('Nedjelja') }}<br>{{ \Carbon\Carbon::parse($webinar->webinar_date)->format('d-m-Y') }}</div>
-                                    <div class="col-3">{{ $webinar->webinar_time }}</div>
-                                    <div class="col-3">{{ $webinar->webinar_duration }}</div>
+                                    <div class="col-3">{{ $webinar->webinar_time }}h</div>
+                                    <div class="col-3">{{ $webinar->webinar_duration }}h</div>
                                 </div>
                             </div>
                         </a>

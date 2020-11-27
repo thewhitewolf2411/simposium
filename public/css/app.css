@@ -11127,6 +11127,25 @@ body {
   transition: 0.2s linear;
 }
 
+.back-button-container {
+  max-width: 50px;
+}
+
+.back-button-container:hover {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 200ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 200ms;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: linear;
+}
+
+#back-webinar img {
+  width: 100%;
+}
+
 header {
   background-color: #005cb8;
 }
