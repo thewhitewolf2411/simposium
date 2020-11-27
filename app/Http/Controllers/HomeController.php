@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Webinar;
+
 class HomeController extends Controller
 {
     /**
@@ -14,6 +16,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('verified');
     }
 
     /**
@@ -43,8 +46,8 @@ class HomeController extends Controller
     //webinars
     public function showWebinars(){
 
-
-        return view('dashboard.webinars.webinars');
+        $webinars = Webinar::all();
+        return view('dashboard.webinars.webinars')->with(['webinars'=>$webinars]);
 
     }
 

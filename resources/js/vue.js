@@ -15,12 +15,12 @@ import Meeting from './components/Meeting';
 
 const routes = [
   {
-    path: '/simpozij/webinars/proba',
+    path: '/simpozij/webinars/join',
     name: 'join',
     component: Join
   },
   {
-    path: '/meeting/webinars/kurac',
+    path: '/meeting/webinars/webinar',
     name: 'meeting',
     component: Meeting
   }

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\Webinar;
+use App\User;
 
 class SuperAdminController extends Controller
 {
@@ -22,7 +24,8 @@ class SuperAdminController extends Controller
     }
     
     public function showAddPanelistPage(){
-        dd("Here2");
+
+        return view('dashboard.create.panelists');
     }
     
     public function showAddAdminPage(){
@@ -44,11 +47,32 @@ class SuperAdminController extends Controller
     }
 
     public function addWebinar(Request $request){
-        $this->_addWebinar($request);
+        if($this->_addWebinar($request)){
+            return redirect()->back()->with('success', 'Uspješno ste dodali webinar.');
+        }
+        else{
+            return redirect()->back()->with('error', 'Webinar nije spašen. Molimo pokušajte kasnije.');
+        }
     }
 
     private function _addWebinar(Request $request){
-        dd($request);
+        #dd($request->date);
+
+        $webinar = new Webinar();
+        $webinar->webinar_name = $request->name;
+        $webinar->webinar_link = $request->link;
+
+        $webinar->webinar_date = $request->date;
+        $webinar->webinar_time = $request->time;
+        $webinar->webinar_duration = $request->duration;
+
+        if($webinar->save()){
+            return true;
+        }
+        else{
+            return false;
+        }
+
     }
 
 }

@@ -10915,6 +10915,11 @@ body {
   overflow-x: hidden;
 }
 
+.card {
+  background-color: transparent;
+  overflow-y: hidden;
+}
+
 .card-header {
   background-color: #9bf2ca !important;
   border-bottom: 3px solid #9bf2ca;
@@ -10936,6 +10941,7 @@ body {
 
 .card-body {
   background-color: #005cb8;
+  overflow-x: hidden;
 }
 
 .card-body label {
@@ -10992,7 +10998,6 @@ body {
   width: 100%;
   height: 100%;
   min-height: 700px;
-  max-height: 770px;
 }
 
 .loader-container {
@@ -11035,6 +11040,91 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+#zmmtg-root {
+  background-color: transparent !important;
+  position: relative !important;
+}
+
+.btn-link {
+  color: #fff !important;
+}
+
+.navbar-collapse {
+  flex-basis: 50% !important;
+  flex-grow: 2;
+  max-width: 50%;
+}
+
+.webinar-link {
+  text-decoration: none;
+  color: #fff !important;
+  text-align: center;
+}
+
+.webinar-link:hover {
+  text-decoration: none;
+}
+
+.webinar-day-active {
+  text-decoration: none;
+  color: #005cb8;
+  font-size: 22pt;
+  transition: 0.2s linear;
+}
+
+.webinar-day-active:hover {
+  text-decoration: none;
+  color: #fff;
+  font-size: 22pt;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+
+.webinar-day-disabled {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20pt;
+  transition: 0.2s linear;
+}
+
+.webinar-day-disabled:hover {
+  text-decoration: none;
+  color: #005cb8;
+  font-size: 22pt;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+
+.webinar-link-disabled {
+  width: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+  opacity: 0 !important;
+  transition: 0.2s linear;
+}
+
+.webinar-link-disabled div {
+  width: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+  opacity: 0 !important;
+  transition: 0.2s linear;
+}
+
+.webinar-link-active {
+  width: auto !important;
+  height: auto !important;
+  opacity: 1 !important;
+  transition: 0.2s linear;
+}
+
+.webinar-link-active div {
+  width: auto !important;
+  height: auto !important;
+  opacity: 1 !important;
+  transition: 0.2s linear;
 }
 
 header {

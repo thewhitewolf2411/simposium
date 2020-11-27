@@ -1,32 +1,40 @@
 <template>
-  <div class="join">
-    <div class="join-card">
-      <div class="join-header">
-        <h2>Join Meeting</h2>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <p>Join Meeting</p>
       </div>
-      <div>
-        <div class="form-item">
-          <label for="alias">Alias: </label>
-          <input v-model="nickname" type="text" name="alias">
+      <div class="card-body">
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label text-md-right" for="alias">Alias: </label>
+          <div class="col-md-6">
+            <input class="form-control" v-model="nickname" type="text" name="alias">
+          </div>
+
         </div>
 
-        <div class="form-item">
-          <label for="meetingId">Meeting ID: </label>
-          <input v-model="meetingId" type="text" name="meetingId">
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label text-md-right" for="meetingId">Meeting ID: </label>
+          <div class="col-md-6">
+            <input class="form-control" v-model="meetingId" type="text" name="meetingId">
+          </div>
+          
         </div>
 
-        <div class="form-item">
-          <label for="password">Password: </label>
-          <input v-model="password" type="text" name="password">
+        <div class="form-group row">
+          <label class="col-md-4 col-form-label text-md-right" for="password">Password: </label>
+          <div class="col-md-6">
+            <input class="form-control" v-model="password" type="text" name="password">
+          </div class="col-md-6">
         </div>
 
-        <div class="form-item">
-          <button>
-            <router-link
-              :to="{ name: 'meeting', query: { nickname: nickname, meetingId: meetingId, password: password }}"
-            >Join Meeting</router-link>
-          </button>
-        </div>
+
+        <button class="btn btn-outline-success">
+          <router-link
+            :to="{ name: 'meeting', query: { nickname: nickname, meetingId: meetingId, password: password }}"
+          >Join Meeting</router-link>
+        </button>
+        
       </div>
     </div>
   </div>

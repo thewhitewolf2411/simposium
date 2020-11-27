@@ -18,7 +18,7 @@ Route::get('/', 'FrontPageController@redirectToLogin');
 Route::get('/auth/{param}', 'FrontPageController@showFrontPage')->name('login');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/simpozij/dashboard', 'HomeController@index')->name('home');
 
@@ -42,7 +42,7 @@ Route::get('/simpozij/QA', 'HomeController@showQA')->name('QAs');
 Route::get('/simpozij/ondemand', 'HomeController@showOnDemand')->name('ondemands');
 
 //admin get
-Route::get('/simpozij/createwebinar', 'SuperAdminController@showCreateWebinarPage');
+Route::get('/simpozij/createwebinar', 'SuperAdminController@showCreateWebinarPage')->name('createWebinarPage');
 Route::get('/simpozij/addpanelist', 'SuperAdminController@showAddPanelistPage');
 Route::get('/simpozij/addadmins', 'SuperAdminController@showAddAdminPage');
 Route::get('/simpozij/addsponsor', 'SuperAdminController@showAddSponsorPage');

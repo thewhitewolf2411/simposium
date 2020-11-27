@@ -5,6 +5,20 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
+
+                @if(Session::has('success'))
+                    <div class="alert alert-success my-0 p-3" role="alert">
+                        {{Session::get('success')}}
+                    </div>
+                @endif
+
+                @if(Session::has('error'))
+                    <div class="alert alert-danger my-0 p-3" role="alert">
+                        {{Session::get('error')}}
+                    </div>
+                @endif
+
+
                 <div class="card-header">{{ __('Create Webinar') }}</div>
 
                     <div class="card-body">
@@ -12,54 +26,42 @@
 
                             @csrf
                             <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Ime sponzora:') }}</label>
+                                <label for="date" class="col-md-4 col-form-label text-md-right">{{ __('Datum webinara:') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    <input id="date" type="date" class="form-control" name="date" value="{{ old('date') }}" required autocomplete="date" autofocus>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="logo" class="col-md-4 col-form-label text-md-right">{{ __('Logo sponzora:') }}</label>
+                                <label for="time" class="col-md-4 col-form-label text-md-right">{{ __('Vrijeme webinara:') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="logo" type="file" class="form-control" name="logo" value="{{ old('logo') }}" required autocomplete="logo" autofocus>
+                                    <input id="time" type="time" class="form-control" name="time" value="{{ old('time') }}" required autocomplete="time" autofocus>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Kontakt email sponzora:') }}</label>
+                                <label for="duration" class="col-md-4 col-form-label text-md-right">{{ __('Trajanje webinara:') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    <input id="duration" type="time" class="form-control @error('duration') is-invalid @enderror" name="duration" value="{{ old('duration') }}" required autocomplete="duration" autofocus>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="level" class="col-md-4 col-form-label text-md-right">{{ __('Nivo sponzora:') }}</label>
+                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Ime webinara:') }}</label>
 
                                 <div class="col-md-6">
-                                    <select id="level" class="form-control" name="level" required>
-                                        <option value="" selected disabled>Odaberite nivo sponzora:</option>
-                                        <option value="1">Platinum</option>
-                                        <option value="2">Zlatni</option>
-                                        <option value="3">Srebreni</option>
-                                        <option value="4">Ostali</option>
-                                    </select>
+                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="booth" class="col-md-4 col-form-label text-md-right">{{ __('Da li sponzor ima pravo na štand: ') }}</label>
+                                <label for="link" class="col-md-4 col-form-label text-md-right">{{ __('Link webinara: ') }}</label>
 
                                 <div class="col-md-6">
-                                    <select id="booth" class="form-control" name="booth" required>
-                                        <option value="" selected disabled></option>
-                                        <option value="true">Da</option>
-                                        <option value="false">Ne</option>
-                                        <option value="3"></option>
-                                        <option value="4"></option>
-                                    </select>
+                                    <input id="link" type="text" class="form-control @error('link') is-invalid @enderror" name="link" value="{{ old('link') }}" autocomplete="link" autofocus>
                                 </div>
                             </div>
 
