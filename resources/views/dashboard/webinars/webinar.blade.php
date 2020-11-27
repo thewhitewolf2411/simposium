@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="back-button-container" id="back-webinar">
+    <div class="back-button-container" id="back-webinar" title="Svi webinari">
         <a href="/simpozij/webinars">
             <div class="my-3">
                 <img src="{{url('/images/body/back.svg')}}">
@@ -22,7 +22,7 @@
                     </div>
                     <div class="row">
                         <div class="col-3"></div>
-                        <div class="col-3">{{ $webinar->webinar_date }}</div>
+                        <div class="col-3">{{ \Carbon\Carbon::parse($webinar->webinar_date)->format('d/m/Y') }}</div>
                         <div class="col-3">{{ $webinar->webinar_time }}h</div>
                         <div class="col-3">{{ $webinar->webinar_duration }}h</div>
                     </div>

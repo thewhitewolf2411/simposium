@@ -42,7 +42,7 @@
                         </a>
                         <a href="/simpozij/addsponsor" class="card-link">
                             <div class="card-body">
-                                {{ __('Dodaj Sponzore') }}
+                                {{ __('Dodaj Štandove') }}
                             </div>
                         </a>
                         @if(Auth::user()->level === 3)

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="back-button-container" id="back-webinar">
+    <div class="back-button-container" id="back-webinar" title="Dashboard">
         <a href="/simpozij/dashboard">
             <div class="my-3">
                 <img src="{{url('/images/body/back.svg')}}">
