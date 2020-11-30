@@ -5,10 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Štandovi naših sponzora') }}</div>
+                <div class="card-header">{{ __('Interaktivni štandovi naših sponzora') }}</div>
 
                 <div class="card-body">
-               
+                
                 </div>
 
             </div>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Webinar;
 use App\User;
+use App\Sponsors;
 
 class SuperAdminController extends Controller
 {
@@ -43,7 +44,35 @@ class SuperAdminController extends Controller
     }
 
     private function _addSponsor(Request $request){
-        dd($request);
+        #dd($request);
+
+        if(isset($request->booth)){
+            $sponsor = new Sponsors();
+
+            $sponsor->sponsor_name = $request->name;
+            $sponsor->sponsor_contact_email = $request->email;
+
+            $filenameWithExt = $request->file('booth')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('booth')->getClientOriginalExtension();
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            $path = $request->file('booth')->storeAs('/canvas/' . $request->name ,$fileNameToStore);
+
+            $sponsor->booth_path = '/canvas/' . $request->name;
+
+            #$sponsor->save();
+
+            $zip = new \ZipArchive;
+            $res = $zip->open($path, \ZipArchive::CREATE || \ZIPARCHIVE::OVERWRITE);
+            if($res === TRUE){
+
+                $zip->extractTo('/canvas/' . $request->name);
+                $zip->close();
+                dd("Done");
+            }
+
+        }
+
     }
 
     public function addWebinar(Request $request){

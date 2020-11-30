@@ -16,10 +16,8 @@ class CreateSponsorsTable extends Migration
         Schema::create('sponsors', function (Blueprint $table) {
             $table->id();
             $table->string('sponsor_name');
-            $table->string('sponsor_logo');
             $table->string('sponsor_contact_email');
-            $table->integer('sponsor_level');
-            $table->boolean('booth_bought')->default(false);
+            $table->string('booth_path');
             $table->timestamps();
         });
     }
