@@ -104,4 +104,12 @@ class SuperAdminController extends Controller
 
     }
 
+    public function addPanelist(Request $request){
+        $this->_addPanelist($request);
+    }
+
+    private function _addPanelist(Request $request){
+        dd($request);
+    }
+
 }

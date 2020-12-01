@@ -52,3 +52,4 @@ Route::get('/simpozij/addsponsor', 'SuperAdminController@showAddSponsorPage');
 //admin post
 Route::post('/simposij/addsponsor/add', 'SuperAdminController@addSponsor')->name('addSponsor');
 Route::post('/simposij/addwebinar/add', 'SuperAdminController@addWebinar')->name('addWebinar');
+Route::post('/simposij/addpanelist/add', 'SuperAdminController@addPanelist')->name('addPanelist');

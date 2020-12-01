@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLecturersTable extends Migration
+class CreatePanelistDataTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateLecturersTable extends Migration
      */
     public function up()
     {
-        Schema::create('lecturers', function (Blueprint $table) {
+        Schema::create('panelist_data', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->integer('webinar_id')->nullable();
-            $table->integer('qa_id')->nullable();
+            $table->integer('user_id');
+            $table->integer('webinar_id');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateLecturersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lecturers');
+        Schema::dropIfExists('panelist_data');
     }
 }

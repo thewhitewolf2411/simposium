@@ -19,17 +19,20 @@
                 @endif
 
 
-                <div class="card-header">{{ __('Create Webinar') }}</div>
+                <div class="card-header">{{ __('Dodaj panelista') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('addWebinar') }}">
+                        <form method="POST" action="{{ route('addPanelist') }}">
 
                             @csrf
                             <div class="form-group row">
-                                <label for="date" class="col-md-4 col-form-label text-md-right">{{ __('Datum webinara:') }}</label>
+                                <label for="title" class="col-md-4 col-form-label text-md-right">{{ __('Titula:') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="date" type="date" class="form-control" name="date" value="{{ old('date') }}" required autocomplete="date" autofocus>
+                                    <select id="title" class="form-control" name="title" value="{{ old('title') }}" required autofocus>
+                                        <option>Selektuj opciju</option>
+                                    </select>
                                 </div>
                             </div>
 
