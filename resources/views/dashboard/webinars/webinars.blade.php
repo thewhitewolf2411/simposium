@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-3">{{ __('Ime webinara') }}</div>
                         <div class="col-3">{{ __('Datum održavanja webinara') }}</div>
-                        <div class="col-3">{{ __('Vrijeme održavanja webinara') }}</div>
+                        <div class="col-3">{{ __('Vrijeme početka webinara') }}</div>
                         <div class="col-3">{{ __('Trajanje webinara') }}</div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
 
 
                 @foreach($webinars as $webinar)
-                    @if($webinar->webinar_date === '2020-12-04')
+                    @if($webinar->webinar_date === '2020-12-04' || $webinar->webinar_date === '2020-12-01' )
                         <a href="/simpozij/webinars/{{$webinar->id}}" class="webinar-link webinar-link-active day1">
                             <div class="card-body">
                                 <div class="row">

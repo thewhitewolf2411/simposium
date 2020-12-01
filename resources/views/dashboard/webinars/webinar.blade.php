@@ -12,12 +12,12 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Webinar') }}<br>{{ $webinar->webinar_name }}</div>
+                <div class="card-header">{{ $webinar->webinar_name }}</div>
                 <div class="card-body webinar-link">
                     <div class="row">
                         <div class="col-3">{{ __('Predavači') }}</div>
                         <div class="col-3">{{ __('Datum održavanja webinara') }}</div>
-                        <div class="col-3">{{ __('Vrijeme održavanja webinara') }}</div>
+                        <div class="col-3">{{ __('Vrijeme početka webinara') }}</div>
                         <div class="col-3">{{ __('Trajanje webinara') }}</div>
                     </div>
                     <div class="row">
@@ -30,7 +30,16 @@
 
                 <div class="card-header">{{ __('Pridruži se webinaru:') }}</div>
                 <div class="card-body webinar-link">
-                    <div class="row">
+                    <div class="row px-5">
+                        @if($webinarStarted == "Started")
+                            <a href="/simpozij/webinars/webinar/{{$webinar->id}}">Link za webinar</a>
+                        @else
+                            @if($webinarStarted == "Notstarted")
+                                Webinar has not started yet
+                            @elseif($webinarStarted == "Ended")
+                                Webinar has ended
+                            @endif
+                        @endif
 
                     </div>
                 </div>

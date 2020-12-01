@@ -31,10 +31,11 @@ Route::get('/simpozij/booth/{parameter}', 'HomeController@showBooth')->name('boo
 //webinars
 Route::get('/simpozij/webinars', 'HomeController@showWebinars')->name('webinars');
 Route::get('/simpozij/webinars/{id}', 'HomeController@showWebinar')->name('webinar');
+Route::get('/simpozij/webinars/webinar/{id}', 'HomeController@webinar');
 /*Route::get('/simpozij/webinars/{any}', 'HomeController@showWebinar')->name('webinar');
-Route::get('/simpozij/webinars/{any}', function () {
-    return view('app');
-})->where('any','.*');*/
+*/
+
+Route::post('/simpozij/webinar/getData', 'HomeController@getData');
 
 //QA
 Route::get('/simpozij/QA', 'HomeController@showQA')->name('QAs');
