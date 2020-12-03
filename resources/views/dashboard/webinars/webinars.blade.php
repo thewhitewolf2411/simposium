@@ -16,10 +16,10 @@
 
                 <div class="card-body webinar-link">
                     <div class="row">
-                        <div class="col-3">{{ __('Ime webinara') }}</div>
-                        <div class="col-3">{{ __('Datum održavanja webinara') }}</div>
-                        <div class="col-3">{{ __('Vrijeme početka webinara') }}</div>
-                        <div class="col-3">{{ __('Trajanje webinara') }}</div>
+                        <div class="col-6">{{ __('Ime webinara') }}</div>
+                        <div class="col-2">{{ __('Datum održavanja webinara') }}</div>
+                        <div class="col-2">{{ __('Vrijeme početka webinara') }}</div>
+                        <div class="col-2">{{ __('Trajanje webinara') }}</div>
                     </div>
                 </div>
 
@@ -27,14 +27,14 @@
 
 
                 @foreach($webinars as $webinar)
-                    @if($webinar->webinar_date === '2020-12-04' || $webinar->webinar_date === '2020-12-01' )
+                    @if($webinar->webinar_date === '2020-12-04' || $webinar->webinar_date === '2020-12-03' )
                         <a href="/simpozij/webinars/{{$webinar->id}}" class="webinar-link webinar-link-active day1">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-3">{{ $webinar->webinar_name }}</div>
-                                    <div class="col-3">{{ __('Petak') }}<br>{{ \Carbon\Carbon::parse($webinar->webinar_date)->format('d/m/Y') }}</div>
-                                    <div class="col-3">{{ $webinar->webinar_time }}h</div>
-                                    <div class="col-3">{{ $webinar->webinar_duration }}h</div>
+                                    <div class="col-6"> {{ $webinar->webinar_name }}</div>
+                                    <div class="col-2">{{ __('Petak') }}<br>{{ \Carbon\Carbon::parse($webinar->webinar_date)->format('d/m/Y') }}</div>
+                                    <div class="col-2">{{ $webinar->webinar_time }}h</div>
+                                    <div class="col-2">{{ $webinar->webinar_duration }}h</div>
                                 </div>
                             </div>
                         </a>
@@ -45,10 +45,10 @@
                         <a href="/simpozij/webinars/{{$webinar->id}}" class="webinar-link webinar-link-disabled day2">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-3">{{ $webinar->webinar_name }}</div>
-                                    <div class="col-3">{{ __('Subota') }}<br>{{ \Carbon\Carbon::parse($webinar->webinar_date)->format('d/m/Y') }}</div>
-                                    <div class="col-3">{{ $webinar->webinar_time }}h</div>
-                                    <div class="col-3">{{ $webinar->webinar_duration }}h</div>
+                                    <div class="col-6">{{ $webinar->webinar_name }}</div>
+                                    <div class="col-2">{{ __('Subota') }}<br>{{ \Carbon\Carbon::parse($webinar->webinar_date)->format('d/m/Y') }}</div>
+                                    <div class="col-2">{{ $webinar->webinar_time }}h</div>
+                                    <div class="col-2">{{ $webinar->webinar_duration }}h</div>
                                 </div>
                             </div>
                         </a>
@@ -59,10 +59,10 @@
                         <a href="/simpozij/webinars/{{$webinar->id}}" class="webinar-link webinar-link-disabled day3">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-3">{{ $webinar->webinar_name }}</div>
-                                    <div class="col-3">{{ __('Nedjelja') }}<br>{{ \Carbon\Carbon::parse($webinar->webinar_date)->format('d-m-Y') }}</div>
-                                    <div class="col-3">{{ $webinar->webinar_time }}h</div>
-                                    <div class="col-3">{{ $webinar->webinar_duration }}h</div>
+                                    <div class="col-6">{{ $webinar->webinar_name }}</div>
+                                    <div class="col-2">{{ __('Nedjelja') }}<br>{{ \Carbon\Carbon::parse($webinar->webinar_date)->format('d-m-Y') }}</div>
+                                    <div class="col-2">{{ $webinar->webinar_time }}h</div>
+                                    <div class="col-2">{{ $webinar->webinar_duration }}h</div>
                                 </div>
                             </div>
                         </a>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Webinar;
+use App\Sponsors;
 
 use Auth;
 
@@ -34,13 +35,18 @@ class HomeController extends Controller
     //booths
     public function showBooths(){
 
-        return view('dashboard.booths.booths');
+        $booths = Sponsors::all();
+
+        return view('dashboard.booths.booths')->with(['booths'=>$booths]);
 
     }
 
     public function showBooth($parameter){
 
-        return view('dashboard.booths.booth')->with(['name'=>$parameter]);
+        $booth = Sponsors::where('sponsor_name', $parameter)->first();
+        $boothpath = $booth->booth_path;
+
+        return view('dashboard.booths.booth')->with(['name'=>$parameter, 'boothpath'=>$boothpath, 'logo'=>$booth->sponsor_logo]);
 
     }
 
@@ -79,7 +85,7 @@ class HomeController extends Controller
         $response = rtrim(strtr(base64_encode($_sig), '+/', '-_'), '=');
         
 
-        return view('app')->with(['response'=>$response, 'meetingnumber'=>$meeting_number, 'userName'=>$userName, 'userMail'=>$userMail, 'apiKey'=>$api_key]);
+        return view('app')->with(['response'=>$response, 'meetingnumber'=>$meeting_number, 'userName'=>$userName, 'userMail'=>$userMail, 'apiKey'=>$api_key, 'webinarlink'=>$webinar->webinar_link]);
     }
 
     public function getData(){

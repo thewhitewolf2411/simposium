@@ -4,28 +4,34 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-                    <a href="/simpozij/booth" class="card-link">
-                        <div class="card-body">
-                            {{ __('Štandovi') }}
-                        </div>
-                    </a>
-                    <a href="/simpozij/webinars" class="card-link">
-                        <div class="card-body">
-                            {{ __('Webinari') }}
-                        </div>
-                    </a>
-                    <a href="/simpozij/QA" class="card-link">
-                        <div class="card-body">
-                            {{ __('QA Sesije') }}
-                        </div>
-                    </a>
-                    <a href="/simpozij/ondemand" class="card-link">
-                        <div class="card-body">
-                            {{ __('Video on demand') }}
-                        </div>
-                    </a>
+            <div class="card noborder">
+                <div class="card-header round">{{ __('DASHBOARD') }}</div>
+                    <div class="boxes">
+                        <a href="/simpozij/booth" class="card-link box">
+                            <div class="card-body">
+                                <img src="{{asset('/images/body/main/Standovi-Ikona.svg')}}">
+                                {{ __('Štandovi') }}
+                            </div>
+                        </a>
+                        <a href="/simpozij/webinars" class="card-link box">
+                            <div class="card-body">
+                                <img src="{{asset('/images/body/main/Webinari-Ikona.svg')}}">
+                                {{ __('Webinari') }}
+                            </div>
+                        </a>
+                        <a href="/simpozij/QA" class="card-link box">
+                            <div class="card-body">
+                                <img src="{{asset('/images/body/main/QA-Ikona.svg')}}">
+                                {{ __('QA Sesije') }}
+                            </div>
+                        </a>
+                        <a href="/simpozij/ondemand" class="card-link box">
+                            <div class="card-body">
+                                <img src="{{asset('/images/body/main/Video-Deman-Ikona.svg')}}">
+                                {{ __('Video on demand') }}
+                            </div>
+                        </a>
+                    </div>
             </div>
                 @if(Auth::user()->level === 2 || Auth::user()->level === 3)
                 <div class="card">

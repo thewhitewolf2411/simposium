@@ -44,7 +44,7 @@
         <main class="py-4">
           <!-- import ZoomMtg dependencies -->
           <div class="iframe-container" style="overflow: hidden; padding-top: 56.25%; position: relative;">
-              <iframe allow="microphone; camera" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%;" src="https://zoom.us/webinar/register/WN_AcCMU8XgSkq_L19zD-VpHw/" frameborder="0"></iframe>
+              <iframe allow="microphone; camera" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%;" src="{{$webinarlink}}" frameborder="0"></iframe>
           </div>
 
         </main>

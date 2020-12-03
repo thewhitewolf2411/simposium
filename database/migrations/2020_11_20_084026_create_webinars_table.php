@@ -19,6 +19,7 @@ class CreateWebinarsTable extends Migration
             $table->time('webinar_time')->format('H:m:i');
             $table->time('webinar_duration');
             $table->string('webinar_name');
+            $table->string('webinar_image')->default('/images/header/SWOC white@2x.png');
             $table->string('webinar_link')->nullable();
             $table->timestamps();
         });

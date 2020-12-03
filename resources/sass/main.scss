@@ -1,5 +1,5 @@
 p, a, body{
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif !important;
     font-size: 14pt;
 }
 
@@ -19,7 +19,7 @@ html, body{
     font-weight: 600;
     font-size: 32px;
     line-height: 1.7;
-    font-family: "Roboto Slab", serif;
+    font-family: "Roboto", serif !important;
 
 }
 
@@ -92,6 +92,10 @@ html, body{
     width: 100%;
     height: 100%;
     min-height: 700px;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
 }
 
 .loader-container{
@@ -111,6 +115,60 @@ html, body{
     animation: spin 2s linear infinite;
   }
   
+.objectdata{
+    min-height: 1200px;
+}
+.mh-100{
+    min-height: 1200px;
+}
+
+.interactivity-text{
+    display: none;
+    color: #fff;
+}
+
+.round{
+    border-radius: 50px !important;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.boxes{
+    display: flex;
+    flex-direction: row;
+}
+
+.box{
+    width: 20% !important;
+    margin: 5% auto;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.box>.card-body{
+    border-radius: 25px;
+}
+
+.noborder{
+    border: none !important;
+}
+
+@media screen and (max-width:992px){
+    .objectdata{
+        min-height: auto !important;
+    }
+
+    .mh-100{
+        min-height: 400px;
+        overflow-y: hidden;
+    }
+    .interactivity-text{
+        display: block;
+    }
+    
+}
+
 /* Safari */
 @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
