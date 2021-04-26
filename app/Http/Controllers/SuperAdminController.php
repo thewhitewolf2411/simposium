@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\CanvasData;
 use Illuminate\Http\Request;
 use Auth;
 use App\Webinar;
@@ -40,38 +41,33 @@ class SuperAdminController extends Controller
     //add Post Route
 
     public function addSponsor(Request $request){
-        $this->_addSponsor($request);
+        $createdCanvas = $this->_addSponsor($request);
+
+        if($createdCanvas){
+            return redirect('/simpozij/editsponsor/' . $createdCanvas->id);
+        }
     }
 
     private function _addSponsor(Request $request){
-        #dd($request);
+        #dd($request->all());
 
-        if(isset($request->booth)){
-            $sponsor = new Sponsors();
-
-            $sponsor->sponsor_name = $request->name;
-            $sponsor->sponsor_contact_email = $request->email;
-
-            $filenameWithExt = $request->file('booth')->getClientOriginalName();
+        if($request->input_image){
+            $filenameWithExt = $request->file('input_image')->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            $extension = $request->file('booth')->getClientOriginalExtension();
+            $extension = $request->file('input_image')->getClientOriginalExtension();
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
-            $path = $request->file('booth')->storeAs('/canvas/' . $request->name ,$fileNameToStore);
-
-            $sponsor->booth_path = '/canvas/' . $request->name;
-
-            #$sponsor->save();
-
-            $zip = new \ZipArchive;
-            $res = $zip->open($path, \ZipArchive::CREATE || \ZIPARCHIVE::OVERWRITE);
-            if($res === TRUE){
-
-                $zip->extractTo('/canvas/' . $request->name);
-                $zip->close();
-                dd("Done");
-            }
-
+            $path = $request->file('input_image')->storeAs('public/input_image',$fileNameToStore);
         }
+
+        $canvas = CanvasData::create([
+
+            'canvas_name'=>$request->name,
+            'image_path'=>$fileNameToStore,
+            'booth_type'=>$request->booth_type
+
+        ]);
+
+        return $canvas;
 
     }
 
@@ -110,6 +106,12 @@ class SuperAdminController extends Controller
 
     private function _addPanelist(Request $request){
         dd($request);
+    }
+
+    public function editSponsor($id){
+        $canvas = CanvasData::find($id);
+
+        return view('dashboard.create.editwebinar', ['canvas'=>$canvas]);
     }
 
 }

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="navbar-collapse">
         <a href='/simpozij/dashboard' class="header-image">
-            <img src="{{asset('/images/header/SWOC white@2x.png')}}">
+            <img src="{{asset('/images/header/rekonio_logo.png')}}">
         </a>
     </div>
 

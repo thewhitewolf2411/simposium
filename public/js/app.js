@@ -49540,6 +49540,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 
+__webpack_require__(/*! ./scripts/EditCanvas */ "./resources/js/scripts/EditCanvas.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -49587,6 +49589,126 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/scripts/EditCanvas.js":
+/*!********************************************!*\
+  !*** ./resources/js/scripts/EditCanvas.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+window.$ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+$(document).ready(function () {
+  if ($('#canvas_editor')) {
+    var startDrag = function startDrag(ev) {
+      // middle button delete rect
+      if (ev.button === 1) {
+        var rect = hitTest(ev.layerX, ev.layerY);
+
+        if (rect) {
+          rectangles.splice(rectangles.indexOf(rect), 1);
+          redraw();
+        }
+
+        return;
+      }
+
+      window.addEventListener('pointerup', stopDrag);
+      $screenshot.addEventListener('pointermove', moveDrag);
+      $marquee.classList.remove('hide');
+      startX = ev.layerX;
+      startY = ev.layerY;
+      drawRect($marquee, startX, startY, 0, 0);
+    };
+
+    var stopDrag = function stopDrag(ev) {
+      $marquee.classList.add('hide');
+      window.removeEventListener('pointerup', stopDrag);
+      $screenshot.removeEventListener('pointermove', moveDrag);
+
+      if (ev.target === $screenshot && marqueeRect.width && marqueeRect.height) {
+        rectangles.push(Object.assign({}, marqueeRect));
+        redraw();
+      }
+    };
+
+    var moveDrag = function moveDrag(ev) {
+      var x = ev.layerX;
+      var y = ev.layerY;
+      var width = startX - x;
+      var height = startY - y;
+
+      if (width < 0) {
+        width *= -1;
+        x -= width;
+      }
+
+      if (height < 0) {
+        height *= -1;
+        y -= height;
+      }
+
+      Object.assign(marqueeRect, {
+        x: x,
+        y: y,
+        width: width,
+        height: height
+      });
+      drawRect($marquee, marqueeRect);
+    };
+
+    var hitTest = function hitTest(x, y) {
+      return rectangles.find(function (rect) {
+        return x >= rect.x && y >= rect.y && x <= rect.x + rect.width && y <= rect.y + rect.height;
+      });
+    };
+
+    var redraw = function redraw() {
+      boxes.innerHTML = '';
+      rectangles.forEach(function (data) {
+        boxes.appendChild(drawRect(document.createElementNS("http://www.w3.org/2000/svg", 'rect'), data));
+      });
+    };
+
+    var drawRect = function drawRect(rect, data) {
+      var x = data.x,
+          y = data.y,
+          width = data.width,
+          height = data.height;
+      rect.setAttributeNS(null, 'width', width);
+      rect.setAttributeNS(null, 'height', height);
+      rect.setAttributeNS(null, 'x', x);
+      rect.setAttributeNS(null, 'y', y);
+      return rect;
+    };
+
+    var _$ = document.querySelector.bind(document);
+
+    var rectangles = []; // DOM elements
+
+    var $screenshot = _$('#canvas');
+
+    var $draw = _$('#draw');
+
+    var $marquee = _$('#marquee');
+
+    var $boxes = _$('#boxes'); // Temp variables
+
+
+    var startX = 0;
+    var startY = 0;
+    var marqueeRect = {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    };
+    $marquee.classList.add('hide');
+    $screenshot.addEventListener('pointerdown', startDrag);
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -49605,8 +49727,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\haris.muslic\Desktop\simpozij\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\haris.muslic\Desktop\simpozij\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\haris.muslic\Desktop\simposium\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\haris.muslic\Desktop\simposium\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

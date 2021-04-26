@@ -10921,9 +10921,9 @@ body {
 }
 
 .card-header {
-  background-color: #9bf2ca !important;
-  border-bottom: 3px solid #9bf2ca;
-  color: #005cb8;
+  background-color: #8A8E91 !important;
+  border-bottom: 3px solid #8A8E91;
+  color: #f6be07;
   font-weight: 600;
   font-size: 32px;
   line-height: 1.7;
@@ -10940,7 +10940,7 @@ body {
 }
 
 .card-body {
-  background-color: #005cb8;
+  background-color: #f6be07;
   overflow-x: hidden;
 }
 
@@ -10955,14 +10955,14 @@ body {
 
 .btn-outline-success {
   padding: 11px 27px 14px;
-  color: #005cb8;
+  color: #f6be07;
   border-radius: 30px;
-  background: #9bf2ca;
+  background: #8A8E91;
   font-size: 17px;
   line-height: 1.7;
   font-weight: 600;
   letter-spacing: 0px;
-  border-color: #9bf2ca;
+  border-color: #8A8E91;
   transition: 0.1s linear;
   outline: none !important;
   border: none !important;
@@ -10973,7 +10973,7 @@ body {
 }
 
 .btn-outline-success:hover {
-  color: #005cb8;
+  color: #f6be07;
   background: #fff;
   border-color: #fff;
   transition: 0.1s linear;
@@ -11014,7 +11014,7 @@ body {
 .loader {
   border: 16px solid #f3f3f3;
   /* Light grey */
-  border-top: 16px solid #3498db;
+  border-top: 16px solid #f6be07;
   /* Blue */
   border-radius: 50%;
   width: 120px;
@@ -11127,7 +11127,7 @@ body {
 
 .webinar-day-active {
   text-decoration: none;
-  color: #005cb8;
+  color: #f6be07;
   font-size: 22pt;
   transition: 0.2s linear;
 }
@@ -11205,7 +11205,7 @@ body {
 }
 
 header {
-  background-color: #005cb8;
+  background-color: #f6be07;
 }
 
 header p {
@@ -11215,14 +11215,14 @@ header p {
 }
 
 .navbar {
-  background-color: #005cb8;
+  background-color: #f6be07;
   height: 140px !important;
   max-width: 1280px;
   margin: 0 auto !important;
 }
 
 .header-image img {
-  max-width: 100px;
+  max-width: 300px;
 }
 
 footer {
