@@ -1,104 +1,131 @@
-window.$ = require('jquery');
+if(document.getElementById('edit_events_container')){
 
-$(document).ready(function(){
+    $(document).ready(function(){
+        $('#first_event_input_container').hide();
+        $('#second_event_input_container').hide();
+        $('#third_event_input_container').hide();
+        $('#fourth_event_input_container').hide();
+        $('#fifth_event_input_container').hide();
+        $('#sixth_event_input_container').hide();
+    });
 
-    if($('#canvas_editor')){
-        const $ = document.querySelector.bind(document);
+    $('#first_event').on('change', function(){
+        $('#first_event_input_container').show();
+        $('#first_event_input_container').addClass('show');
 
-        const rectangles = [];
-
-        // DOM elements
-        const $screenshot = $('#canvas');
-        const $draw = $('#draw');
-        const $marquee = $('#marquee');
-        const $boxes = $('#boxes');
-
-        // Temp variables
-        let startX = 0;
-        let startY = 0;
-        const marqueeRect = {
-            x: 0,
-        y: 0,
-        width: 0,
-        height: 0,
-        };
-
-        $marquee.classList.add('hide');
-        $screenshot.addEventListener('pointerdown', startDrag);
-
-        function startDrag(ev) {
-            // middle button delete rect
-            if (ev.button === 1) {
-            const rect = hitTest(ev.layerX, ev.layerY);
-            if (rect) {
-                rectangles.splice(rectangles.indexOf(rect), 1);
-            redraw();
-            }
-            return;
+        switch($(this).val()){
+            case "1":
+                $('#first_event_input').attr('accept', '.mp4');
+            break;
+            case "2":
+                $('#first_event_input').attr('accept', '.pdf');
+            break;
+            case "3":
+                $('#first_event_input').attr('accept', 'image/*');
+            break;
+            case "4":
+                $('#first_event_input').attr('accept', '.ppt, .pptx');
+            break;
         }
-            window.addEventListener('pointerup', stopDrag);
-        $screenshot.addEventListener('pointermove', moveDrag);
-        $marquee.classList.remove('hide');
-        startX = ev.layerX;
-        startY = ev.layerY;
-        drawRect($marquee, startX, startY, 0, 0);
-        }
+    });
 
-        function stopDrag(ev) {
-            $marquee.classList.add('hide');
-            window.removeEventListener('pointerup', stopDrag);
-            $screenshot.removeEventListener('pointermove', moveDrag);
-            if (ev.target === $screenshot && marqueeRect.width && marqueeRect.height) {
-                rectangles.push(Object.assign({}, marqueeRect));
-                redraw();
-            }
-        }
+    $('#second_event').on('change', function(){
+        $('#second_event_input_container').show();
+        $('#second_event_input_container').addClass('show');
 
-        function moveDrag(ev) {
-            let x = ev.layerX;
-        let y = ev.layerY;
-            let width = startX - x;
-        let height = startY - y;
-        if (width < 0) {
-            width *= -1;
-            x -= width;
+        switch($(this).val()){
+            case "1":
+                $('#second_event_input').attr('accept', '.mp4');
+            break;
+            case "2":
+                $('#second_event_input').attr('accept', '.pdf');
+            break;
+            case "3":
+                $('#second_event_input').attr('accept', 'image/*');
+            break;
+            case "4":
+                $('#second_event_input').attr('accept', '.ppt, .pptx');
+            break;
         }
-        if (height < 0) {
-            height *= -1;
-            y -= height;
+    });
+
+    $('#third_event').on('change', function(){
+        $('#third_event_input_container').show();
+        $('#third_event_input_container').addClass('show');
+
+        switch($(this).val()){
+            case "1":
+                $('#third_event_input').attr('accept', '.mp4');
+            break;
+            case "2":
+                $('#third_event_input').attr('accept', '.pdf');
+            break;
+            case "3":
+                $('#third_event_input').attr('accept', 'image/*');
+            break;
+            case "4":
+                $('#third_event_input').attr('accept', '.ppt, .pptx');
+            break;
         }
-        Object.assign(marqueeRect, { x, y, width, height });
-        drawRect($marquee, marqueeRect);
+    });
+
+    $('#fourth_event').on('change', function(){
+        $('#fourth_event_input_container').show();
+        $('#fourth_event_input_container').addClass('show');
+
+        switch($(this).val()){
+            case "1":
+                $('#fourth_event_input').attr('accept', '.mp4');
+            break;
+            case "2":
+                $('#fourth_event_input').attr('accept', '.pdf');
+            break;
+            case "3":
+                $('#fourth_event_input').attr('accept', 'image/*');
+            break;
+            case "4":
+                $('#fourth_event_input').attr('accept', '.ppt, .pptx');
+            break;
         }
+    });
 
-        function hitTest(x, y) {
-            return rectangles.find(rect => (
-            x >= rect.x &&
-            y >= rect.y && 
-            x <= rect.x + rect.width &&
-            y <= rect.y + rect.height
-        ));
+    $('#fifth_event').on('change', function(){
+        $('#fifth_event_input_container').show();
+        $('#fifth_event_input_container').addClass('show');
+
+        switch($(this).val()){
+            case "1":
+                $('#fifth_event_input').attr('accept', '.mp4');
+            break;
+            case "2":
+                $('#fifth_event_input').attr('accept', '.pdf');
+            break;
+            case "3":
+                $('#fifth_event_input').attr('accept', 'image/*');
+            break;
+            case "4":
+                $('#fifth_event_input').attr('accept', '.ppt, .pptx');
+            break;
         }
+    });
 
-        function redraw() {
-            boxes.innerHTML = '';
-        rectangles.forEach((data) => {
-            boxes.appendChild(drawRect(
-                document.createElementNS("http://www.w3.org/2000/svg", 'rect'), data
-            ));
-        });
+    $('#sixth_event').on('change', function(){
+        $('#sixth_event_input_container').show();
+        $('#sixth_event_input_container').addClass('show');
+
+        switch($(this).val()){
+            case "1":
+                $('#sixth_event_input').attr('accept', '.mp4');
+            break;
+            case "2":
+                $('#sixth_event_input').attr('accept', '.pdf');
+            break;
+            case "3":
+                $('#sixth_event_input').attr('accept', 'image/*');
+            break;
+            case "4":
+                $('#sixth_event_input').attr('accept', '.ppt, .pptx');
+            break;
         }
-
-        function drawRect(rect, data) {
-            const { x, y, width, height } = data;
-            rect.setAttributeNS(null, 'width', width);
-        rect.setAttributeNS(null, 'height', height);
-        rect.setAttributeNS(null, 'x', x);
-        rect.setAttributeNS(null, 'y', y);
-        return rect;
-        }
-
-
-    }
-
-});
+    });
+}

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\CanvasData;
+use App\CanvasEvents;
 use Illuminate\Http\Request;
 
 use App\Webinar;
@@ -35,7 +37,7 @@ class HomeController extends Controller
     //booths
     public function showBooths(){
 
-        $booths = Sponsors::all();
+        $booths = CanvasData::all();
 
         return view('dashboard.booths.booths')->with(['booths'=>$booths]);
 
@@ -43,10 +45,10 @@ class HomeController extends Controller
 
     public function showBooth($parameter){
 
-        $booth = Sponsors::where('sponsor_name', $parameter)->first();
-        $boothpath = $booth->booth_path;
+        $booth = CanvasData::find($parameter);
+        $boothEvents = CanvasEvents::where('canvas_id', $parameter)->get();
 
-        return view('dashboard.booths.booth')->with(['name'=>$parameter, 'boothpath'=>$boothpath, 'logo'=>$booth->sponsor_logo]);
+        return view('dashboard.booths.booth', ['booth'=>$booth, 'boothEvents'=>$boothEvents]);
 
     }
 

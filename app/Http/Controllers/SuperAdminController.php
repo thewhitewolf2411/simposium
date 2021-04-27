@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\CanvasData;
+use App\Services\CreatingCanvasAlhorithm;
 use Illuminate\Http\Request;
 use Auth;
 use App\Webinar;
@@ -108,10 +109,20 @@ class SuperAdminController extends Controller
         dd($request);
     }
 
-    public function editSponsor($id){
+    public function editSponsorPage($id){
         $canvas = CanvasData::find($id);
 
         return view('dashboard.create.editwebinar', ['canvas'=>$canvas]);
+    }
+
+    public function editSponsor(Request $request){
+        $canvas = CanvasData::find($request->canvas_id);
+        $data = $request->all();
+
+        $response = new CreatingCanvasAlhorithm($canvas, $data);
+        $responseData = $response->createCanvasEvents();
+
+        return redirect($responseData);
     }
 
 }

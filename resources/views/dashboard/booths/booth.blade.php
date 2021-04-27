@@ -14,7 +14,7 @@
     <div class="row justify-content-center w-100">
         <div class="col-md-12 mh-100">
             <div class="card mh-100">
-                <div class="card-header"> <img src="{{$logo}}" height="100px"></div>
+                <div class="card-header"></div>
 
 
 
@@ -24,8 +24,16 @@
                         {{ __('Interaktivnost sa štandom je moguća samo na desktop verzijama. ')}}
 
                     </div>
-                    <object class="objectdata" data="{{$boothpath}}" width="100%" height="100%">
-                    </object>
+                    <div class="booth-background-image" style="background-image: url('/storage/input_image/{{$booth->image_path}}');">
+
+                        @foreach($boothEvents as $boothEvent)
+
+                            <a role="button" class="booth-btn" style="display:flex; position: relative; top:{{$boothEvent->y1}}px; left:{{$boothEvent->x1}}px; width:{{$boothEvent->x2}}px; height:{{$boothEvent->y2}}px" >
+                                <div class=""></div>
+                            </a>
+
+                        @endforeach
+                    </div>
                 </div>
 
             </div>
@@ -33,5 +41,6 @@
     </div>
 </div>
 
+<script src="{{$boothEvents[0]->script_path}}"></script>
 
 @endsection

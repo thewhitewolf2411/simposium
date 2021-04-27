@@ -48,10 +48,10 @@ Route::get('/simpozij/createwebinar', 'SuperAdminController@showCreateWebinarPag
 Route::get('/simpozij/addpanelist', 'SuperAdminController@showAddPanelistPage');
 Route::get('/simpozij/addadmins', 'SuperAdminController@showAddAdminPage');
 Route::get('/simpozij/addsponsor', 'SuperAdminController@showAddSponsorPage');
-Route::get('/simpozij/editsponsor/{id}', 'SuperAdminController@editSponsor')->name('editSponsorView');
+Route::get('/simpozij/editsponsor/{id}', 'SuperAdminController@editSponsorPage')->name('editSponsorView');
 
 //admin post
 Route::post('/simposij/addsponsor/add', 'SuperAdminController@addSponsor')->name('addSponsor');
-Route::post('/simposij/editsponsor/edit', 'SuperAdminController@addSponsor')->name('editSponsor');
+Route::post('/simposij/editsponsor/edit', 'SuperAdminController@editSponsor')->name('editSponsor');
 Route::post('/simposij/addwebinar/add', 'SuperAdminController@addWebinar')->name('addWebinar');
 Route::post('/simposij/addpanelist/add', 'SuperAdminController@addPanelist')->name('addPanelist');
