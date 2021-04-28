@@ -9,3 +9,4 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 require('./scripts/EditCanvas');
+require('./scripts/GetCanvasData');

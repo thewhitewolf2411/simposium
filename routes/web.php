@@ -43,6 +43,9 @@ Route::get('/simpozij/QA', 'HomeController@showQA')->name('QAs');
 //Ondemand
 Route::get('/simpozij/ondemand', 'HomeController@showOnDemand')->name('ondemands');
 
+//Exibition
+Route::get('/simpozij/exibition', 'HomeController@showExibition')->name('exibition');
+
 //admin get
 Route::get('/simpozij/createwebinar', 'SuperAdminController@showCreateWebinarPage')->name('createWebinarPage');
 Route::get('/simpozij/addpanelist', 'SuperAdminController@showAddPanelistPage');
@@ -50,8 +53,11 @@ Route::get('/simpozij/addadmins', 'SuperAdminController@showAddAdminPage');
 Route::get('/simpozij/addsponsor', 'SuperAdminController@showAddSponsorPage');
 Route::get('/simpozij/editsponsor/{id}', 'SuperAdminController@editSponsorPage')->name('editSponsorView');
 
+Route::post('/simpozij/webinar/getBoothData', 'SuperAdminController@getBoothData')->name('getBoothData');
+
 //admin post
 Route::post('/simposij/addsponsor/add', 'SuperAdminController@addSponsor')->name('addSponsor');
 Route::post('/simposij/editsponsor/edit', 'SuperAdminController@editSponsor')->name('editSponsor');
 Route::post('/simposij/addwebinar/add', 'SuperAdminController@addWebinar')->name('addWebinar');
 Route::post('/simposij/addpanelist/add', 'SuperAdminController@addPanelist')->name('addPanelist');
+

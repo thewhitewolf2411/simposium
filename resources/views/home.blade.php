@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+<div class="container d-flex align-items-center justify-content-center">
+    <div class="row w-100">
         <div class="col-md-12">
             <div class="card noborder">
                 <div class="card-header round">{{ __('DASHBOARD') }}</div>
@@ -10,25 +10,31 @@
                         <a href="/simpozij/booth" class="card-link box">
                             <div class="card-body">
                                 <img src="{{asset('/images/body/main/Standovi-Ikona.svg')}}">
-                                {{ __('Štandovi') }}
+                                {{ __('Promo Booths') }}
                             </div>
                         </a>
                         <a href="/simpozij/webinars" class="card-link box">
                             <div class="card-body">
                                 <img src="{{asset('/images/body/main/Webinari-Ikona.svg')}}">
-                                {{ __('Webinari') }}
+                                {{ __('Webinars') }}
                             </div>
                         </a>
                         <a href="/simpozij/QA" class="card-link box">
                             <div class="card-body">
                                 <img src="{{asset('/images/body/main/QA-Ikona.svg')}}">
-                                {{ __('QA Sesije') }}
+                                {{ __('Agenda') }}
                             </div>
                         </a>
                         <a href="/simpozij/ondemand" class="card-link box">
                             <div class="card-body">
                                 <img src="{{asset('/images/body/main/Video-Deman-Ikona.svg')}}">
                                 {{ __('Video on demand') }}
+                            </div>
+                        </a>
+                        <a href="/simpozij/exibition" class="card-link box">
+                            <div class="card-body">
+                                <img src="{{asset('/images/body/main/Exibition-Ikona.svg')}}">
+                                {{ __('Exhibition') }}
                             </div>
                         </a>
                     </div>

@@ -1,36 +1,17 @@
 footer{
     background-image: url('/images/footer/meetting.jpg');
-    padding: 80px 0px 110px 0px;
+    padding: 80px 0px 0px 0px;
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100%;
 }
 
-#plat-ad img{
-    max-width: 33% !important;
-    width: 33% !important;
-}
-
-#gold-ad img{
-    max-width: 365px !important;
-    width: 365px !important;
-}
-
-#silver-ad img{
-    max-width: 20% !important;
-    width: 20% !important;
-}
-
-#rest-ad img{
-    max-width: 20% !important;
-    width: 20% !important;
-}
-
 .sub-images{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 footer .sub-title{
@@ -47,6 +28,7 @@ footer .sub-title{
 footer .sub-title p{
     font-size: 32px !important;
     text-align: center;
+    color: $primaryGray;
 }
 
 footer .title{
@@ -64,12 +46,13 @@ footer .title{
 footer .title p{
     font-size: 40px !important;
     text-align: center;
+    color: $primaryYellow;
 }
 
 .footer-container{
     display: flex;
     flex-direction: column;
-    max-width: 1220px !important;
+    max-width: 75% !important;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -79,4 +62,49 @@ footer .title p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+}
+
+.orange-round{
+    width: 222px;
+    height: 121px;
+    background: $primaryYellow;
+    border-radius: 25px;
+    margin: 30px 2%;
+}
+
+.orange-round img{
+    max-width: 100% !important;
+}
+
+.credit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: $secondaryGray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.credit-text-container{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.credit-text-container p{
+    font-family: "Open Sans", Arial ,sans-serif !important;
+    font-size: 14px;
+    color:#ffffff;
+    line-height: 1.7em;
+    font-weight: 500;
+    margin: 0;
+}
+
+.credit-text-container a{
+    color: $primaryYellow;
+    text-decoration: none;
+    font-size: 14px;
 }

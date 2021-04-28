@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+<div class="container d-flex align-items-center justify-content-center">
+    <div class="row w-100">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Potvrdite svoju Email adresu') }}</div>

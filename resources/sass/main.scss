@@ -5,16 +5,18 @@ p, a, body{
 
 html, body{
     overflow-x: hidden;
+    padding-right: 0 !important;
 }
 
 .card{
     background-color: transparent;
     overflow-y: hidden;
+    border: none !important;
 }
 
 .card-header{
-    background-color: #8A8E91 !important;
-    border-bottom: 3px solid #8A8E91;
+    background-color: #fff !important;
+    border-bottom: 3px solid #fff;
     color: #f6be07;
     font-weight: 600;
     font-size: 32px;
@@ -33,7 +35,7 @@ html, body{
 }
 
 .card-body{
-    background-color: #f6be07;
+    background-color: $primaryGray;
     overflow-x: hidden;
 }
 
@@ -48,9 +50,9 @@ html, body{
 
 .btn-outline-success{
     padding: 11px 27px 14px;
-    color: #f6be07;
+    color: #fff;
     border-radius: 30px;
-    background: #8A8E91;
+    background: $primaryYellow;
     font-size: 17px;
     line-height: 1.7;
     font-weight: 600;
@@ -59,6 +61,7 @@ html, body{
     transition: 0.1s linear;
     outline: none !important;
     border: none !important;
+    max-height: 46px;
 }
 
 .btn-outline-success:focus{
@@ -77,11 +80,9 @@ html, body{
 }
 
 #gl-horisontal{
-    background-color: #7fffd4;
-    max-width: 456px;
-    width: 456px;
-    margin: 40px auto;
-    height: 3px;
+    width: 100%;
+    max-width: 15%;
+    border-top: 2px solid rgba(138,142,145,1);
 }
 
 #auth-page{
@@ -140,14 +141,44 @@ html, body{
 }
 
 .box{
-    width: 20% !important;
+    width: 18% !important;
     margin: 5% auto;
     border-radius: 25px;
     text-align: center;
+    min-height: 250px !important;
 }
 
 .box>.card-body{
     border-radius: 25px;
+    background: #ffffff !important;
+    color: #8e8e8e;
+    line-height: 25px;
+}
+
+.exibition-boxes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.exibition-box{
+    width: 30% !important;
+    min-width: 300px !important;
+    margin: 20px auto !important;
+    text-align: center;
+    min-height: 400px !important;
+}
+
+.exibition-box>.card-body{
+    background: #ffffff !important;
+    color: #8e8e8e;
+    line-height: 25px;
+    height: 100%;
+}
+
+.exibition-inner{
+    background: $primaryYellow;
+    height: 100%;
 }
 
 .noborder{
@@ -271,6 +302,10 @@ html, body{
 
 .back-button-container{
     max-width: 50px;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 50px;
 }
 
 .back-button-container:hover{
@@ -312,11 +347,158 @@ html, body{
     transition: 0.1s linear;
 }
 
+.modal-dialog{
+    max-width: 900px !important;
+}
+
 @media only screen and (max-width: 1600px) and (min-width: 1200px){
     .booth-background-image{
         width: 992px;
         height: 100%;
     }
+
+    //Type 1 booth css
+    .booth-type-1>.booth-event-0{
+        top: 449px !important;
+        left: 829px !important;
+        width: 87px !important;
+        height: 277px !important;
+    }
+
+    
+    .booth-type-1>.booth-event-1{
+        top: 399px !important;
+        left: 660px !important;
+        width: 30px !important;
+        height: 42px !important;
+    }
+
+    
+    .booth-type-1>.booth-event-2{
+        top: 164px !important;
+        left: 420px !important;
+        width: 155px !important;
+        height: 87px !important;
+    }   
+
+    
+    .booth-type-1>.booth-event-3{
+        top: 229px !important;
+        left: 402px !important;
+        width: 188px !important;
+        height: 99px !important;
+    }   
+
+    
+    .booth-type-1>.booth-event-4{
+        top: 164px !important;
+        left: 310px !important;
+        width: 30px !important;
+        height: 42px !important;
+    }   
+
+    
+    .booth-type-1>.booth-event-5{
+        top: -103px !important;
+        left: 110px !important;
+        width: 70px !important;
+        height: 286px !important;
+    }
+    //Type 2 Both css
+    .booth-type-2>.booth-event-0{
+        top: 449px !important;
+        left: 829px !important;
+        width: 87px !important;
+        height: 277px !important;
+    }
+
+    
+    .booth-type-2>.booth-event-1{
+        top: 399px !important;
+        left: 660px !important;
+        width: 30px !important;
+        height: 42px !important;
+    }
+
+    
+    .booth-type-2>.booth-event-2{
+        top: 164px !important;
+        left: 420px !important;
+        width: 155px !important;
+        height: 87px !important;
+    }   
+
+    
+    .booth-type-2>.booth-event-3{
+        top: 229px !important;
+        left: 402px !important;
+        width: 188px !important;
+        height: 99px !important;
+    }   
+
+    
+    .booth-type-2>.booth-event-4{
+        top: 164px !important;
+        left: 310px !important;
+        width: 30px !important;
+        height: 42px !important;
+    }   
+
+    
+    .booth-type-2>.booth-event-5{
+        top: -103px !important;
+        left: 110px !important;
+        width: 70px !important;
+        height: 286px !important;
+    }
+    
+    //Type 3 Booth css
+    .booth-type-3>.booth-event-0{
+        top: 449px !important;
+        left: 829px !important;
+        width: 87px !important;
+        height: 277px !important;
+    }
+
+    
+    .booth-type-3>.booth-event-1{
+        top: 399px !important;
+        left: 660px !important;
+        width: 30px !important;
+        height: 42px !important;
+    }
+
+    
+    .booth-type-3>.booth-event-2{
+        top: 164px !important;
+        left: 420px !important;
+        width: 155px !important;
+        height: 87px !important;
+    }   
+
+    
+    .booth-type-3>.booth-event-3{
+        top: 229px !important;
+        left: 402px !important;
+        width: 188px !important;
+        height: 99px !important;
+    }   
+
+    
+    .booth-type-3>.booth-event-4{
+        top: 164px !important;
+        left: 310px !important;
+        width: 30px !important;
+        height: 42px !important;
+    }   
+
+    
+    .booth-type-3>.booth-event-5{
+        top: -103px !important;
+        left: 110px !important;
+        width: 70px !important;
+        height: 286px !important;
+    } 
 }
 
 @media only screen and (max-width: 1200px) and (min-width: 992px){
@@ -324,6 +506,53 @@ html, body{
         width: 768px;
         height: 100%;
     }
+
+    .booth-type-1>.booth-event-0{
+        top: 475px !important;
+        left: 643px !important;
+        width: 67px !important;
+        height: 223px !important;
+    }
+
+    
+    .booth-type-1>.booth-event-1{
+        top: 423px !important;
+        left: 510px !important;
+        width: 30px !important;
+        height: 42px !important;
+    }
+
+    
+    .booth-type-1>.booth-event-2{
+        top: 239px !important;
+        left: 324px !important;
+        width: 122px !important;
+        height: 68px !important;
+    }   
+
+    
+    .booth-type-1>.booth-event-3{
+        top: 290px !important;
+        left: 310px !important;
+        width: 147px !important;
+        height: 77px !important;
+    }   
+
+    
+    .booth-type-1>.booth-event-4{
+        top: 239px !important;
+        left: 235px !important;
+        width: 30px !important;
+        height: 42px !important;
+    }   
+
+    
+    .booth-type-1>.booth-event-5{
+        top: 25px !important;
+        left: 83px !important;
+        width: 55px !important;
+        height: 218px !important;
+    }   
 }
 
 @media only screen and (max-width: 992px){

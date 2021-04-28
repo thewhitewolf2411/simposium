@@ -1,5 +1,5 @@
 header{
-    background-color: #f6be07;
+    background-color: $primaryGray;
 }
 
 header p{
@@ -9,12 +9,12 @@ header p{
 }
 
 .navbar{
-    background-color: #f6be07;
-    height: 140px !important;
+    background-color: $primaryGray;
+    height: 72px !important;
     max-width: 1280px;
     margin: 0 auto !important;
 }
 
 .header-image img{
-    max-width: 300px;
+    max-width: 280px;
 }

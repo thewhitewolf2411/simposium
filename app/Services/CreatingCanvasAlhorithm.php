@@ -66,44 +66,44 @@ class CreatingCanvasAlhorithm
             case 2:
                 $coordinates = [
                     'event1' => [
-                        "x1"=>0,
-                        "x2"=>0,
-                        "y1"=>0,
-                        "y2"=>0
+                        "x1"=>1200,
+                        "x2"=>207,
+                        "y1"=>455,
+                        "y2"=>394
                     ],
                     'event2' => [
-                        "x1"=>0,
-                        "x2"=>0,
-                        "y1"=>0,
-                        "y2"=>0
+                        "x1"=>967,
+                        "x2"=>42,
+                        "y1"=>305,
+                        "y2"=>50
                     ],
                     'event3' => [
-                        "x1"=>0,
-                        "x2"=>0,
-                        "y1"=>0,
-                        "y2"=>0
+                        "x1"=>650,
+                        "x2"=>178,
+                        "y1"=>20,
+                        "y2"=>100
                     ],
                     'event4' => [
-                        "x1"=>0,
-                        "x2"=>0,
-                        "y1"=>0,
-                        "y2"=>0
+                        "x1"=>615,
+                        "x2"=>252,
+                        "y1"=>149,
+                        "y2"=>104
                     ],
                     'event5' => [
-                        "x1"=>0,
-                        "x2"=>0,
-                        "y1"=>0,
-                        "y2"=>0
+                        "x1"=>466,
+                        "x2"=>42,
+                        "y1"=>50,
+                        "y2"=>50
                     ],
                     'event6' => [
-                        "x1"=>0,
-                        "x2"=>0,
-                        "y1"=>0,
-                        "y2"=>0
+                        "x1"=>70,
+                        "x2"=>205,
+                        "y1"=>-241,
+                        "y2"=>390
                     ]
                 ];
                 if($this->_createTypeOneEvent($coordinates)){
-                    
+                    return "/simpozij/dashboard";
                 }
                 break;
             case 3:
@@ -146,7 +146,7 @@ class CreatingCanvasAlhorithm
                     ]
                 ];
                 if($this->_createTypeOneEvent($coordinates)){
-                    
+                    return "/simpozij/dashboard";
                 }
                 break;
         }
@@ -205,210 +205,11 @@ class CreatingCanvasAlhorithm
             $path = $events['sixth_event_input']->storeAs('public/canvas_data',$fileNameToStore6);
         }
 
-        $function1 = null;
-        $function2 = null;
-        $function3 = null;
-        $function4 = null;
-        $function5 = null;
-        $function6 = null;
-
-
-        switch($events['first_event']){
-            case 1:
-                $function1 = "function event1_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<video width='320' height='240' controls><source src='/public/canvas_data/" . $fileNameToStore1 . "' type='video/mp4'><source src='movie.ogg' type='video/ogg'></video> &quot);
-                }";
-                break;
-            case 2:
-                $function1 = "function event1_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<iframe src='/public/canvas_data/" . $fileNameToStore1 . "' </iframe> &quot);
-                }";
-                break;
-            case 3:
-                $function1 = "function event1_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<img src='/public/canvas_data/" . $fileNameToStore1 . "' > &quot);
-                }";
-                break;
-            case 4:
-                $function1 = "function event1_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=['/public/canvas_data/" . $fileNameToStore1 . "'] frameborder='0'> &quot);
-                }";
-                break;
-        }
-
-        switch($events['second_event']){
-            case 1:
-                $function2 = "function event2_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<video width='320' height='240' controls><source src='/public/canvas_data/" . $fileNameToStore2 . "' type='video/mp4'><source src='movie.ogg' type='video/ogg'></video> &quot);
-                }";
-                break;
-            case 2:
-                $function2 = "function event2_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<iframe src='/public/canvas_data/" . $fileNameToStore2 . "' </iframe> &quot);
-                }";
-                break;
-            case 3:
-                $function2 = "function event2_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<img src='/public/canvas_data/" . $fileNameToStore2 . "' > &quot);
-                }";
-                break;
-            case 4:
-                $function2 = "function event2_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=['/public/canvas_data/" . $fileNameToStore2 . "'] frameborder='0'> &quot);
-                }";
-                break;
-        }
-
-        switch($events['third_event']){
-            case 1:
-                $function2 = "function event3_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<video width='320' height='240' controls><source src='/public/canvas_data/" . $fileNameToStore3 . "' type='video/mp4'><source src='movie.ogg' type='video/ogg'></video> &quot);
-                }";
-                break;
-            case 2:
-                $function2 = "function event3_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<iframe src='/public/canvas_data/" . $fileNameToStore3 . "' </iframe> &quot);
-                }";
-                break;
-            case 3:
-                $function2 = "function event3_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<img src='/public/canvas_data/" . $fileNameToStore3 . "' > &quot);
-                }";
-                break;
-            case 4:
-                $function2 = "function event3_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=['/public/canvas_data/" . $fileNameToStore3 . "'] frameborder='0'> &quot);
-                }";
-                break;
-        }
-
-        switch($events['fourth_event']){
-            case 1:
-                $function2 = "function event4_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<video width='320' height='240' controls><source src='/public/canvas_data/" . $fileNameToStore4 . "' type='video/mp4'><source src='movie.ogg' type='video/ogg'></video> &quot);
-                }";
-                break;
-            case 2:
-                $function2 = "function event4_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<iframe src='/public/canvas_data/" . $fileNameToStore4 . "' </iframe> &quot);
-                }";
-                break;
-            case 3:
-                $function2 = "function event4_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<img src='/public/canvas_data/" . $fileNameToStore4 . "' > &quot);
-                }";
-                break;
-            case 4:
-                $function2 = "function event4_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=['/public/canvas_data/" . $fileNameToStore4 . "'] frameborder='0'> &quot);
-                }";
-                break;
-        }
-
-        switch($events['fifth_event']){
-            case 1:
-                $function2 = "function event5_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<video width='320' height='240' controls><source src='/public/canvas_data/" . $fileNameToStore5 . "' type='video/mp4'><source src='movie.ogg' type='video/ogg'></video> &quot);
-                }";
-                break;
-            case 2:
-                $function2 = "function event5_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<iframe src='/public/canvas_data/" . $fileNameToStore5 . "' </iframe> &quot);
-                }";
-                break;
-            case 3:
-                $function2 = "function event5_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<img src='/public/canvas_data/" . $fileNameToStore5 . "' > &quot);
-                }";
-                break;
-            case 4:
-                $function2 = "function event5_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=['/public/canvas_data/" . $fileNameToStore5 . "'] frameborder='0'> &quot);
-                }";
-                break;
-        }
-
-        switch($events['sixth_event']){
-            case 1:
-                $function2 = "function event6_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<video width='320' height='240' controls><source src='/public/canvas_data/" . $fileNameToStore6 . "' type='video/mp4'><source src='movie.ogg' type='video/ogg'></video> &quot);
-                }";
-                break;
-            case 2:
-                $function2 = "function event6_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<iframe src='/public/canvas_data/" . $fileNameToStore6 . "' </iframe> &quot);
-                }";
-                break;
-            case 3:
-                $function2 = "function event6_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<img src='/public/canvas_data/" . $fileNameToStore6 . "' > &quot);
-                }";
-                break;
-            case 4:
-                $function2 = "function event6_canvas_" . $events['canvas_id'] . "(){
-                    $('#eventModal').modal('show'); 
-                    $('#eventModal modal-body').empty();
-                    $('#eventModal modal-body').append(&quot<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=['/public/canvas_data/" . $fileNameToStore6 . "'] frameborder='0'> &quot);
-                }";
-                break;
-        }
-
-        $script = $function1.$function2.$function3.$function4.$function5.$function6;
-        $scriptName = public_path() . '/js/' . \Carbon\Carbon::now()->format('Y-m-d-h-s-i') . $events['canvas_id'] . '.js';
-        
-        file_put_contents($scriptName, $script);
 
         $canvasEvent1 = [
             'canvas_id'=>$this->canvas->id,
             'event_type'=>$events['first_event'],
-            'script_path'=>$scriptName,
-            'function_name'=>"event1_canvas_" . $events['canvas_id'] . "()",
+            'file_path'=>$fileNameToStore1,
             'x1'=>$coordinates['event1']['x1'],
             'x2'=>$coordinates['event1']['x2'],
             'y1'=>$coordinates['event1']['y1'],
@@ -417,8 +218,7 @@ class CreatingCanvasAlhorithm
         $canvasEvent2 = [
             'canvas_id'=>$this->canvas->id,
             'event_type'=>$events['second_event'],
-            'script_path'=>$scriptName,
-            'function_name'=>"event2_canvas_" . $events['canvas_id'] . "()",
+            'file_path'=>$fileNameToStore2,
             'x1'=>$coordinates['event2']['x1'],
             'x2'=>$coordinates['event2']['x2'],
             'y1'=>$coordinates['event2']['y1'],
@@ -427,8 +227,7 @@ class CreatingCanvasAlhorithm
         $canvasEvent3 = [
             'canvas_id'=>$this->canvas->id,
             'event_type'=>$events['third_event'],
-            'script_path'=>$scriptName,
-            'function_name'=>"event3_canvas_" . $events['canvas_id'] . "()",
+            'file_path'=>$fileNameToStore3,
             'x1'=>$coordinates['event3']['x1'],
             'x2'=>$coordinates['event3']['x2'],
             'y1'=>$coordinates['event3']['y1'],
@@ -437,8 +236,7 @@ class CreatingCanvasAlhorithm
         $canvasEvent4 = [
             'canvas_id'=>$this->canvas->id,
             'event_type'=>$events['fourth_event'],
-            'script_path'=>$scriptName,
-            'function_name'=>"event4_canvas_" . $events['canvas_id'] . "()",
+            'file_path'=>$fileNameToStore4,
             'x1'=>$coordinates['event4']['x1'],
             'x2'=>$coordinates['event4']['x2'],
             'y1'=>$coordinates['event4']['y1'],
@@ -447,8 +245,7 @@ class CreatingCanvasAlhorithm
         $canvasEvent5 = [
             'canvas_id'=>$this->canvas->id,
             'event_type'=>$events['fifth_event'],
-            'script_path'=>$scriptName,
-            'function_name'=>"event5_canvas_" . $events['canvas_id'] . "()",
+            'file_path'=>$fileNameToStore5,
             'x1'=>$coordinates['event5']['x1'],
             'x2'=>$coordinates['event5']['x2'],
             'y1'=>$coordinates['event5']['y1'],
@@ -457,8 +254,7 @@ class CreatingCanvasAlhorithm
         $canvasEvent6 = [
             'canvas_id'=>$this->canvas->id,
             'event_type'=>$events['sixth_event'],
-            'script_path'=>$scriptName,
-            'function_name'=>"event6_canvas_" . $events['canvas_id'] . "()",
+            'file_path'=>$fileNameToStore6,
             'x1'=>$coordinates['event6']['x1'],
             'x2'=>$coordinates['event6']['x2'],
             'y1'=>$coordinates['event6']['y1'],
