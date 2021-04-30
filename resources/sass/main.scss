@@ -351,6 +351,15 @@ html, body{
     max-width: 900px !important;
 }
 
+.booth-type-3{
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
 @media only screen and (max-width: 1600px) and (min-width: 1200px){
     .booth-background-image{
         width: 992px;
@@ -406,49 +415,49 @@ html, body{
     }
     //Type 2 Both css
     .booth-type-2>.booth-event-0{
-        top: 449px !important;
-        left: 829px !important;
-        width: 87px !important;
+        top: 490px !important;
+        left: 807px !important;
+        width: 135px !important;
         height: 277px !important;
     }
 
     
     .booth-type-2>.booth-event-1{
-        top: 399px !important;
-        left: 660px !important;
+        top: 377px !important;
+        left: 649px !important;
         width: 30px !important;
         height: 42px !important;
     }
 
     
     .booth-type-2>.booth-event-2{
-        top: 164px !important;
-        left: 420px !important;
-        width: 155px !important;
-        height: 87px !important;
+        top: 184px !important;
+        left: 438px !important;
+        width: 116px !important;
+        height: 68px !important;
     }   
 
     
     .booth-type-2>.booth-event-3{
-        top: 229px !important;
-        left: 402px !important;
-        width: 188px !important;
-        height: 99px !important;
+        top: 269px !important;
+        left: 413px !important;
+        width: 168px !important;
+        height: 70px !important;
     }   
 
     
     .booth-type-2>.booth-event-4{
-        top: 164px !important;
-        left: 310px !important;
+        top: 201px !important;
+        left: 314px !important;
         width: 30px !important;
         height: 42px !important;
     }   
 
     
     .booth-type-2>.booth-event-5{
-        top: -103px !important;
-        left: 110px !important;
-        width: 70px !important;
+        top: -9px !important;
+        left: 47px !important;
+        width: 137px !important;
         height: 286px !important;
     }
     
@@ -507,6 +516,7 @@ html, body{
         height: 100%;
     }
 
+    //booth type 1
     .booth-type-1>.booth-event-0{
         top: 475px !important;
         left: 643px !important;
@@ -548,6 +558,102 @@ html, body{
 
     
     .booth-type-1>.booth-event-5{
+        top: 25px !important;
+        left: 83px !important;
+        width: 55px !important;
+        height: 218px !important;
+    }
+
+    //booth type 2
+    .booth-type-2>.booth-event-0{
+        top: 516px !important;
+        left: 625px !important;
+        width: 105px !important;
+        height: 203px !important;
+    }
+
+    
+    .booth-type-2>.booth-event-1{
+        top: 430px !important;
+        left: 500px !important;
+        width: 30px !important;
+        height: 42px !important;
+    }
+
+    
+    .booth-type-2>.booth-event-2{
+        top: 276px !important;
+        left: 338px !important;
+        width: 91px !important;
+        height: 50px !important;
+    }   
+
+    
+    .booth-type-2>.booth-event-3{
+        top: 344px !important;
+        left: 320px !important;
+        width: 131px !important;
+        height: 55px !important;
+    }   
+
+    
+    .booth-type-2>.booth-event-4{
+        top: 294px !important;
+        left: 237px !important;
+        width: 30px !important;
+        height: 42px !important;
+    }   
+
+    
+    .booth-type-2>.booth-event-5{
+        top: 120px !important;
+        left: 37px !important;
+        width: 106px !important;
+        height: 210px !important;
+    }
+
+    //booth type 3
+    .booth-type-3>.booth-event-0{
+        top: 475px !important;
+        left: 643px !important;
+        width: 67px !important;
+        height: 223px !important;
+    }
+
+    
+    .booth-type-3>.booth-event-1{
+        top: 423px !important;
+        left: 510px !important;
+        width: 30px !important;
+        height: 42px !important;
+    }
+
+    
+    .booth-type-3>.booth-event-2{
+        top: 239px !important;
+        left: 324px !important;
+        width: 122px !important;
+        height: 68px !important;
+    }   
+
+    
+    .booth-type-3>.booth-event-3{
+        top: 290px !important;
+        left: 310px !important;
+        width: 147px !important;
+        height: 77px !important;
+    }   
+
+    
+    .booth-type-3>.booth-event-4{
+        top: 239px !important;
+        left: 235px !important;
+        width: 30px !important;
+        height: 42px !important;
+    }   
+
+    
+    .booth-type-3>.booth-event-5{
         top: 25px !important;
         left: 83px !important;
         width: 55px !important;
