@@ -351,7 +351,7 @@ html, body{
     max-width: 900px !important;
 }
 
-.booth-type-3{
+.booth-type-3, .booth-type-2, .booth-type-1{
     position: absolute;
     top: 0;
     margin: 0 auto;
@@ -368,7 +368,11 @@ html, body{
 
     //Type 1 booth css
     .booth-type-1>.booth-event-0{
-        top: 449px !important;
+        // top: 449px !important;
+        // left: 829px !important;
+        // width: 87px !important;
+        // height: 277px !important;
+        top: 482px !important;
         left: 829px !important;
         width: 87px !important;
         height: 277px !important;
@@ -376,7 +380,11 @@ html, body{
 
     
     .booth-type-1>.booth-event-1{
-        top: 399px !important;
+        // top: 399px !important;
+        // left: 660px !important;
+        // width: 30px !important;
+        // height: 42px !important;
+        top: 433px !important;
         left: 660px !important;
         width: 30px !important;
         height: 42px !important;
@@ -384,7 +392,11 @@ html, body{
 
     
     .booth-type-1>.booth-event-2{
-        top: 164px !important;
+        // top: 164px !important;
+        // left: 420px !important;
+        // width: 155px !important;
+        // height: 87px !important;
+        top: 198px !important;
         left: 420px !important;
         width: 155px !important;
         height: 87px !important;
@@ -392,7 +404,11 @@ html, body{
 
     
     .booth-type-1>.booth-event-3{
-        top: 229px !important;
+        // top: 229px !important;
+        // left: 402px !important;
+        // width: 188px !important;
+        // height: 99px !important;
+        top: 265px !important;
         left: 402px !important;
         width: 188px !important;
         height: 99px !important;
@@ -400,7 +416,11 @@ html, body{
 
     
     .booth-type-1>.booth-event-4{
-        top: 164px !important;
+        // top: 164px !important;
+        // left: 310px !important;
+        // width: 30px !important;
+        // height: 42px !important;
+        top: 204px !important;
         left: 310px !important;
         width: 30px !important;
         height: 42px !important;
@@ -408,14 +428,22 @@ html, body{
 
     
     .booth-type-1>.booth-event-5{
-        top: -103px !important;
+        // top: -103px !important;
+        // left: 110px !important;
+        // width: 70px !important;
+        // height: 286px !important;
+        top: -67px !important;
         left: 110px !important;
         width: 70px !important;
         height: 286px !important;
     }
     //Type 2 Both css
     .booth-type-2>.booth-event-0{
-        top: 490px !important;
+        // top: 490px !important;
+        // left: 807px !important;
+        // width: 135px !important;
+        // height: 277px !important;
+        top: 525px !important;
         left: 807px !important;
         width: 135px !important;
         height: 277px !important;
@@ -423,7 +451,11 @@ html, body{
 
     
     .booth-type-2>.booth-event-1{
-        top: 377px !important;
+        // top: 377px !important;
+        // left: 649px !important;
+        // width: 30px !important;
+        // height: 42px !important;
+        top: 410px !important;
         left: 649px !important;
         width: 30px !important;
         height: 42px !important;
@@ -431,7 +463,11 @@ html, body{
 
     
     .booth-type-2>.booth-event-2{
-        top: 184px !important;
+        // top: 184px !important;
+        // left: 438px !important;
+        // width: 116px !important;
+        // height: 68px !important;
+        top: 217px !important;
         left: 438px !important;
         width: 116px !important;
         height: 68px !important;
@@ -439,7 +475,11 @@ html, body{
 
     
     .booth-type-2>.booth-event-3{
-        top: 269px !important;
+        // top: 269px !important;
+        // left: 413px !important;
+        // width: 168px !important;
+        // height: 70px !important;
+        top: 301px !important;
         left: 413px !important;
         width: 168px !important;
         height: 70px !important;
@@ -447,7 +487,11 @@ html, body{
 
     
     .booth-type-2>.booth-event-4{
-        top: 201px !important;
+        // top: 201px !important;
+        // left: 314px !important;
+        // width: 30px !important;
+        // height: 42px !important;
+        top: 230px !important;
         left: 314px !important;
         width: 30px !important;
         height: 42px !important;
@@ -455,7 +499,11 @@ html, body{
 
     
     .booth-type-2>.booth-event-5{
-        top: -9px !important;
+        // top: -9px !important;
+        // left: 47px !important;
+        // width: 137px !important;
+        // height: 286px !important;
+        top: 22px !important;
         left: 47px !important;
         width: 137px !important;
         height: 286px !important;
@@ -463,16 +511,24 @@ html, body{
     
     //Type 3 Booth css
     .booth-type-3>.booth-event-0{
-        top: 449px !important;
-        left: 829px !important;
+        // top: 449px !important;
+        // left: 829px !important;
+        // width: 87px !important;
+        // height: 277px !important;
+        top: 500px !important;
+        left: 800px !important;
         width: 87px !important;
         height: 277px !important;
     }
 
     
     .booth-type-3>.booth-event-1{
-        top: 399px !important;
-        left: 660px !important;
+        // top: 399px !important;
+        // left: 660px !important;
+        // width: 30px !important;
+        // height: 42px !important;
+        top: 345px !important;
+        left: 680px !important;
         width: 30px !important;
         height: 42px !important;
     }
@@ -487,7 +543,11 @@ html, body{
 
     
     .booth-type-3>.booth-event-3{
-        top: 229px !important;
+        // top: 229px !important;
+        // left: 402px !important;
+        // width: 188px !important;
+        // height: 99px !important;
+        top: 264px !important;
         left: 402px !important;
         width: 188px !important;
         height: 99px !important;
@@ -495,16 +555,24 @@ html, body{
 
     
     .booth-type-3>.booth-event-4{
-        top: 164px !important;
-        left: 310px !important;
+        // top: 164px !important;
+        // left: 310px !important;
+        // width: 30px !important;
+        // height: 42px !important;
+        top: 120px !important;
+        left: 292px !important;
         width: 30px !important;
         height: 42px !important;
     }   
 
     
     .booth-type-3>.booth-event-5{
-        top: -103px !important;
-        left: 110px !important;
+        // top: -103px !important;
+        // left: 110px !important;
+        // width: 70px !important;
+        // height: 286px !important;
+        top: -50px !important;
+        left: 115px !important;
         width: 70px !important;
         height: 286px !important;
     } 
@@ -518,7 +586,11 @@ html, body{
 
     //booth type 1
     .booth-type-1>.booth-event-0{
-        top: 475px !important;
+        // top: 475px !important;
+        // left: 643px !important;
+        // width: 67px !important;
+        // height: 223px !important;
+        top: 510px !important;
         left: 643px !important;
         width: 67px !important;
         height: 223px !important;
@@ -526,7 +598,11 @@ html, body{
 
     
     .booth-type-1>.booth-event-1{
-        top: 423px !important;
+        // top: 423px !important;
+        // left: 510px !important;
+        // width: 30px !important;
+        // height: 42px !important;
+        top: 462px !important;
         left: 510px !important;
         width: 30px !important;
         height: 42px !important;
@@ -534,7 +610,11 @@ html, body{
 
     
     .booth-type-1>.booth-event-2{
-        top: 239px !important;
+        // top: 239px !important;
+        // left: 324px !important;
+        // width: 122px !important;
+        // height: 68px !important;
+        top: 273px !important;
         left: 324px !important;
         width: 122px !important;
         height: 68px !important;
@@ -542,7 +622,11 @@ html, body{
 
     
     .booth-type-1>.booth-event-3{
-        top: 290px !important;
+        // top: 290px !important;
+        // left: 310px !important;
+        // width: 147px !important;
+        // height: 77px !important;
+        top: 324px !important;
         left: 310px !important;
         width: 147px !important;
         height: 77px !important;
@@ -550,7 +634,11 @@ html, body{
 
     
     .booth-type-1>.booth-event-4{
-        top: 239px !important;
+        // top: 239px !important;
+        // left: 235px !important;
+        // width: 30px !important;
+        // height: 42px !important;
+        top: 273px !important;
         left: 235px !important;
         width: 30px !important;
         height: 42px !important;
@@ -558,7 +646,11 @@ html, body{
 
     
     .booth-type-1>.booth-event-5{
-        top: 25px !important;
+        // top: 25px !important;
+        // left: 83px !important;
+        // width: 55px !important;
+        // height: 218px !important;
+        top: 60px !important;
         left: 83px !important;
         width: 55px !important;
         height: 218px !important;
@@ -566,7 +658,11 @@ html, body{
 
     //booth type 2
     .booth-type-2>.booth-event-0{
-        top: 516px !important;
+        // top: 516px !important;
+        // left: 625px !important;
+        // width: 105px !important;
+        // height: 203px !important;
+        top: 550px !important;
         left: 625px !important;
         width: 105px !important;
         height: 203px !important;
@@ -574,7 +670,11 @@ html, body{
 
     
     .booth-type-2>.booth-event-1{
-        top: 430px !important;
+        // top: 430px !important;
+        // left: 500px !important;
+        // width: 30px !important;
+        // height: 42px !important;
+        top: 463px !important;
         left: 500px !important;
         width: 30px !important;
         height: 42px !important;
@@ -582,7 +682,11 @@ html, body{
 
     
     .booth-type-2>.booth-event-2{
-        top: 276px !important;
+        // top: 276px !important;
+        // left: 338px !important;
+        // width: 91px !important;
+        // height: 50px !important;
+        top: 310px !important;
         left: 338px !important;
         width: 91px !important;
         height: 50px !important;
@@ -590,7 +694,11 @@ html, body{
 
     
     .booth-type-2>.booth-event-3{
-        top: 344px !important;
+        // top: 344px !important;
+        // left: 320px !important;
+        // width: 131px !important;
+        // height: 55px !important;
+        top: 376px !important;
         left: 320px !important;
         width: 131px !important;
         height: 55px !important;
@@ -598,7 +706,11 @@ html, body{
 
     
     .booth-type-2>.booth-event-4{
-        top: 294px !important;
+        // top: 294px !important;
+        // left: 237px !important;
+        // width: 30px !important;
+        // height: 42px !important;
+        top: 317px !important;
         left: 237px !important;
         width: 30px !important;
         height: 42px !important;
@@ -606,7 +718,11 @@ html, body{
 
     
     .booth-type-2>.booth-event-5{
-        top: 120px !important;
+        // top: 120px !important;
+        // left: 37px !important;
+        // width: 106px !important;
+        // height: 210px !important;
+        top: 155px !important;
         left: 37px !important;
         width: 106px !important;
         height: 210px !important;
@@ -614,48 +730,72 @@ html, body{
 
     //booth type 3
     .booth-type-3>.booth-event-0{
-        top: 475px !important;
-        left: 643px !important;
+        // top: 475px !important;
+        // left: 643px !important;
+        // width: 67px !important;
+        // height: 223px !important;
+        top: 520px !important;
+        left: 618px !important;
         width: 67px !important;
         height: 223px !important;
     }
 
     
     .booth-type-3>.booth-event-1{
-        top: 423px !important;
-        left: 510px !important;
+        // top: 423px !important;
+        // left: 510px !important;
+        // width: 30px !important;
+        // height: 42px !important;
+        top: 390px !important;
+        left: 522px !important;
         width: 30px !important;
         height: 42px !important;
     }
 
     
     .booth-type-3>.booth-event-2{
-        top: 239px !important;
-        left: 324px !important;
+        // top: 239px !important;
+        // left: 324px !important;
+        // width: 122px !important;
+        // height: 68px !important;
+        top: 249px !important;
+        left: 325px !important;
         width: 122px !important;
         height: 68px !important;
     }   
 
     
     .booth-type-3>.booth-event-3{
-        top: 290px !important;
-        left: 310px !important;
+        // top: 290px !important;
+        // left: 310px !important;
+        // width: 147px !important;
+        // height: 77px !important;
+        top: 324px !important;
+        left: 312px !important;
         width: 147px !important;
         height: 77px !important;
     }   
 
     
     .booth-type-3>.booth-event-4{
-        top: 239px !important;
-        left: 235px !important;
+        // top: 239px !important;
+        // left: 235px !important;
+        // width: 30px !important;
+        // height: 42px !important;
+        top: 204px !important;
+        left: 222px !important;
         width: 30px !important;
         height: 42px !important;
     }   
 
     
     .booth-type-3>.booth-event-5{
-        top: 25px !important;
-        left: 83px !important;
+        // top: 25px !important;
+        // left: 83px !important;
+        // width: 55px !important;
+        // height: 218px !important;
+        top: 77px !important;
+        left: 89px !important;
         width: 55px !important;
         height: 218px !important;
     }   
