@@ -52,6 +52,7 @@ Route::get('/simpozij/addpanelist', 'SuperAdminController@showAddPanelistPage');
 Route::get('/simpozij/addadmins', 'SuperAdminController@showAddAdminPage');
 Route::get('/simpozij/addsponsor', 'SuperAdminController@showAddSponsorPage');
 Route::get('/simpozij/editsponsor/{id}', 'SuperAdminController@editSponsorPage')->name('editSponsorView');
+Route::get('/simpozij/addexgibition', 'SuperAdminController@showAddExhibition')->name('addExhibitionPage');
 
 Route::post('/simpozij/webinar/getBoothData', 'SuperAdminController@getBoothData')->name('getBoothData');
 
@@ -60,4 +61,5 @@ Route::post('/simposij/addsponsor/add', 'SuperAdminController@addSponsor')->name
 Route::post('/simposij/editsponsor/edit', 'SuperAdminController@editSponsor')->name('editSponsor');
 Route::post('/simposij/addwebinar/add', 'SuperAdminController@addWebinar')->name('addWebinar');
 Route::post('/simposij/addpanelist/add', 'SuperAdminController@addPanelist')->name('addPanelist');
+Route::post('/simposij/addexgibition/add', 'SuperAdminController@addExhibition')->name('addExhibition');
 

@@ -64,6 +64,13 @@
                             </div>
                         </a>
                         @endif
+                        @if(Auth::user()->level === 3)
+                        <a href="/simpozij/addexgibition" class="card-link">
+                            <div class="card-body">
+                                {{ __('Dodaj Izložbu') }}
+                            </div>
+                        </a>
+                        @endif
                 </div>
                 @endif
             </div>

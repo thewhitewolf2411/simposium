@@ -10976,9 +10976,18 @@ body {
 }
 
 .btn-outline-success:hover {
-  color: #f6be07;
+  color: #F7BD02;
   background: #fff;
   border-color: #fff;
+  transition: 0.1s linear;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active,
+.btn-outline-success:not(:disabled):not(.disabled).active,
+.show > .btn-outline-success.dropdown-toggle {
+  color: #8e8e8e;
+  background: #ffffff;
+  border-color: #ffffff;
   transition: 0.1s linear;
 }
 
