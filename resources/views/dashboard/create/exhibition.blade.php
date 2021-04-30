@@ -13,25 +13,18 @@
 
                             @csrf
                             <div class="form-group row">
-                                <label for="first_event" class="col-md-4 col-form-label text-md-right">{{ __('Prvi event tip:') }}</label>
+                                <label for="exhibition_name" class="col-md-4 col-form-label text-md-right">{{ __('Prvi event file:') }}</label>
 
                                 <div class="col-md-6">
-                                    <select id="first_event" type="text" class="form-control" name="first_event" value="{{ old('first_event') }}" required>
-                                        <option selected disabled>Select option</option>
-                                        <option value="1">Video</option>
-                                        <option value="2">PDF</option>
-                                        <option value="3">Image</option>
-                                        <option value="4">PPT</option>
-                                    </select>
-
+                                    <input id="exhibition_name" type="text" class="form-control" name="exhibition_name" required >
                                 </div>
                             </div>
 
-                            <div class="form-group row event_input_container fade" id="first_event_input_container">
-                                <label for="first_event_input" class="col-md-4 col-form-label text-md-right">{{ __('Prvi event file:') }}</label>
+                            <div class="form-group row" id="exhibition_image_container">
+                                <label for="exhibition_image" class="col-md-4 col-form-label text-md-right">{{ __('Prvi event file:') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="first_event_input" type="file" class="form-control" name="first_event_input" required >
+                                    <input id="exhibition_image" type="file" class="form-control" name="exhibition_image" required >
                                 </div>
                             </div>
 

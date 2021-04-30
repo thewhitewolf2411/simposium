@@ -367,6 +367,14 @@ html, body{
     transform: translate(-50%, 0);
 }
 
+.booth-body-container{
+    background-color: #fff !important;
+}
+
+.booth-title{
+    background-color: $primaryGray !important;
+}
+
 @media only screen and (max-width: 1600px) and (min-width: 1200px){
     .booth-background-image{
         width: 992px;

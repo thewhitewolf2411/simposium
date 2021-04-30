@@ -41,7 +41,7 @@ class SuperAdminController extends Controller
     }
 
     public function showAddExhibition(){
-        return view('dashboard.create.sponsors');
+        return view('dashboard.create.exhibition');
     }
 
     //add Post Route

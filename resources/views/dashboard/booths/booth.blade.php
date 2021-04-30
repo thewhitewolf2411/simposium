@@ -14,11 +14,11 @@
     <div class="row justify-content-center w-100">
         <div class="col-md-12 mh-100">
             <div class="card mh-100">
-                <div class="card-header"></div>
+                <div class="card-header booth-title">{{$booth->canvas_name}}</div>
 
 
 
-                <div class="card-body mh-100">
+                <div class="card-body mh-100 booth-body-container">
                     <div class="interactivity-text">
 
                         {{ __('Interaktivnost sa štandom je moguća samo na desktop verzijama. ')}}
