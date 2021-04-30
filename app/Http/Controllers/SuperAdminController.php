@@ -40,6 +40,10 @@ class SuperAdminController extends Controller
         return view('dashboard.create.sponsors');
     }
 
+    public function showAddExhibition(){
+        return view('dashboard.create.sponsors');
+    }
+
     //add Post Route
 
     public function addSponsor(Request $request){
@@ -175,6 +179,20 @@ class SuperAdminController extends Controller
             'ppt'=>$ppt,
             'path'=>$eventData->file_path
         ]);
+    }
+
+    public function addExhibition(Request $request){
+        if($this->_addExhibition($request)){
+            return redirect()->with('success', '');
+        }
+    }
+
+    private function _addExhibition(Request $request){
+        $requestData = $request->all();
+    }
+
+    public function getExhibitionData(Request $request){
+        dd($request->all());
     }
 
 }

@@ -12,8 +12,8 @@
     <div class="row w-100 mt-5">
         <div class="col-md-12">
             <div class="card">
-                <div class="exibition-boxes">
-
+                <div class="exibition-boxes" id="exibition-boxes-container">
+                    @foreach ($excibitionElements as $excibitionElement)
                     <a class="card-link exibition-box shadow ">
                         <div class="card-body">
                             <div class="exibition-inner">
@@ -21,62 +21,7 @@
                             </div>
                         </div>
                     </a>
-
-                    <a class="card-link exibition-box shadow ">
-                        <div class="card-body">
-                        </div>
-                    </a>
-
-                    <a class="card-link exibition-box shadow ">
-                        <div class="card-body">
-                        </div>
-                    </a>
-
-                    <a class="card-link exibition-box shadow">
-                        <div class="card-body">
-                        </div>
-                    </a>
-
-                    <a class="card-link exibition-box shadow">
-                        <div class="card-body">
-                        </div>
-                    </a>
-
-                    <a class="card-link exibition-box shadow">
-                        <div class="card-body">
-                        </div>
-                    </a>
-
-                    <a class="card-link exibition-box shadow">
-                        <div class="card-body">
-                        </div>
-                    </a>
-
-                    <a class="card-link exibition-box shadow">
-                        <div class="card-body">
-                        </div>
-                    </a>
-
-                    <a class="card-link exibition-box shadow">
-                        <div class="card-body">
-                        </div>
-                    </a>
-
-                    <a class="card-link exibition-box shadow">
-                        <div class="card-body">
-                        </div>
-                    </a>
-
-                    <a class="card-link exibition-box shadow">
-                        <div class="card-body">
-                        </div>
-                    </a>
-
-                    <a class="card-link exibition-box">
-                        <div class="card-body">
-                        </div>
-                    </a>
-
+                    @endforeach
                 </div>
 
             </div>

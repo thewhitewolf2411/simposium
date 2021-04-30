@@ -69,9 +69,16 @@ html, body{
 }
 
 .btn-outline-success:hover{
-    color: #f6be07;
+    color: $primaryYellow;
     background: #fff;
     border-color: #fff;
+    transition: 0.1s linear;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active, .show > .btn-outline-success.dropdown-toggle{
+    color: $primaryGray;
+    background: #ffffff;
+    border-color: #ffffff;
     transition: 0.1s linear;
 }
 

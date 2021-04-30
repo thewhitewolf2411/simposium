@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\CanvasData;
 use App\CanvasEvents;
+use App\ExcibitionElement;
 use Illuminate\Http\Request;
 
 use App\Webinar;
@@ -157,7 +158,9 @@ class HomeController extends Controller
 
     public function showExibition(){
 
-        return view('dashboard.exibition.exibition');
+        $excibitionElements = ExcibitionElement::all();
+
+        return view('dashboard.exibition.exibition', ['excibitionElements'=>$excibitionElements]);
 
     }
 
