@@ -133,57 +133,6 @@ class SuperAdminController extends Controller
         return redirect($responseData);
     }
 
-    public function getBoothData(Request $request){
-
-        $requestData = $request->all();
-
-        $canvas_id = $requestData['canvas_id'];
-        $event_id = $requestData['event_id'];
-
-        $eventData = CanvasEvents::where('id', $event_id)->where('canvas_id', $canvas_id)->first();
-
-        $video = false;
-        $pdf = false;
-        $image = false;
-        $ppt = false;
-
-        switch($eventData->event_type){
-            case 1:
-                $video = true;
-                $image = false;
-                $pdf = false;
-                $ppt = false;
-                break;
-            case 2:
-                $video = false;
-                $pdf = true;
-                $image = false;
-                $ppt = false;
-                break;
-            case 3:
-                $video = false;
-                $pdf = false;
-                $image = true;
-                $ppt = false;
-                break;
-            case 4:
-                $video = false;
-                $pdf = false;
-                $image = false;
-                $ppt = true;
-                break;
-        }
-
-        return response()->json([
-            'success'=>true,
-            'video'=>$video,
-            'pdf'=>$pdf,
-            'image'=>$image,
-            'ppt'=>$ppt,
-            'path'=>$eventData->file_path
-        ]);
-    }
-
     public function addExhibition(Request $request){
         if($this->_addExhibition($request)){
             return redirect()->with('success', '');

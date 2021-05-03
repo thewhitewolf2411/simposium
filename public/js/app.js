@@ -51212,18 +51212,35 @@ window.getCanvasData = /*#__PURE__*/function () {
               return response.json();
             }).then(function (data) {
               $('#eventModal .modal-body').empty();
+              $('#choicemodal .modal-body').empty();
 
               if (data.success === true) {
-                if (data.video) {
-                  $('#eventModal .modal-body').append('<video width="100%" height="100%" controls><source src="/storage/canvas_data/' + data.path + '" type="video/mp4"></video>');
-                } else if (data.pdf) {
-                  $('#eventModal .modal-body').append('<iframe src="/storage/canvas_data/' + data.path + '"&embedded=true" style="width:100%; height:800px;" frameborder="0"></iframe>');
-                } else if (data.image) {
-                  $('#eventModal .modal-body').append('<img src="/storage/canvas_data/' + data.path + '" style="width:100%; height:100%;">');
-                } else if (data.ppt) {
-                  $('#eventModal .modal-body').append('<iframe src="//docs.google.com/gview?url=/storage/canvas_data/' + data.path + '"&embedded=true" style="width:100%; height:800px;" frameborder="0"></iframe>');
+                if (data.morethanone === true) {
+                  for (var i = 0; i < data.events.length; i++) {
+                    $('#choicemodal .modal-body').append('<a class="my-3" onclick="showSingleEvent(' + data.events[i].id + ')"><div class="btn btn-outline-success my-3">Link ' + i + '</div></a><br>');
+                  }
+
+                  $('#choicemodal').modal({
+                    show: true
+                  });
                 } else {
-                  alert("something went wrong");
+                  if (data.video) {
+                    $('#eventModal .modal-body').append('<video width="100%" height="100%" controls><source src="/storage/canvas_data/' + data.path + '" type="video/mp4"></video>');
+                  } else if (data.pdf) {
+                    $('#eventModal .modal-body').append('<iframe src="/storage/canvas_data/' + data.path + '"&embedded=true" style="width:100%; height:800px;" frameborder="0"></iframe>');
+                  } else if (data.image) {
+                    $('#eventModal .modal-body').append('<img src="/storage/canvas_data/' + data.path + '" style="width:100%; height:100%;">');
+                  } else if (data.ppt) {
+                    $('#eventModal .modal-body').append('<iframe src="//docs.google.com/gview?url=/storage/canvas_data/' + data.path + '"&embedded=true" style="width:100%; height:800px;" frameborder="0"></iframe>');
+                  } else if (data.url) {
+                    $('#eventModal .modal-body').append('<a href="' + data.path + '" target="_blank">Posjeti stranicu</a>');
+                  } else {
+                    alert("something went wrong");
+                  }
+
+                  $('#eventModal').modal({
+                    show: true
+                  });
                 }
               }
             })["catch"](function (error) {
@@ -51243,8 +51260,76 @@ window.getCanvasData = /*#__PURE__*/function () {
   };
 }();
 
+window.showSingleEvent = /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(eventid) {
+    var url, data;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            url = '/simpozij/webinar/getSingleBoothData';
+            data = {
+              'event_id': eventid
+            };
+            $('#choicemodal').modal('hide');
+            _context2.next = 5;
+            return fetch(url, {
+              method: 'POST',
+              mode: 'cors',
+              headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "X-Requested-With": "XMLHttpRequest",
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              },
+              body: JSON.stringify(data)
+            }).then(function (response) {
+              return response.json();
+            }).then(function (data) {
+              $('#eventModal .modal-body').empty();
+              $('#choicemodal .modal-body').empty();
+
+              if (data.success === true) {
+                if (data.video) {
+                  $('#eventModal .modal-body').append('<video width="100%" height="100%" controls><source src="/storage/canvas_data/' + data.path + '" type="video/mp4"></video>');
+                } else if (data.pdf) {
+                  $('#eventModal .modal-body').append('<iframe src="/storage/canvas_data/' + data.path + '"&embedded=true" style="width:100%; height:800px;" frameborder="0"></iframe>');
+                } else if (data.image) {
+                  $('#eventModal .modal-body').append('<img src="/storage/canvas_data/' + data.path + '" style="width:100%; height:100%;">');
+                } else if (data.ppt) {
+                  $('#eventModal .modal-body').append('<iframe src="//docs.google.com/gview?url=/storage/canvas_data/' + data.path + '"&embedded=true" style="width:100%; height:800px;" frameborder="0"></iframe>');
+                } else if (data.url) {
+                  $('#eventModal .modal-body').append('<a href="' + data.path + '" target="_blank">Posjeti stranicu</a>');
+                } else {
+                  alert("something went wrong");
+                }
+
+                $('#eventModal').modal({
+                  show: true
+                });
+              }
+            })["catch"](function (error) {
+              console.error('Error:', error);
+            });
+
+          case 5:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+
+  return function (_x3) {
+    return _ref2.apply(this, arguments);
+  };
+}();
+
 $('#eventModal').on('hidden.bs.modal', function (e) {
   $('#eventModal .modal-body').empty();
+});
+$('#choicemodal').on('hidden.bs.modal', function (e) {
+  $('#choicemodal .modal-body').empty();
 });
 
 /***/ }),

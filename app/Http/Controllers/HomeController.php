@@ -65,6 +65,143 @@ class HomeController extends Controller
 
     }
 
+    public function getBoothData(Request $request){
+
+        $requestData = $request->all();
+
+        $canvas_id = $requestData['canvas_id'];
+        $event_id = $requestData['event_id'];
+
+        $eventData = CanvasEvents::where('event_number', $event_id)->where('canvas_id', $canvas_id)->get();
+
+        if(count($eventData)>1){
+            return response()->json([
+                'success'=>true,
+                'morethanone'=>true,
+                'events'=>$eventData
+            ]);
+        }
+
+        $video = false;
+        $pdf = false;
+        $image = false;
+        $ppt = false;
+        $url = false;
+
+        switch($eventData[0]->event_type){
+            case 1:
+                $video = true;
+                $image = false;
+                $pdf = false;
+                $ppt = false;
+                $url = false;
+                break;
+            case 2:
+                $video = false;
+                $pdf = true;
+                $image = false;
+                $ppt = false;
+                $url = false;
+                break;
+            case 3:
+                $video = false;
+                $pdf = false;
+                $image = true;
+                $ppt = false;
+                $url = false;
+                break;
+            case 4:
+                $video = false;
+                $pdf = false;
+                $image = false;
+                $ppt = true;
+                $url = false;
+                break;
+            case 5:
+                $video = false;
+                $pdf = false;
+                $image = false;
+                $ppt = false;
+                $url = true;
+                break;
+        }
+
+        return response()->json([
+            'success'=>true,
+            'morethanone'=>false,
+            'video'=>$video,
+            'pdf'=>$pdf,
+            'image'=>$image,
+            'ppt'=>$ppt,
+            'url'=>$url,
+            'path'=>$eventData[0]->file_path
+        ]);
+    }
+
+    public function getSingleBoothData(Request $request){
+        $requestData = $request->all();
+
+        $event_id = $requestData['event_id'];
+
+        $eventData = CanvasEvents::find($event_id);
+
+        $video = false;
+        $pdf = false;
+        $image = false;
+        $ppt = false;
+        $url = false;
+
+        switch($eventData->event_type){
+            case 1:
+                $video = true;
+                $image = false;
+                $pdf = false;
+                $ppt = false;
+                $url = false;
+                break;
+            case 2:
+                $video = false;
+                $pdf = true;
+                $image = false;
+                $ppt = false;
+                $url = false;
+                break;
+            case 3:
+                $video = false;
+                $pdf = false;
+                $image = true;
+                $ppt = false;
+                $url = false;
+                break;
+            case 4:
+                $video = false;
+                $pdf = false;
+                $image = false;
+                $ppt = true;
+                $url = false;
+                break;
+            case 5:
+                $video = false;
+                $pdf = false;
+                $image = false;
+                $ppt = false;
+                $url = true;
+                break;
+        }
+
+        return response()->json([
+            'success'=>true,
+            'morethanone'=>false,
+            'video'=>$video,
+            'pdf'=>$pdf,
+            'image'=>$image,
+            'ppt'=>$ppt,
+            'url'=>$url,
+            'path'=>$eventData->file_path
+        ]);
+
+    }
+
 
     //webinars
     public function showWebinars(){
@@ -101,27 +238,6 @@ class HomeController extends Controller
         
 
         return view('app')->with(['response'=>$response, 'meetingnumber'=>$meeting_number, 'userName'=>$userName, 'userMail'=>$userMail, 'apiKey'=>$api_key, 'webinarlink'=>$webinar->webinar_link]);
-    }
-
-    public function getData(){
-
-        $api_key = "BEqgk1SkT-qzy3mkWK-CMQ";
-        $api_secret = "2vj0tKS2OfPh4KwW7xPVuLd6lSvlbHW1S15e";
-        $meeting_number = "935 6568 6648 ";
-        $time = '16:00';
-        $role =0;
-
-        $time = time() * 1000 - 30000;//time in milliseconds (or close enough)
-        
-        $data = base64_encode($api_key . $meeting_number . $time . $role);
-        
-        $hash = hash_hmac('sha256', $data, $api_secret, true);
-        
-        $_sig = $api_key . "." . $meeting_number . "." . $time . "." . $role . "." . base64_encode($hash);
-        
-        //return signature, url safe base64 encoded
-        return rtrim(strtr(base64_encode($_sig), '+/', '-_'), '=');
-
     }
 
     public function showWebinar($id){

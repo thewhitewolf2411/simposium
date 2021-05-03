@@ -11270,6 +11270,10 @@ body {
   transition: 0.1s linear;
 }
 
+#choicemodal > .modal-dialog {
+  max-width: 400px !important;
+}
+
 .modal-dialog {
   max-width: 900px !important;
 }
