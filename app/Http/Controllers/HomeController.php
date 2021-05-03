@@ -37,7 +37,7 @@ class HomeController extends Controller
 
     //booths
     public function showBooths(){
-
+        
         $booths = CanvasData::all();
 
         return view('dashboard.booths.booths')->with(['booths'=>$booths]);
@@ -47,9 +47,21 @@ class HomeController extends Controller
     public function showBooth($parameter){
 
         $booth = CanvasData::find($parameter);
-        $boothEvents = CanvasEvents::where('canvas_id', $parameter)->get();
+        $boothEvent1 = CanvasEvents::where('canvas_id', $parameter)->where('event_number', 1)->first();
+        $boothEvent2 = CanvasEvents::where('canvas_id', $parameter)->where('event_number', 2)->first();
+        $boothEvent3 = CanvasEvents::where('canvas_id', $parameter)->where('event_number', 3)->first();
+        $boothEvent4 = CanvasEvents::where('canvas_id', $parameter)->where('event_number', 4)->first();
+        $boothEvent5 = CanvasEvents::where('canvas_id', $parameter)->where('event_number', 5)->first();
+        $boothEvent6 = CanvasEvents::where('canvas_id', $parameter)->where('event_number', 6)->first();
 
-        return view('dashboard.booths.booth', ['booth'=>$booth, 'boothEvents'=>$boothEvents]);
+        $e1 = ['x1'=>$boothEvent1->x1, 'x2'=>$boothEvent1->x2, 'y1'=>$boothEvent1->y1, 'y2'=>$boothEvent1->y2];
+        $e2 = ['x1'=>$boothEvent2->x1, 'x2'=>$boothEvent2->x2, 'y1'=>$boothEvent2->y1, 'y2'=>$boothEvent2->y2];
+        $e3 = ['x1'=>$boothEvent3->x1, 'x2'=>$boothEvent3->x2, 'y1'=>$boothEvent3->y1, 'y2'=>$boothEvent3->y2];
+        $e4 = ['x1'=>$boothEvent4->x1, 'x2'=>$boothEvent4->x2, 'y1'=>$boothEvent4->y1, 'y2'=>$boothEvent4->y2];
+        $e5 = ['x1'=>$boothEvent5->x1, 'x2'=>$boothEvent5->x2, 'y1'=>$boothEvent5->y1, 'y2'=>$boothEvent5->y2];
+        $e6 = ['x1'=>$boothEvent6->x1, 'x2'=>$boothEvent6->x2, 'y1'=>$boothEvent6->y1, 'y2'=>$boothEvent6->y2];
+
+        return view('dashboard.booths.booth', ['booth'=>$booth, 'e1'=>$e1, 'e2'=>$e2, 'e3'=>$e3, 'e4'=>$e4, 'e5'=>$e5, 'e6'=>$e6]);
 
     }
 

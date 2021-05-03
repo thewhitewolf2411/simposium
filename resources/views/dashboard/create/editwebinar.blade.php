@@ -19,7 +19,7 @@
                             @csrf
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <label for="first_event" class="col-md-4 col-form-label text-md-right">{{ __('Prvi event tip:') }}</label>
+                                    <label for="first_event" class="col-md-4 col-form-label">{{ __('Prvi event tip:') }}</label>
     
                                     <div class="col-md-12">
                                         <select id="first_event" type="text" class="form-control" name="first_event" value="{{ old('first_event') }}" required>
@@ -84,7 +84,7 @@
                                 </div>
     
                                 <div class="form-group col-md-6">
-                                    <label for="first_event_input" class="col-md-4 col-form-label text-md-right">{{ __('Prvi event file:') }}</label>
+                                    <label for="first_event_input" class="col-md-4 col-form-label ">{{ __('Prvi event file:') }}</label>
     
                                     <div class="col-md-12 event_input_container fade" id="first_event_input_container">
                                         <input id="first_event_input" type="file" class="form-control" name="first_event_input" required >
@@ -110,7 +110,7 @@
 
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <label for="second_event" class="col-md-4 col-form-label text-md-right">{{ __('Second event type:') }}</label>
+                                    <label for="second_event" class="col-md-4 col-form-label ">{{ __('Second event type:') }}</label>
     
                                     <div class="col-md-12">
                                         <select id="second_event" type="text" class="form-control" name="second_event" value="{{ old('first_event') }}" required>
@@ -175,7 +175,7 @@
                                 </div>
     
                                 <div class="form-group col-md-6">
-                                    <label for="second_event_input" class="col-md-4 col-form-label text-md-right">{{ __('Second event file:') }}</label>
+                                    <label for="second_event_input" class="col-md-4 col-form-label ">{{ __('Second event file:') }}</label>
     
                                     <div class="col-md-12 event_input_container fade" id="second_event_input_container">
                                         <input id="second_event_input" type="file" class="form-control" name="second_event_input" required >
@@ -201,7 +201,7 @@
 
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <label for="third_event" class="col-md-4 col-form-label text-md-right">{{ __('Third event type:') }}</label>
+                                    <label for="third_event" class="col-md-4 col-form-label ">{{ __('Third event type:') }}</label>
     
                                     <div class="col-md-12">
                                         <select id="third_event" type="text" class="form-control" name="third_event" value="{{ old('first_event') }}" required>
@@ -266,7 +266,7 @@
                                 </div>
     
                                 <div class="form-group col-md-6">
-                                    <label for="third_event_input" class="col-md-4 col-form-label text-md-right">{{ __('Thrid event file:') }}</label>
+                                    <label for="third_event_input" class="col-md-4 col-form-label ">{{ __('Thrid event file:') }}</label>
     
                                     <div class="col-md-12 event_input_container fade" id="third_event_input_container">
                                         <input id="third_event_input" type="file" class="form-control" name="third_event_input" required >
@@ -292,7 +292,7 @@
 
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <label for="fourth_event" class="col-md-4 col-form-label text-md-right">{{ __('Fourth event tip:') }}</label>
+                                    <label for="fourth_event" class="col-md-4 col-form-label ">{{ __('Fourth event tip:') }}</label>
     
                                     <div class="col-md-12">
                                         <select id="fourth_event" type="text" class="form-control" name="fourth_event" value="{{ old('first_event') }}" required>
@@ -357,10 +357,10 @@
                                 </div>
     
                                 <div class="form-group col-md-6">
-                                    <label for="fourth_event_input" class="col-md-4 col-form-label text-md-right">{{ __('Fourth event file:') }}</label>
+                                    <label for="fourth_event_input" class="col-md-4 col-form-label ">{{ __('Fourth event file:') }}</label>
     
                                     <div class="col-md-12 event_input_container fade" id="fourth_event_input_container">
-                                        <input id="fourth_event_input" type="file" class="form-control" name="first_event_input" required >
+                                        <input id="fourth_event_input" type="file" class="form-control" name="fourth_event_input" required >
                                     </div>
     
                                     <div class="col-md-12 event_input_container fade" id="fourth_event_optional_1_input_container">
@@ -383,7 +383,7 @@
 
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <label for="first_event" class="col-md-4 col-form-label text-md-right">{{ __('Fifth event type:') }}</label>
+                                    <label for="first_event" class="col-md-4 col-form-label ">{{ __('Fifth event type:') }}</label>
     
                                     <div class="col-md-12">
                                         <select id="fifth_event" type="text" class="form-control" name="fifth_event" value="{{ old('first_event') }}" required>
@@ -448,7 +448,7 @@
                                 </div>
     
                                 <div class="form-group col-md-6">
-                                    <label for="fifth_event_input" class="col-md-4 col-form-label text-md-right">{{ __('Fifth event file:') }}</label>
+                                    <label for="fifth_event_input" class="col-md-4 col-form-label ">{{ __('Fifth event file:') }}</label>
     
                                     <div class="col-md-12 event_input_container fade" id="fifth_event_input_container">
                                         <input id="fifth_event_input" type="file" class="form-control" name="fifth_event_input" required >
@@ -474,7 +474,7 @@
 
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <label for="sixth_event" class="col-md-4 col-form-label text-md-right">{{ __('Sixth event type:') }}</label>
+                                    <label for="sixth_event" class="col-md-4 col-form-label ">{{ __('Sixth event type:') }}</label>
     
                                     <div class="col-md-12">
                                         <select id="sixth_event" type="text" class="form-control" name="sixth_event" value="{{ old('first_event') }}" required>
@@ -539,7 +539,7 @@
                                 </div>
     
                                 <div class="form-group col-md-6">
-                                    <label for="sixth_event_input" class="col-md-4 col-form-label text-md-right">{{ __('Sixth event file:') }}</label>
+                                    <label for="sixth_event_input" class="col-md-4 col-form-label ">{{ __('Sixth event file:') }}</label>
     
                                     <div class="col-md-12 event_input_container fade" id="sixth_event_input_container">
                                         <input id="sixth_event_input" type="file" class="form-control" name="sixth_event_input" required >

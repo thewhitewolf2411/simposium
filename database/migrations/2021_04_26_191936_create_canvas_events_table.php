@@ -18,6 +18,7 @@ class CreateCanvasEventsTable extends Migration
             $table->integer('canvas_id');
             $table->integer('event_type')->nullable();
             $table->string('file_path')->nullable();
+            $table->integer('event_number');
             $table->string('x1')->nullable();
             $table->string('y1')->nullable();
             $table->string('x2')->nullable();

@@ -121,6 +121,9 @@ class SuperAdminController extends Controller
     }
 
     public function editSponsor(Request $request){
+
+        #dd($request->all());
+
         $canvas = CanvasData::find($request->canvas_id);
         $data = $request->all();
 

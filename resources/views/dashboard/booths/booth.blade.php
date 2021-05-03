@@ -25,14 +25,24 @@
 
                     </div>
                     <div class="booth-type-{{$booth->booth_type}} booth-background-image" style="background-image: url('/storage/input_image/{{$booth->image_path}}');">
-
-                        @foreach($boothEvents as $key=>$boothEvent)
-
-                            <a role="button" data-toggle="modal" data-target="#eventModal" onclick="getCanvasData({{$booth->id}}, {{$boothEvent->id}})" class="booth-btn booth-event-{{$key}}" style="display:flex; position: relative; top:{{$boothEvent->y1}}px; left:{{$boothEvent->x1}}px; width:{{$boothEvent->x2}}px; height:{{$boothEvent->y2}}px">
-                                <div class=""></div>
-                            </a>
-
-                        @endforeach
+                        <a role="button" data-toggle="modal" data-target="#eventModal" onclick="getCanvasData({{$booth->id}}, 1)" class="booth-btn booth-event-1" style="display:flex; position: relative; top:{{$e1['y1']}}px; left:{{$e1['x1']}}px; width:{{$e1['x2']}}px; height:{{$e1['y2']}}px">
+                            <div class=""></div>
+                        </a>
+                        <a role="button" data-toggle="modal" data-target="#eventModal" onclick="getCanvasData({{$booth->id}}, 2)" class="booth-btn booth-event-2" style="display:flex; position: relative; top:{{$e2['y1']}}px; left:{{$e2['x1']}}px; width:{{$e2['x2']}}px; height:{{$e2['y2']}}px">
+                            <div class=""></div>
+                        </a>
+                        <a role="button" data-toggle="modal" data-target="#eventModal" onclick="getCanvasData({{$booth->id}}, 3)" class="booth-btn booth-event-3" style="display:flex; position: relative; top:{{$e3['y1']}}px; left:{{$e3['x1']}}px; width:{{$e3['x2']}}px; height:{{$e3['y2']}}px">
+                            <div class=""></div>
+                        </a>
+                        <a role="button" data-toggle="modal" data-target="#eventModal" onclick="getCanvasData({{$booth->id}}, 4)" class="booth-btn booth-event-4" style="display:flex; position: relative; top:{{$e4['y1']}}px; left:{{$e4['x1']}}px; width:{{$e4['x2']}}px; height:{{$e4['y2']}}px">
+                            <div class=""></div>
+                        </a>
+                        <a role="button" data-toggle="modal" data-target="#eventModal" onclick="getCanvasData({{$booth->id}}, 5)" class="booth-btn booth-event-5" style="display:flex; position: relative; top:{{$e5['y1']}}px; left:{{$e5['x1']}}px; width:{{$e5['x2']}}px; height:{{$e5['y2']}}px">
+                            <div class=""></div>
+                        </a>
+                        <a role="button" data-toggle="modal" data-target="#eventModal" onclick="getCanvasData({{$booth->id}}, 6)" class="booth-btn booth-event-6" style="display:flex; position: relative; top:{{$e6['y1']}}px; left:{{$e6['x1']}}px; width:{{$e6['x2']}}px; height:{{$e6['y2']}}px">
+                            <div class=""></div>
+                        </a>
                     </div>
                 </div>
 

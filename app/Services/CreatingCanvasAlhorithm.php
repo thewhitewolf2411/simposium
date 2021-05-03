@@ -156,117 +156,661 @@ class CreatingCanvasAlhorithm
     private function _createTypeOneEvent(array $coordinates){
         $events = $this->eventData;
         $fileNameToStore1 = null;
+        $fileNameToStore1_1 = null;
+        $fileNameToStore1_2 = null;
+        $fileNameToStore1_3 = null;
+        $fileNameToStore1_4 = null;
         $fileNameToStore2 = null;
+        $fileNameToStore2_1 = null;
+        $fileNameToStore2_2 = null;
+        $fileNameToStore2_3 = null;
+        $fileNameToStore2_4 = null;
         $fileNameToStore3 = null;
+        $fileNameToStore3_1 = null;
+        $fileNameToStore3_2 = null;
+        $fileNameToStore3_3 = null;
+        $fileNameToStore3_4 = null;
         $fileNameToStore4 = null;
+        $fileNameToStore4_1 = null;
+        $fileNameToStore4_2 = null;
+        $fileNameToStore4_3 = null;
+        $fileNameToStore4_4 = null;
         $fileNameToStore5 = null;
+        $fileNameToStore5_1 = null;
+        $fileNameToStore5_2 = null;
+        $fileNameToStore5_3 = null;
+        $fileNameToStore5_4 = null;
         $fileNameToStore6 = null;
+        $fileNameToStore6_1 = null;
+        $fileNameToStore6_2 = null;
+        $fileNameToStore6_3 = null;
+        $fileNameToStore6_4 = null;
         
-        if($events['first_event_input']){
+        //first event
+        if($events['first_event_input'] && $events['first_event'] != '5'){
             $filenameWithExt = $events['first_event_input']->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $events['first_event_input']->getClientOriginalExtension();
             $fileNameToStore1 = $filename.'_'.time().'.'.$extension;
             $path = $events['first_event_input']->storeAs('public/canvas_data',$fileNameToStore1);
-        }
-        if($events['second_event_input']){
+        }else{$fileNameToStore1 = $events['first_event_input'];}
+        if($events['first_event_input_optional_1'] && $events['first_event_optional_1'] != '5'){
+            $filenameWithExt = $events['first_event_input_optional_1']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['first_event_input_optional_1']->getClientOriginalExtension();
+            $fileNameToStore1_1 = $filename.'_'.time().'.'.$extension;
+            $path = $events['first_event_input_optional_1']->storeAs('public/canvas_data',$fileNameToStore1_1);
+        }else{$fileNameToStore1_1 = $events['first_event_input_optional_1'];}
+        if($events['first_event_input_optional_2'] && $events['first_event_optional_2'] != '5'){
+            $filenameWithExt = $events['first_event_input_optional_2']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['first_event_input_optional_2']->getClientOriginalExtension();
+            $fileNameToStore1_2 = $filename.'_'.time().'.'.$extension;
+            $path = $events['first_event_input_optional_2']->storeAs('public/canvas_data',$fileNameToStore1_2);
+        }else{$fileNameToStore1_2 = $events['first_event_input_optional_2'];}
+        if($events['first_event_input_optional_3'] && $events['first_event_optional_3'] != '5'){
+            $filenameWithExt = $events['first_event_input_optional_3']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['first_event_input_optional_3']->getClientOriginalExtension();
+            $fileNameToStore1_3 = $filename.'_'.time().'.'.$extension;
+            $path = $events['first_event_input_optional_3']->storeAs('public/canvas_data',$fileNameToStore1_3);
+        }else{$fileNameToStore1_3 = $events['first_event_input_optional_3'];}
+        if($events['first_event_input_optional_4'] && $events['first_event_optional_4'] != '5'){
+            $filenameWithExt = $events['first_event_input_optional_4']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['first_event_input_optional_4']->getClientOriginalExtension();
+            $fileNameToStore1_4 = $filename.'_'.time().'.'.$extension;
+            $path = $events['first_event_input_optional_4']->storeAs('public/canvas_data',$fileNameToStore1_4);
+        }else{$fileNameToStore1_4 = $events['first_event_input_optional_4'];}
+
+        //Second event
+        if($events['second_event_input'] && $events['second_event'] != '5'){
             $filenameWithExt = $events['second_event_input']->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $events['second_event_input']->getClientOriginalExtension();
             $fileNameToStore2 = $filename.'_'.time().'.'.$extension;
             $path = $events['second_event_input']->storeAs('public/canvas_data',$fileNameToStore2);
-        }
-        if($events['third_event_input']){
+        }else{$fileNameToStore2 = $events['second_event_input'];}
+        if($events['second_event_input_optional_1'] && $events['second_event_optional_1'] != '5'){
+            $filenameWithExt = $events['second_event_input_optional_1']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['second_event_input_optional_1']->getClientOriginalExtension();
+            $fileNameToStore2_1 = $filename.'_'.time().'.'.$extension;
+            $path = $events['second_event_input_optional_1']->storeAs('public/canvas_data',$fileNameToStore2_1);
+        }else{$fileNameToStore2_1 = $events['second_event_input_optional_1'];}
+        if($events['second_event_input_optional_2'] && $events['second_event_optional_2'] != '5'){
+            $filenameWithExt = $events['second_event_input_optional_2']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['second_event_input_optional_2']->getClientOriginalExtension();
+            $fileNameToStore2_2 = $filename.'_'.time().'.'.$extension;
+            $path = $events['second_event_input_optional_2']->storeAs('public/canvas_data',$fileNameToStore2_2);
+        }else{$fileNameToStore2_2 = $events['second_event_input_optional_2'];}
+        if($events['second_event_input_optional_3'] && $events['second_event_optional_3'] != '5'){
+            $filenameWithExt = $events['second_event_input_optional_3']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['second_event_input_optional_3']->getClientOriginalExtension();
+            $fileNameToStore2_3 = $filename.'_'.time().'.'.$extension;
+            $path = $events['second_event_input_optional_3']->storeAs('public/canvas_data',$fileNameToStore2_3);
+        }else{$fileNameToStore2_3 = $events['second_event_input_optional_3'];}
+        if($events['second_event_input_optional_4'] && $events['second_event_optional_4'] != '5'){
+            $filenameWithExt = $events['second_event_input_optional_4']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['second_event_input_optional_4']->getClientOriginalExtension();
+            $fileNameToStore2_4 = $filename.'_'.time().'.'.$extension;
+            $path = $events['second_event_input_optional_4']->storeAs('public/canvas_data',$fileNameToStore2_4);
+        }else{$fileNameToStore2_4 = $events['second_event_input_optional_4'];}
+
+        //third event
+        if($events['third_event_input'] && $events['third_event'] != '5'){
             $filenameWithExt = $events['third_event_input']->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $events['third_event_input']->getClientOriginalExtension();
             $fileNameToStore3 = $filename.'_'.time().'.'.$extension;
             $path = $events['third_event_input']->storeAs('public/canvas_data',$fileNameToStore3);
-        }
-        if($events['fourth_event_input']){
+        }else{$fileNameToStore3 = $events['third_event_input'];}
+        if($events['third_event_input_optional_1'] && $events['third_event_optional_1'] != '5'){
+            $filenameWithExt = $events['third_event_input_optional_1']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['third_event_input_optional_1']->getClientOriginalExtension();
+            $fileNameToStore3_1 = $filename.'_'.time().'.'.$extension;
+            $path = $events['third_event_input_optional_1']->storeAs('public/canvas_data',$fileNameToStore3_1);
+        }else{$fileNameToStore3_1 = $events['third_event_input_optional_1'];}
+        if($events['third_event_input_optional_2'] && $events['third_event_optional_2'] != '5'){
+            $filenameWithExt = $events['third_event_input_optional_2']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['third_event_input_optional_2']->getClientOriginalExtension();
+            $fileNameToStore3_2 = $filename.'_'.time().'.'.$extension;
+            $path = $events['third_event_input_optional_2']->storeAs('public/canvas_data',$fileNameToStore3_2);
+        }else{$fileNameToStore3_2 = $events['third_event_input_optional_2'];}
+        if($events['third_event_input_optional_3'] && $events['third_event_optional_3'] != '5'){
+            $filenameWithExt = $events['third_event_input_optional_3']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['third_event_input_optional_3']->getClientOriginalExtension();
+            $fileNameToStore3_3 = $filename.'_'.time().'.'.$extension;
+            $path = $events['third_event_input_optional_3']->storeAs('public/canvas_data',$fileNameToStore3_3);
+        }else{$fileNameToStore3_3 = $events['third_event_input_optional_3'];}
+        if($events['third_event_input_optional_4'] && $events['third_event_optional_4'] != '5'){
+            $filenameWithExt = $events['third_event_input_optional_4']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['third_event_input_optional_4']->getClientOriginalExtension();
+            $fileNameToStore3_4 = $filename.'_'.time().'.'.$extension;
+            $path = $events['third_event_input_optional_4']->storeAs('public/canvas_data',$fileNameToStore3_4);
+        }else{$fileNameToStore3_3 = $events['third_event_input_optional_4'];}
+
+        //fourth event
+        if($events['fourth_event_input'] && $events['fourth_event'] != '5'){
             $filenameWithExt = $events['fourth_event_input']->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $events['fourth_event_input']->getClientOriginalExtension();
             $fileNameToStore4 = $filename.'_'.time().'.'.$extension;
             $path = $events['fourth_event_input']->storeAs('public/canvas_data',$fileNameToStore4);
-        }
-        if($events['fifth_event_input']){
+        }else{$fileNameToStore4 = $events['fourth_event_input'];}
+        if($events['fourth_event_input_optional_1'] && $events['fourth_event_optional_1'] != '5'){
+            $filenameWithExt = $events['fourth_event_input_optional_1']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['fourth_event_input_optional_1']->getClientOriginalExtension();
+            $fileNameToStore4_1 = $filename.'_'.time().'.'.$extension;
+            $path = $events['fourth_event_input_optional_1']->storeAs('public/canvas_data',$fileNameToStore4_1);
+        }else{$fileNameToStore4_1 = $events['fourth_event_input_optional_1'];}
+        if($events['fourth_event_input_optional_2'] && $events['fourth_event_optional_2'] != '5'){
+            $filenameWithExt = $events['fourth_event_input_optional_2']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['fourth_event_input_optional_2']->getClientOriginalExtension();
+            $fileNameToStore4_2 = $filename.'_'.time().'.'.$extension;
+            $path = $events['fourth_event_input_optional_2']->storeAs('public/canvas_data',$fileNameToStore4_2);
+        }else{$fileNameToStore4_2 = $events['fourth_event_input_optional_2'];}
+        if($events['fourth_event_input_optional_3'] && $events['fourth_event_optional_3'] != '5'){
+            $filenameWithExt = $events['fourth_event_input_optional_3']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['fourth_event_input_optional_3']->getClientOriginalExtension();
+            $fileNameToStore4_3 = $filename.'_'.time().'.'.$extension;
+            $path = $events['fourth_event_input_optional_3']->storeAs('public/canvas_data',$fileNameToStore4_3);
+        }else{$fileNameToStore4_3 = $events['fourth_event_input_optional_3'];}
+        if($events['fourth_event_input_optional_4'] && $events['fourth_event_optional_4'] != '5'){
+            $filenameWithExt = $events['fourth_event_input_optional_4']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['fourth_event_input_optional_4']->getClientOriginalExtension();
+            $fileNameToStore4_4 = $filename.'_'.time().'.'.$extension;
+            $path = $events['fourth_event_input_optional_4']->storeAs('public/canvas_data',$fileNameToStore4_4);
+        }else{$fileNameToStore4_4 = $events['fourth_event_input_optional_4'];}
+
+        //fifth event
+        if($events['fifth_event_input'] && $events['fifth_event'] != '5'){
             $filenameWithExt = $events['fifth_event_input']->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $events['fifth_event_input']->getClientOriginalExtension();
             $fileNameToStore5 = $filename.'_'.time().'.'.$extension;
             $path = $events['fifth_event_input']->storeAs('public/canvas_data',$fileNameToStore5);
-        }
-        if($events['sixth_event_input']){
+        }else{$fileNameToStore5 = $events['fifth_event_input'];}
+        if($events['fifth_event_input_optional_1'] && $events['fifth_event_optional_1'] != '5'){
+            $filenameWithExt = $events['fifth_event_input_optional_1']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['fifth_event_input_optional_1']->getClientOriginalExtension();
+            $fileNameToStore5_1 = $filename.'_'.time().'.'.$extension;
+            $path = $events['fifth_event_input_optional_1']->storeAs('public/canvas_data',$fileNameToStore5_1);
+        }else{$fileNameToStore5_1 = $events['fifth_event_input_optional_1'];}
+        if($events['fifth_event_input_optional_2'] && $events['fifth_event_optional_2'] != '5'){
+            $filenameWithExt = $events['fifth_event_input_optional_2']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['fifth_event_input_optional_2']->getClientOriginalExtension();
+            $fileNameToStore5_2 = $filename.'_'.time().'.'.$extension;
+            $path = $events['fifth_event_input_optional_2']->storeAs('public/canvas_data',$fileNameToStore5_2);
+        }else{$fileNameToStore5_2 = $events['fifth_event_input_optional_2'];}
+        if($events['fifth_event_input_optional_3'] && $events['fifth_event_optional_3'] != '5'){
+            $filenameWithExt = $events['fifth_event_input_optional_3']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['fifth_event_input_optional_3']->getClientOriginalExtension();
+            $fileNameToStore5_3 = $filename.'_'.time().'.'.$extension;
+            $path = $events['fifth_event_input_optional_3']->storeAs('public/canvas_data',$fileNameToStore5_3);
+        }else{$fileNameToStore5_3 = $events['fifth_event_input_optional_3'];}
+        if($events['fifth_event_input_optional_4'] && $events['fifth_event_optional_4'] != '5'){
+            $filenameWithExt = $events['fifth_event_input_optional_4']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['fifth_event_input_optional_4']->getClientOriginalExtension();
+            $fileNameToStore5_4 = $filename.'_'.time().'.'.$extension;
+            $path = $events['fifth_event_input_optional_4']->storeAs('public/canvas_data',$fileNameToStore5_4);
+        }else{$fileNameToStore5_4 = $events['fifth_event_input_optional_4'];}
+
+        //sixth event
+        if($events['sixth_event_input'] && $events['sixth_event'] != '5'){
             $filenameWithExt = $events['sixth_event_input']->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $events['sixth_event_input']->getClientOriginalExtension();
             $fileNameToStore6 = $filename.'_'.time().'.'.$extension;
             $path = $events['sixth_event_input']->storeAs('public/canvas_data',$fileNameToStore6);
-        }
+        }else{$fileNameToStore6 = $events['sixth_event_input'];}
+        if($events['sixth_event_input_optional_1'] && $events['sixth_event_optional_1'] != '5'){
+            $filenameWithExt = $events['sixth_event_input_optional_1']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['sixth_event_input_optional_1']->getClientOriginalExtension();
+            $fileNameToStore6_1 = $filename.'_'.time().'.'.$extension;
+            $path = $events['sixth_event_input_optional_1']->storeAs('public/canvas_data',$fileNameToStore6_1);
+        }else{$fileNameToStore6_1 = $events['sixth_event_input_optional_1'];}
+        if($events['sixth_event_input_optional_2'] && $events['sixth_event_optional_2'] != '5'){
+            $filenameWithExt = $events['sixth_event_input_optional_2']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['sixth_event_input_optional_2']->getClientOriginalExtension();
+            $fileNameToStore6_2 = $filename.'_'.time().'.'.$extension;
+            $path = $events['sixth_event_input_optional_2']->storeAs('public/canvas_data',$fileNameToStore6_2);
+        }else{$fileNameToStore6_2 = $events['sixth_event_input_optional_2'];}
+        if($events['sixth_event_input_optional_3'] && $events['sixth_event_optional_3'] != '5'){
+            $filenameWithExt = $events['sixth_event_input_optional_3']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['sixth_event_input_optional_3']->getClientOriginalExtension();
+            $fileNameToStore6_3 = $filename.'_'.time().'.'.$extension;
+            $path = $events['sixth_event_input_optional_3']->storeAs('public/canvas_data',$fileNameToStore6_3);
+        }else{$fileNameToStore6_3 = $events['sixth_event_input_optional_3'];}
+        if($events['sixth_event_input_optional_4'] && $events['sixth_event_optional_4'] != '5'){
+            $filenameWithExt = $events['sixth_event_input_optional_4']->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $events['sixth_event_input_optional_4']->getClientOriginalExtension();
+            $fileNameToStore6_4 = $filename.'_'.time().'.'.$extension;
+            $path = $events['sixth_event_input_optional_4']->storeAs('public/canvas_data',$fileNameToStore6_4);
+        }else{$fileNameToStore6_4 = $events['sixth_event_input_optional_4'];}
 
 
         $canvasEvent1 = [
             'canvas_id'=>$this->canvas->id,
             'event_type'=>$events['first_event'],
             'file_path'=>$fileNameToStore1,
+            'event_number'=>1,
             'x1'=>$coordinates['event1']['x1'],
             'x2'=>$coordinates['event1']['x2'],
             'y1'=>$coordinates['event1']['y1'],
             'y2'=>$coordinates['event1']['y2'],
         ];
+        CanvasEvents::create($canvasEvent1);
+        if($events['first_event_input_optional_1']){
+            $canvasEvent1_1 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['first_event_optional_1'],
+                'file_path'=>$fileNameToStore1_1,
+                'event_number'=>1,
+                'x1'=>$coordinates['event1']['x1'],
+                'x2'=>$coordinates['event1']['x2'],
+                'y1'=>$coordinates['event1']['y1'],
+                'y2'=>$coordinates['event1']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent1_1);
+        }
+        if($events['first_event_input_optional_2']){
+            $canvasEvent1_2 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['first_event_optional_2'],
+                'file_path'=>$fileNameToStore1_2,
+                'event_number'=>1,
+                'x1'=>$coordinates['event1']['x1'],
+                'x2'=>$coordinates['event1']['x2'],
+                'y1'=>$coordinates['event1']['y1'],
+                'y2'=>$coordinates['event1']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent1_2);
+        }
+        if($events['first_event_input_optional_3']){
+            $canvasEvent1_3 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['first_event_optional_3'],
+                'file_path'=>$fileNameToStore1_3,
+                'event_number'=>1,
+                'x1'=>$coordinates['event1']['x1'],
+                'x2'=>$coordinates['event1']['x2'],
+                'y1'=>$coordinates['event1']['y1'],
+                'y2'=>$coordinates['event1']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent1_3);
+        }
+        if($events['first_event_input_optional_4']){
+            $canvasEvent1_4 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['first_event_optional_4'],
+                'file_path'=>$fileNameToStore1_4,
+                'event_number'=>1,
+                'x1'=>$coordinates['event1']['x1'],
+                'x2'=>$coordinates['event1']['x2'],
+                'y1'=>$coordinates['event1']['y1'],
+                'y2'=>$coordinates['event1']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent1_4);
+        }
         $canvasEvent2 = [
             'canvas_id'=>$this->canvas->id,
             'event_type'=>$events['second_event'],
             'file_path'=>$fileNameToStore2,
+            'event_number'=>2,
             'x1'=>$coordinates['event2']['x1'],
             'x2'=>$coordinates['event2']['x2'],
             'y1'=>$coordinates['event2']['y1'],
             'y2'=>$coordinates['event2']['y2'],
         ];
+        CanvasEvents::create($canvasEvent2);
+        if($events['second_event_input_optional_1']){
+            $canvasEvent2_1 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['second_event_optional_1'],
+                'file_path'=>$fileNameToStore2_1,
+                'event_number'=>2,
+                'x1'=>$coordinates['event2']['x1'],
+                'x2'=>$coordinates['event2']['x2'],
+                'y1'=>$coordinates['event2']['y1'],
+                'y2'=>$coordinates['event2']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent2_1);
+        }
+        if($events['second_event_input_optional_2']){
+            $canvasEvent2_2 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['second_event_optional_2'],
+                'file_path'=>$fileNameToStore2_2,
+                'event_number'=>2,
+                'x1'=>$coordinates['event2']['x1'],
+                'x2'=>$coordinates['event2']['x2'],
+                'y1'=>$coordinates['event2']['y1'],
+                'y2'=>$coordinates['event2']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent2_2);
+        }
+        if($events['second_event_input_optional_3']){
+            $canvasEvent2_3 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['second_event_optional_3'],
+                'file_path'=>$fileNameToStore2_3,
+                'event_number'=>2,
+                'x1'=>$coordinates['event2']['x1'],
+                'x2'=>$coordinates['event2']['x2'],
+                'y1'=>$coordinates['event2']['y1'],
+                'y2'=>$coordinates['event2']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent2_3);
+        }
+        if($events['second_event_input_optional_4']){
+            $canvasEvent2_4 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['second_event_optional_4'],
+                'file_path'=>$fileNameToStore2_4,
+                'event_number'=>2,
+                'x1'=>$coordinates['event2']['x1'],
+                'x2'=>$coordinates['event2']['x2'],
+                'y1'=>$coordinates['event2']['y1'],
+                'y2'=>$coordinates['event2']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent2_4);
+        }
         $canvasEvent3 = [
             'canvas_id'=>$this->canvas->id,
             'event_type'=>$events['third_event'],
             'file_path'=>$fileNameToStore3,
+            'event_number'=>3,
             'x1'=>$coordinates['event3']['x1'],
             'x2'=>$coordinates['event3']['x2'],
             'y1'=>$coordinates['event3']['y1'],
             'y2'=>$coordinates['event3']['y2'],
         ];
+        CanvasEvents::create($canvasEvent3);
+        if($events['third_event_input_optional_1']){
+            $canvasEvent3_1 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['third_event_optional_1'],
+                'file_path'=>$fileNameToStore3_1,
+                'event_number'=>3,
+                'x1'=>$coordinates['event3']['x1'],
+                'x2'=>$coordinates['event3']['x2'],
+                'y1'=>$coordinates['event3']['y1'],
+                'y2'=>$coordinates['event3']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent3_1);
+        }
+        if($events['third_event_input_optional_2']){
+            $canvasEvent3_2 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['third_event_optional_2'],
+                'file_path'=>$fileNameToStore3_2,
+                'event_number'=>3,
+                'x1'=>$coordinates['event3']['x1'],
+                'x2'=>$coordinates['event3']['x2'],
+                'y1'=>$coordinates['event3']['y1'],
+                'y2'=>$coordinates['event3']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent3_2);
+        }
+        if($events['third_event_input_optional_3']){
+            $canvasEvent3_3 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['third_event_optional_3'],
+                'file_path'=>$fileNameToStore3_3,
+                'event_number'=>3,
+                'x1'=>$coordinates['event3']['x1'],
+                'x2'=>$coordinates['event3']['x2'],
+                'y1'=>$coordinates['event3']['y1'],
+                'y2'=>$coordinates['event3']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent3_3);
+        }
+        if($events['third_event_input_optional_4']){
+            $canvasEvent3_4 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['third_event_optional_4'],
+                'file_path'=>$fileNameToStore3_4,
+                'event_number'=>3,
+                'x1'=>$coordinates['event3']['x1'],
+                'x2'=>$coordinates['event3']['x2'],
+                'y1'=>$coordinates['event3']['y1'],
+                'y2'=>$coordinates['event3']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent3_4);
+        }
         $canvasEvent4 = [
             'canvas_id'=>$this->canvas->id,
             'event_type'=>$events['fourth_event'],
             'file_path'=>$fileNameToStore4,
+            'event_number'=>4,
             'x1'=>$coordinates['event4']['x1'],
             'x2'=>$coordinates['event4']['x2'],
             'y1'=>$coordinates['event4']['y1'],
             'y2'=>$coordinates['event4']['y2'],
         ];
+        CanvasEvents::create($canvasEvent4);
+        if($events['fourth_event_input_optional_1']){
+            $canvasEvent4_1 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['fourth_event_optional_1'],
+                'file_path'=>$fileNameToStore4_1,
+                'event_number'=>4,
+                'x1'=>$coordinates['event4']['x1'],
+                'x2'=>$coordinates['event4']['x2'],
+                'y1'=>$coordinates['event4']['y1'],
+                'y2'=>$coordinates['event4']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent4_1);
+        }
+        if($events['fourth_event_input_optional_2']){
+            $canvasEvent4_2 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['fourth_event_optional_2'],
+                'file_path'=>$fileNameToStore4_2,
+                'event_number'=>4,
+                'x1'=>$coordinates['event4']['x1'],
+                'x2'=>$coordinates['event4']['x2'],
+                'y1'=>$coordinates['event4']['y1'],
+                'y2'=>$coordinates['event4']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent4_2);
+        }
+        if($events['fourth_event_input_optional_3']){
+            $canvasEvent4_3 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['fourth_event_optional_3'],
+                'file_path'=>$fileNameToStore4_3,
+                'event_number'=>4,
+                'x1'=>$coordinates['event4']['x1'],
+                'x2'=>$coordinates['event4']['x2'],
+                'y1'=>$coordinates['event4']['y1'],
+                'y2'=>$coordinates['event4']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent4_3);
+        }
+        if($events['fourth_event_input_optional_4']){
+            $canvasEvent4_4 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['fourth_event_optional_4'],
+                'file_path'=>$fileNameToStore4_4,
+                'event_number'=>4,
+                'x1'=>$coordinates['event4']['x1'],
+                'x2'=>$coordinates['event4']['x2'],
+                'y1'=>$coordinates['event4']['y1'],
+                'y2'=>$coordinates['event4']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent4_4);
+        }
         $canvasEvent5 = [
             'canvas_id'=>$this->canvas->id,
             'event_type'=>$events['fifth_event'],
             'file_path'=>$fileNameToStore5,
+            'event_number'=>5,
             'x1'=>$coordinates['event5']['x1'],
             'x2'=>$coordinates['event5']['x2'],
             'y1'=>$coordinates['event5']['y1'],
             'y2'=>$coordinates['event5']['y2'],
         ];
+        CanvasEvents::create($canvasEvent5);
+        if($events['fifth_event_input_optional_1']){
+            $canvasEvent5_1 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['fifth_event_optional_1'],
+                'file_path'=>$fileNameToStore5_1,
+                'event_number'=>5,
+                'x1'=>$coordinates['event5']['x1'],
+                'x2'=>$coordinates['event5']['x2'],
+                'y1'=>$coordinates['event5']['y1'],
+                'y2'=>$coordinates['event5']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent5_1);
+        }
+        if($events['fifth_event_input_optional_2']){
+            $canvasEvent5_2 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['fifth_event_optional_2'],
+                'file_path'=>$fileNameToStore5_2,
+                'event_number'=>5,
+                'x1'=>$coordinates['event5']['x1'],
+                'x2'=>$coordinates['event5']['x2'],
+                'y1'=>$coordinates['event5']['y1'],
+                'y2'=>$coordinates['event5']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent5_2);
+        }
+        if($events['fifth_event_input_optional_3']){
+            $canvasEvent5_3 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['fifth_event_optional_3'],
+                'file_path'=>$fileNameToStore5_3,
+                'event_number'=>5,
+                'x1'=>$coordinates['event5']['x1'],
+                'x2'=>$coordinates['event5']['x2'],
+                'y1'=>$coordinates['event5']['y1'],
+                'y2'=>$coordinates['event5']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent5_3);
+        }
+        if($events['fifth_event_input_optional_4']){
+            $canvasEvent5_4 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['fifth_event_optional_4'],
+                'file_path'=>$fileNameToStore5_4,
+                'event_number'=>5,
+                'x1'=>$coordinates['event5']['x1'],
+                'x2'=>$coordinates['event5']['x2'],
+                'y1'=>$coordinates['event5']['y1'],
+                'y2'=>$coordinates['event5']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent5_4);
+        }
         $canvasEvent6 = [
             'canvas_id'=>$this->canvas->id,
             'event_type'=>$events['sixth_event'],
             'file_path'=>$fileNameToStore6,
+            'event_number'=>6,
             'x1'=>$coordinates['event6']['x1'],
             'x2'=>$coordinates['event6']['x2'],
             'y1'=>$coordinates['event6']['y1'],
             'y2'=>$coordinates['event6']['y2'],
         ];
-
-        CanvasEvents::create($canvasEvent1);
-        CanvasEvents::create($canvasEvent2);
-        CanvasEvents::create($canvasEvent3);
-        CanvasEvents::create($canvasEvent4);
-        CanvasEvents::create($canvasEvent5);
         CanvasEvents::create($canvasEvent6);
+        if($events['sixth_event_input_optional_1']){
+            $canvasEvent6_1 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['sixth_event_optional_1'],
+                'file_path'=>$fileNameToStore6_1,
+                'event_number'=>6,
+                'x1'=>$coordinates['event6']['x1'],
+                'x2'=>$coordinates['event6']['x2'],
+                'y1'=>$coordinates['event6']['y1'],
+                'y2'=>$coordinates['event6']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent6_1);
+        }
+        if($events['sixth_event_input_optional_2']){
+            $canvasEvent6_2 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['sixth_event_optional_2'],
+                'file_path'=>$fileNameToStore6_2,
+                'event_number'=>6,
+                'x1'=>$coordinates['event6']['x1'],
+                'x2'=>$coordinates['event6']['x2'],
+                'y1'=>$coordinates['event6']['y1'],
+                'y2'=>$coordinates['event6']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent6_2);
+        }
+        if($events['sixth_event_input_optional_3']){
+            $canvasEvent6_3 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['sixth_event_optional_3'],
+                'file_path'=>$fileNameToStore6_3,
+                'event_number'=>6,
+                'x1'=>$coordinates['event6']['x1'],
+                'x2'=>$coordinates['event6']['x2'],
+                'y1'=>$coordinates['event6']['y1'],
+                'y2'=>$coordinates['event6']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent6_3);
+        }
+        if($events['sixth_event_input_optional_4']){
+            $canvasEvent6_4 = [
+                'canvas_id'=>$this->canvas->id,
+                'event_type'=>$events['sixth_event_optional_4'],
+                'file_path'=>$fileNameToStore6_4,
+                'event_number'=>6,
+                'x1'=>$coordinates['event6']['x1'],
+                'x2'=>$coordinates['event6']['x2'],
+                'y1'=>$coordinates['event6']['y1'],
+                'y2'=>$coordinates['event6']['y2'],
+            ];
+
+            CanvasEvents::create($canvasEvent6_4);
+        }
 
         return true;
 
