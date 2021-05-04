@@ -11326,6 +11326,104 @@ body {
   background-color: #8e8e8e !important;
 }
 
+#dashboard-page {
+  height: 100vh;
+}
+
+canvas {
+  height: 100vh !important;
+}
+
+#animation_container {
+  height: 100vh !important;
+}
+
+#dom_overlay_container {
+  height: 100vh !important;
+}
+
+.agenda-table-container {
+  background: #fff;
+}
+
+.agenda-table {
+  background: #fff;
+  border: 1px solid #eee;
+  margin: 0 0 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.agenda-table tr td {
+  border-top: 1px solid #eee;
+  padding: 6px 24px;
+}
+
+.et_pb_tabs_controls li.et_pb_tab_active {
+  background-color: #F7BD02;
+}
+
+.et_pb_tabs_controls li {
+  width: 33.3333%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.et_pb_tabs_controls li {
+  background-color: #8A8E91;
+}
+
+.et_pb_tabs_controls li a {
+  font-family: "Ubuntu", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 300;
+  font-size: 19px;
+  display: flex !important;
+  align-items: stretch;
+}
+
+.et_pb_tabs_controls li a {
+  color: #FFFFFF !important;
+}
+
+.et_pb_tabs_controls li a {
+  text-decoration: none;
+  color: #666;
+  padding: 4px 30px;
+  vertical-align: middle;
+  display: table-cell;
+  line-height: inherit;
+}
+
+ul.et_pb_tabs_controls {
+  background-color: #f4f4f4;
+  display: flex;
+}
+
+.et_pb_tab_0 .et_pb_tab_1 .et_pb_tab_2 {
+  cursor: pointer;
+}
+
+#left-area ul,
+.comment-content ul,
+.entry-content ul,
+.et-l--body ul,
+.et-l--footer ul,
+.et-l--header ul,
+body.et-pb-preview #main-content .container ul {
+  list-style-type: disc;
+  padding: 0 0 23px 1em;
+  line-height: 26px;
+}
+
+.et_pb_counters,
+.et_pb_pricing,
+.et_pb_tabs_controls,
+.et_pb_widget_area ul {
+  list-style: none !important;
+  padding: 0 !important;
+  line-height: inherit !important;
+}
+
 @media only screen and (max-width: 1600px) and (min-width: 1200px) {
   .booth-background-image {
     width: 992px;

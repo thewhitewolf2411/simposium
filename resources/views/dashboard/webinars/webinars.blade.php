@@ -12,62 +12,9 @@
     <div class="row w-100">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Webinari') }}</div>
+                <div class="card-header">{{ __('Agenda') }}</div>
 
-                <div class="card-body webinar-link">
-                    <div class="row">
-                        <div class="col-6">{{ __('Ime webinara') }}</div>
-                        <div class="col-2">{{ __('Datum održavanja webinara') }}</div>
-                        <div class="col-2">{{ __('Vrijeme početka webinara') }}</div>
-                        <div class="col-2">{{ __('Trajanje webinara') }}</div>
-                    </div>
-                </div>
-
-                <div class="card-header"><a class="webinar-day-active" href="javascript:void(0)" onclick="changeWebinarDay(1)" id="linkday1"> {{ __('Dan 1') }} </a> <a class="webinar-day-disabled" href="javascript:void(0)" onclick="changeWebinarDay(2)" id="linkday2"> {{ __('Dan 2') }} </a> <a class="webinar-day-disabled" href="javascript:void(0)" onclick="changeWebinarDay(3)" id="linkday3"> {{ __('Dan 3') }} </a> </div>
-
-
-                @foreach($webinars as $webinar)
-                    @if($webinar->webinar_date === '2020-12-04' || $webinar->webinar_date === '2020-12-03' )
-                        <a href="/simpozij/webinars/{{$webinar->id}}" class="webinar-link webinar-link-active day1">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-6"> {{ $webinar->webinar_name }}</div>
-                                    <div class="col-2">{{ __('Petak') }}<br>{{ \Carbon\Carbon::parse($webinar->webinar_date)->format('d/m/Y') }}</div>
-                                    <div class="col-2">{{ $webinar->webinar_time }}h</div>
-                                    <div class="col-2">{{ $webinar->webinar_duration }}h</div>
-                                </div>
-                            </div>
-                        </a>
-                    @endif
-                @endforeach
-                @foreach($webinars as $webinar)
-                    @if($webinar->webinar_date === '2020-12-05')
-                        <a href="/simpozij/webinars/{{$webinar->id}}" class="webinar-link webinar-link-disabled day2">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-6">{{ $webinar->webinar_name }}</div>
-                                    <div class="col-2">{{ __('Subota') }}<br>{{ \Carbon\Carbon::parse($webinar->webinar_date)->format('d/m/Y') }}</div>
-                                    <div class="col-2">{{ $webinar->webinar_time }}h</div>
-                                    <div class="col-2">{{ $webinar->webinar_duration }}h</div>
-                                </div>
-                            </div>
-                        </a>
-                    @endif
-                @endforeach
-                @foreach($webinars as $webinar)
-                    @if($webinar->webinar_date === '2020-12-06')
-                        <a href="/simpozij/webinars/{{$webinar->id}}" class="webinar-link webinar-link-disabled day3">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-6">{{ $webinar->webinar_name }}</div>
-                                    <div class="col-2">{{ __('Nedjelja') }}<br>{{ \Carbon\Carbon::parse($webinar->webinar_date)->format('d-m-Y') }}</div>
-                                    <div class="col-2">{{ $webinar->webinar_time }}h</div>
-                                    <div class="col-2">{{ $webinar->webinar_duration }}h</div>
-                                </div>
-                            </div>
-                        </a>
-                    @endif
-                @endforeach
+                @include('dashboard.webinars.agenda')
 
             </div>
 

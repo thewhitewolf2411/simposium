@@ -18,7 +18,7 @@ lib.ssMetadata = [
 
 
 
-(lib.e_congress_bg = function() {
+(lib.e_congress_bg_2 = function() {
 	this.initialize(ss["landing_page_atlas_"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
@@ -70,41 +70,90 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 		}
 		this.stop();
 		
-		var _root = this;
+		var frequency = 30;
+		stage.enableMouseOver(frequency)
 		
+		var _root = this;
+		var day1 = new Date(2021, 4, 7);
+		var day2 = new Date(2021, 4, 8);
+		var day3 = new Date(2021, 4, 9);
+		//1
 		_root.standovi_btn.addEventListener('click', function(){
 		
-			window.open('/simpozij/booth');
+			window.open('/simpozij/booth', '_self');
 			
 			});
 			
+		_root.standovi_btn.cursor = "pointer";
+		
+		//2	
 		_root.sazetci_btn.addEventListener('click', function(){
 		
-			window.open('/simpozij/booth');
+			window.open('/simpozij/summary', '_self');
 			
 			});
-			
-		_root.live_video_btn.addEventListener('click', function(){
+		_root.sazetci_btn.cursor = "pointer";
 		
-			window.open('/simpozij/booth');
+		//3
+		_root.live_video_btn.addEventListener('click', function(){
+			
+			if(isToday(day1)){
+				window.open('https://zoom.us/j/92397780559', '_blank');
+			}
+			else if(isToday(day2)){
+				window.open('https://zoom.us/j/96324360410', '_blank');
+			}
+			else if(isToday(day3)){
+				window.open('https://zoom.us/j/94918098079', '_blank');
+			}
+			else{
+				alert("Event trenutno nije live.");
+			}
 			
 			});
-			
+		_root.live_video_btn.cursor = "pointer";
+		
+		//4
 		_root.posteri_btn.addEventListener('click', function(){
 		
-			window.open('/simpozij/exibition');
+			window.open('/simpozij/exibition', '_self');
 			
 			});
-			
+		_root.posteri_btn.cursor = "pointer";
+		
+		//5
 		_root.program_btn.addEventListener('click', function(){
 		
-			window.open('/simpozij/webinars');
+			window.open('/simpozij/webinars', '_self');
 			
 			});
+		_root.program_btn.cursor = "pointer";
+			
+		_root.info_pult_btn.addEventListener('click', function(){
+			
+			$('#infopult').modal('show');
+			
+			});
+		_root.info_pult_btn.cursor = "pointer";
+			
+		
+		const isToday = (date) => {
+		    const today = new Date()
+		    return date.getDate() === today.getDate() &&
+		        date.getMonth() === today.getMonth() &&
+		        date.getFullYear() === today.getFullYear();
+		};
 	}
 
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
+
+	// info_pult_layer
+	this.info_pult_btn = new lib.btn();
+	this.info_pult_btn.name = "info_pult_btn";
+	this.info_pult_btn.setTransform(320.3,862.1,3.5026,1.6191,0,0,0,0.1,0.1);
+
+	this.timeline.addTween(cjs.Tween.get(this.info_pult_btn).wait(1));
 
 	// program_btn_layer
 	this.program_btn = new lib.btn();
@@ -142,7 +191,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.timeline.addTween(cjs.Tween.get(this.standovi_btn).wait(1));
 
 	// background
-	this.instance = new lib.e_congress_bg();
+	this.instance = new lib.e_congress_bg_2();
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
@@ -159,7 +208,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/landing_page_atlas_.png?1620125056832", id:"landing_page_atlas_"}
+		{src:"images/landing_page_atlas_.png?1620139162606", id:"landing_page_atlas_"}
 	],
 	preloads: []
 };

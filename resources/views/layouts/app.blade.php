@@ -79,12 +79,12 @@
     
     <div id="app" style="display:none;">
 
-        @if(Route::is('home'))
+        @if(Route::is('home') && Auth::user()->level !== 3)
         <header id="on-hover-header">
             @include('layouts.header')
         </header>
         <main id="dashboard-page" style="overflow: hidden">
-            <iframe src="/landing_canvas/landing_page.html" width="100%" height="100vh" style="overflow: hidden; height:100vh" title="Iframe Example"></iframe>
+            <iframe src="/landing_canvas/landing_page.html" width="100%" height="100%" style="overflow: hidden; height:100%; border:none;" title="Iframe Example"></iframe>
         </main>
         @else
         <header>
@@ -109,10 +109,8 @@
             }, 300);
         }
 
-        
-
-
     </script>
+
 
 </body>
 </html>

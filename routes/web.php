@@ -36,22 +36,19 @@ Route::get('/simpozij/webinars/webinar/{id}', 'HomeController@webinar');
 Route::post('/simpozij/webinar/getBoothData', 'HomeController@getBoothData')->name('getBoothData');
 Route::post('/simpozij/webinar/getSingleBoothData', 'HomeController@getSingleBoothData')->name('getSingleBoothData');
 
-//QA
-Route::get('/simpozij/QA', 'HomeController@showQA')->name('QAs');
-
 //Ondemand
-Route::get('/simpozij/ondemand', 'HomeController@showOnDemand')->name('ondemands');
+Route::get('/simpozij/summary ', 'HomeController@showSummary')->name('ondemands');
 
 //Exibition
 Route::get('/simpozij/exibition', 'HomeController@showExibition')->name('exibition');
 
 //admin get
 Route::get('/simpozij/createwebinar', 'SuperAdminController@showCreateWebinarPage')->name('createWebinarPage');
-Route::get('/simpozij/addpanelist', 'SuperAdminController@showAddPanelistPage');
 Route::get('/simpozij/addadmins', 'SuperAdminController@showAddAdminPage');
 Route::get('/simpozij/addsponsor', 'SuperAdminController@showAddSponsorPage');
 Route::get('/simpozij/editsponsor/{id}', 'SuperAdminController@editSponsorPage')->name('editSponsorView');
 Route::get('/simpozij/addexgibition', 'SuperAdminController@showAddExhibition')->name('addExhibitionPage');
+Route::get('/simpozij/addsummary', 'SuperAdminController@showAddSummary')->name('addSummaryPage');
 
 //admin post
 Route::post('/simposij/addsponsor/add', 'SuperAdminController@addSponsor')->name('addSponsor');
@@ -59,4 +56,4 @@ Route::post('/simposij/editsponsor/edit', 'SuperAdminController@editSponsor')->n
 Route::post('/simposij/addwebinar/add', 'SuperAdminController@addWebinar')->name('addWebinar');
 Route::post('/simposij/addpanelist/add', 'SuperAdminController@addPanelist')->name('addPanelist');
 Route::post('/simposij/addexgibition/add', 'SuperAdminController@addExhibition')->name('addExhibition');
-
+Route::post('/simposij/addsummary/add', 'SuperAdminController@addSummary')->name('addSummary');

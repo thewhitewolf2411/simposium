@@ -12,7 +12,7 @@
     <div class="row w-100">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Videos on demand') }}</div>
+                <div class="card-header">{{ __('Sažetci') }}</div>
 
             </div>
         </div>

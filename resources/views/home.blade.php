@@ -27,35 +27,21 @@
                 @if(Auth::user()->level === 2 || Auth::user()->level === 3)
                 <div class="card">
                     <div class="card-header">{{ __('Admin Panel') }}</div>
-                        <a href="/simpozij/createwebinar" class="card-link">
-                            <div class="card-body">
-                                {{ __('Kreiraj webinar') }}
-                            </div>
-                        </a>
-                        <a href="/simpozij/addpanelist" class="card-link">
-                            <div class="card-body">
-                                {{ __('Dodaj Paneliste') }}
-                            </div>
-                        </a>
-                        <a href="/simpozij/addsponsor" class="card-link">
-                            <div class="card-body">
-                                {{ __('Dodaj Štandove') }}
-                            </div>
-                        </a>
-                        @if(Auth::user()->level === 3)
-                        <a href="/simpozij/addadmins" class="card-link">
-                            <div class="card-body">
-                                {{ __('Dodaj Admine') }}
-                            </div>
-                        </a>
-                        @endif
-                        @if(Auth::user()->level === 3)
-                        <a href="/simpozij/addexgibition" class="card-link">
-                            <div class="card-body">
-                                {{ __('Dodaj Izložbu') }}
-                            </div>
-                        </a>
-                        @endif
+                    <a href="/simpozij/addsponsor" class="card-link">
+                        <div class="card-body">
+                            {{ __('Dodaj Štandove') }}
+                        </div>
+                    </a>
+                    <a href="/simpozij/addexgibition" class="card-link">
+                        <div class="card-body">
+                            {{ __('Dodaj Izložbu') }}
+                        </div>
+                    </a>
+                    <a href="/simpozij/addsummary" class="card-link">
+                        <div class="card-body">
+                            {{ __('Dodaj Sažetak') }}
+                        </div>
+                    </a>
                 </div>
                 @endif
             </div>

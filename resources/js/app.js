@@ -10,3 +10,4 @@ window.Vue = require('vue');
 
 require('./scripts/EditCanvas');
 require('./scripts/GetCanvasData');
+require('./scripts/HandleAgenda');

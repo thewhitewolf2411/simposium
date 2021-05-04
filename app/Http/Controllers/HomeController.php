@@ -278,9 +278,9 @@ class HomeController extends Controller
 
 
     //Ondemand
-    public function showOnDemand(){
+    public function showSummary(){
 
-        return view('dashboard.ondemand.ondemand');
+        return view('dashboard.summary.summary');
 
     }
 

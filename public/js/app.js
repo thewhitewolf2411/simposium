@@ -50315,6 +50315,8 @@ __webpack_require__(/*! ./scripts/EditCanvas */ "./resources/js/scripts/EditCanv
 
 __webpack_require__(/*! ./scripts/GetCanvasData */ "./resources/js/scripts/GetCanvasData.js");
 
+__webpack_require__(/*! ./scripts/HandleAgenda */ "./resources/js/scripts/HandleAgenda.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -51331,6 +51333,78 @@ $('#eventModal').on('hidden.bs.modal', function (e) {
 $('#choicemodal').on('hidden.bs.modal', function (e) {
   $('#choicemodal .modal-body').empty();
 });
+
+/***/ }),
+
+/***/ "./resources/js/scripts/HandleAgenda.js":
+/*!**********************************************!*\
+  !*** ./resources/js/scripts/HandleAgenda.js ***!
+  \**********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+if (document.getElementById('agenda-table-container')) {
+  $('#agenda-table-1').show();
+  $('#agenda-table-2').hide();
+  $('#agenda-table-3').hide();
+}
+
+window.changeAgendaView = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(table_number) {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            $('.et_pb_tab_0').removeClass('et_pb_tab_active');
+            $('.et_pb_tab_1').removeClass('et_pb_tab_active');
+            $('.et_pb_tab_2').removeClass('et_pb_tab_active');
+            _context.t0 = table_number;
+            _context.next = _context.t0 === 1 ? 6 : _context.t0 === 2 ? 11 : _context.t0 === 3 ? 16 : 21;
+            break;
+
+          case 6:
+            $('#agenda-table-1').show();
+            $('#agenda-table-2').hide();
+            $('#agenda-table-3').hide();
+            $('.et_pb_tab_0').addClass('et_pb_tab_active');
+            return _context.abrupt("break", 21);
+
+          case 11:
+            $('#agenda-table-1').hide();
+            $('#agenda-table-2').show();
+            $('#agenda-table-3').hide();
+            $('.et_pb_tab_1').addClass('et_pb_tab_active');
+            return _context.abrupt("break", 21);
+
+          case 16:
+            $('#agenda-table-1').hide();
+            $('#agenda-table-2').hide();
+            $('#agenda-table-3').show();
+            $('.et_pb_tab_2').addClass('et_pb_tab_active');
+            return _context.abrupt("break", 21);
+
+          case 21:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function (_x) {
+    return _ref.apply(this, arguments);
+  };
+}();
 
 /***/ }),
 

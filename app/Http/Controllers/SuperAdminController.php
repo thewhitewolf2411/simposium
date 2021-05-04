@@ -23,25 +23,16 @@ class SuperAdminController extends Controller
         $this->middleware('admin');
     }
 
-    public function showCreateWebinarPage(){
-        return view('dashboard.create.webinars');
-    }
-    
-    public function showAddPanelistPage(){
-
-        return view('dashboard.create.panelists');
-    }
-    
-    public function showAddAdminPage(){
-        dd("Here3");
-    }
-
     public function showAddSponsorPage(){
         return view('dashboard.create.sponsors');
     }
 
     public function showAddExhibition(){
         return view('dashboard.create.exhibition');
+    }
+
+    public function showAddSummary(){
+        return view('');
     }
 
     //add Post Route
@@ -104,14 +95,6 @@ class SuperAdminController extends Controller
             return false;
         }
 
-    }
-
-    public function addPanelist(Request $request){
-        $this->_addPanelist($request);
-    }
-
-    private function _addPanelist(Request $request){
-        dd($request);
     }
 
     public function editSponsorPage($id){
