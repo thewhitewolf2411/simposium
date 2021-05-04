@@ -42,5 +42,18 @@ class DatabaseSeeder extends Seeder
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
 
+
+        DB::table('users')->insert([
+            'name'=>'Ken',
+            'lastname'=>'Kaneki',
+            'email'=>'kenkaneki@purplekeyagency.co.uk',
+            'email_verified_at'=>Carbon::now()->format('Y-m-d H:i:s'),
+            'password'=>Hash::make('Lambda12'),
+            'institution'=>'Purple Key',
+            'profession'=>'Ghoul',
+            'level'=>1,
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
     }
 }

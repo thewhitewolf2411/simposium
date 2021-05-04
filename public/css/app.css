@@ -11265,9 +11265,38 @@ body {
   transition: 0.1s linear;
 }
 
+.enter-btn {
+  background-image: url("/images/body/button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  transition: 0.1s linear;
+  min-width: 50px;
+  min-height: 50px;
+  position: absolute;
+}
+
 .booth-btn:hover {
   background-size: 50px;
   transition: 0.1s linear;
+}
+
+.enter-btn:hover {
+  background-size: 50px;
+  transition: 0.1s linear;
+}
+
+#on-hover-header {
+  opacity: 0 !important;
+  z-index: 50;
+  position: absolute;
+  width: 100% !important;
+  transition: ease-in 0.2s;
+}
+
+#on-hover-header:hover {
+  opacity: 1 !important;
+  transition: ease-in 0.2s;
 }
 
 #choicemodal > .modal-dialog {
