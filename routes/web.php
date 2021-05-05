@@ -37,10 +37,12 @@ Route::post('/simpozij/webinar/getBoothData', 'HomeController@getBoothData')->na
 Route::post('/simpozij/webinar/getSingleBoothData', 'HomeController@getSingleBoothData')->name('getSingleBoothData');
 
 //Ondemand
-Route::get('/simpozij/summary ', 'HomeController@showSummary')->name('ondemands');
+Route::get('/simpozij/summary ', 'HomeController@showSummary')->name('summary');
+Route::post('/simpozij/exibition/getsummarydata', 'HomeController@getSummaryData')->name('getSummaryData');
 
 //Exibition
 Route::get('/simpozij/exibition', 'HomeController@showExibition')->name('exibition');
+Route::post('/simpozij/exibition/getExhibitionData', 'HomeController@getExhibitionData')->name('getExhibitionData');
 
 //admin get
 Route::get('/simpozij/createwebinar', 'SuperAdminController@showCreateWebinarPage')->name('createWebinarPage');

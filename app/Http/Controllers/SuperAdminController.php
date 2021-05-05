@@ -10,6 +10,9 @@ use Auth;
 use App\Webinar;
 use App\User;
 use App\Sponsors;
+use App\Summary;
+use App\ExcibitionElement;
+use Exception;
 
 class SuperAdminController extends Controller
 {
@@ -32,7 +35,7 @@ class SuperAdminController extends Controller
     }
 
     public function showAddSummary(){
-        return view('');
+        return view('dashboard.create.summary');
     }
 
     //add Post Route
@@ -117,17 +120,62 @@ class SuperAdminController extends Controller
     }
 
     public function addExhibition(Request $request){
-        if($this->_addExhibition($request)){
-            return redirect()->with('success', '');
+        if($this->_addExhibition($request->all())){
+            return redirect()->back()->with('success', 'Exhibition succesfully added');
+        }
+        else{
+            return redirect()->back()->with('fail', 'Something went wrong. Please try again.');
         }
     }
 
-    private function _addExhibition(Request $request){
-        $requestData = $request->all();
+    private function _addExhibition(array $data){
+        $filenameWithExt = $data['exhibition_image']->getClientOriginalName();
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        $extension = $data['exhibition_image']->getClientOriginalExtension();
+        $fileNameToStore = $filename.'_'.time().'.'.$extension;
+        $path = $data['exhibition_image']->storeAs('public/exhibition_data',$fileNameToStore);
+
+        $summary_data = [
+            'excibition_name'=>$data['exhibition_name'],
+            'excibition_image'=>$fileNameToStore
+        ];
+
+        try{ExcibitionElement::create($summary_data);return true;}
+        catch(Exception $e){
+            dd($e->getMessage());
+            return false;
+        }
     }
 
-    public function getExhibitionData(Request $request){
-        dd($request->all());
+    public function addSummary(Request $request){
+
+        if($this->_addSummary($request->all())){
+            return redirect()->back()->with('success', 'Summary succesfully added.');
+        }
+        else{
+            return redirect()->back()->with('fail', 'Something went wrong. Please try again.');
+        }
+
+    }
+
+    private function _addSummary(array $data){
+
+        $filenameWithExt = $data['summary_file']->getClientOriginalName();
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        $extension = $data['summary_file']->getClientOriginalExtension();
+        $fileNameToStore = $filename.'_'.time().'.'.$extension;
+        $path = $data['summary_file']->storeAs('public/summary_data',$fileNameToStore);
+
+        $summary_data = [
+            'summary_name'=>$data['summary_name'],
+            'summary_file'=>$fileNameToStore
+        ];
+
+        try{Summary::create($summary_data);return true;}
+        catch(Exception $e){
+            return false;
+        }
+
     }
 
 }

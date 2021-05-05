@@ -11,3 +11,6 @@ window.Vue = require('vue');
 require('./scripts/EditCanvas');
 require('./scripts/GetCanvasData');
 require('./scripts/HandleAgenda');
+require('./scripts/GetExhibitionData');
+require('./scripts/GetSummaryData');
+require('./scripts/HandleVideo');

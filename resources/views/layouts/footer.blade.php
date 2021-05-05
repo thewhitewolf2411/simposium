@@ -2,7 +2,7 @@
 
     <div class="title">
 
-        <p>SPONSORS</p>
+        <p>SPONZORI</p>
 
     </div>
 
@@ -11,7 +11,7 @@
     <div id="plat-ad" class="ft-middle">
 
         <div class="sub-title">
-            <p>PLATINUM</p>
+            <p>PLATINASTI</p>
         </div>
 
         <div class="sub-images">
@@ -20,6 +20,7 @@
             <div class="orange-round"><img src="{{asset('images/spon/plat/Novartis-white-h200.png')}}"></div>
             <div class="orange-round"><img src="{{asset('images/spon/plat/Bristol-white-h200.png')}}"></div>
             <div class="orange-round"><img src="{{asset('images/spon/plat/02852_MSD_Logo_Horizontal_TealGrey_WHITE-h200.png')}}"></div>
+            <div class="orange-round"><img src="{{asset('images/spon/plat/Glosarij_WHITE-h200.png')}}"></div>
         </div>
 
     </div>
@@ -27,7 +28,7 @@
     <div id="gold-ad" class="ft-middle">
 
         <div class="sub-title">
-            <p>GOLD</p>
+            <p>ZLATNI</p>
         </div>
 
         <div class="sub-images">
@@ -40,7 +41,7 @@
     <div id="silver-ad" class="ft-middle">
 
         <div class="sub-title">
-            <p>SILVER</p>
+            <p>SREBRENI</p>
         </div>
 
         <div class="sub-images">
@@ -56,7 +57,7 @@
     <div id="rest-ad" class="ft-middle">
 
         <div class="sub-title">
-            <p>BRONZE</p>
+            <p>BRONZANI</p>
         </div>
 
         <div class="sub-images">

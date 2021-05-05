@@ -26,9 +26,6 @@
     <link rel="shortcut icon" href="{{ asset('/images/header/favicon.ico') }}" type="image/x-icon">
     <link rel="icon" href="{{ asset('/images/header/favicon.ico') }}" type="image/x-icon">
     
-    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-    <!--<script src="landing_page.js?1620117750841"></script>-->
-    <script src="{{ asset('js/landing_page.js') }}"></script>
     <script>
         var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
         function init() {
@@ -84,7 +81,13 @@
             @include('layouts.header')
         </header>
         <main id="dashboard-page" style="overflow: hidden">
-            <iframe src="/landing_canvas/landing_page.html" width="100%" height="100%" style="overflow: hidden; height:100%; border:none;" title="Iframe Example"></iframe>
+            <iframe id="canvas_iframe" src="/landing_canvas/landing_page.html" width="100%" height="100%" style="overflow: hidden; height:100%; border:none;" title="Iframe Example"></iframe>
+            <div id="mobile-menu">
+                @yield('content')
+            </div>
+            <footer id="mobile-footer">
+                @include('layouts.footer')
+            </footer>
         </main>
         @else
         <header>

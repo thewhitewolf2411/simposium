@@ -18,3 +18,13 @@ header p{
 .header-image img{
     max-width: 280px;
 }
+
+@media only screen and (max-width: 625px){
+    .header-image img{
+        max-width: 180px;
+    }
+
+    .navbar-collapse p{
+        display: none;
+    }
+}

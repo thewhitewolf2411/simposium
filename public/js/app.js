@@ -50317,6 +50317,12 @@ __webpack_require__(/*! ./scripts/GetCanvasData */ "./resources/js/scripts/GetCa
 
 __webpack_require__(/*! ./scripts/HandleAgenda */ "./resources/js/scripts/HandleAgenda.js");
 
+__webpack_require__(/*! ./scripts/GetExhibitionData */ "./resources/js/scripts/GetExhibitionData.js");
+
+__webpack_require__(/*! ./scripts/GetSummaryData */ "./resources/js/scripts/GetSummaryData.js");
+
+__webpack_require__(/*! ./scripts/HandleVideo */ "./resources/js/scripts/HandleVideo.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -51336,6 +51342,144 @@ $('#choicemodal').on('hidden.bs.modal', function (e) {
 
 /***/ }),
 
+/***/ "./resources/js/scripts/GetExhibitionData.js":
+/*!***************************************************!*\
+  !*** ./resources/js/scripts/GetExhibitionData.js ***!
+  \***************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+window.getExhibitionData = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(exhibition_id) {
+    var url, data;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            url = '/simpozij/exibition/getExhibitionData';
+            data = {
+              'exhibition_id': exhibition_id
+            };
+            _context.next = 4;
+            return fetch(url, {
+              method: 'POST',
+              mode: 'cors',
+              headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "X-Requested-With": "XMLHttpRequest",
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              },
+              body: JSON.stringify(data)
+            }).then(function (response) {
+              return response.json();
+            }).then(function (data) {
+              $('#exhibitionModal .modal-body').empty();
+
+              if (data.success === true) {
+                $('#exhibitionModal .modal-body').append('<iframe src="/storage/exhibition_data/' + data.exhibition_data + '"&embedded=true" style="width:100%; height:800px;" frameborder="0"></iframe>');
+                $('#exhibitionModal').modal({
+                  show: true
+                });
+              }
+            })["catch"](function (error) {
+              console.error('Error:', error);
+            });
+
+          case 4:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function (_x) {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+/***/ }),
+
+/***/ "./resources/js/scripts/GetSummaryData.js":
+/*!************************************************!*\
+  !*** ./resources/js/scripts/GetSummaryData.js ***!
+  \************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+window.getSummaryData = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(exhibition_id) {
+    var url, data;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            url = '/simpozij/exibition/getsummarydata';
+            data = {
+              'exhibition_id': exhibition_id
+            };
+            _context.next = 4;
+            return fetch(url, {
+              method: 'POST',
+              mode: 'cors',
+              headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "X-Requested-With": "XMLHttpRequest",
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              },
+              body: JSON.stringify(data)
+            }).then(function (response) {
+              return response.json();
+            }).then(function (data) {
+              $('#summaryModal .modal-body').empty();
+
+              if (data.success === true) {
+                $('#summaryModal .modal-body').append('<iframe src="/storage/summary_data/' + data.summary_data + '"&embedded=true" style="width:100%; height:800px;" frameborder="0"></iframe>');
+                $('#summaryModal').modal({
+                  show: true
+                });
+              }
+            })["catch"](function (error) {
+              console.error('Error:', error);
+            });
+
+          case 4:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function (_x) {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+/***/ }),
+
 /***/ "./resources/js/scripts/HandleAgenda.js":
 /*!**********************************************!*\
   !*** ./resources/js/scripts/HandleAgenda.js ***!
@@ -51405,6 +51549,38 @@ window.changeAgendaView = /*#__PURE__*/function () {
     return _ref.apply(this, arguments);
   };
 }();
+
+/***/ }),
+
+/***/ "./resources/js/scripts/HandleVideo.js":
+/*!*********************************************!*\
+  !*** ./resources/js/scripts/HandleVideo.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+  $('#livevideobtn').on('click', function () {
+    var day1 = new Date(2021, 4, 7);
+    var day2 = new Date(2021, 4, 8);
+    var day3 = new Date(2021, 4, 9);
+
+    if (isToday(day1)) {
+      window.open('https://zoom.us/j/92397780559', '_blank');
+    } else if (isToday(day2)) {
+      window.open('https://zoom.us/j/96324360410', '_blank');
+    } else if (isToday(day3)) {
+      window.open('https://zoom.us/j/94918098079', '_blank');
+    } else {
+      alert("Event trenutno nije live.");
+    }
+  });
+});
+
+var isToday = function isToday(date) {
+  var today = new Date();
+  return date.getDate() === today.getDate() && date.getMonth() === today.getMonth() && date.getFullYear() === today.getFullYear();
+};
 
 /***/ }),
 

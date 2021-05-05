@@ -80,7 +80,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 		//1
 		_root.standovi_btn.addEventListener('click', function(){
 		
-			window.open('/simpozij/booth', '_self');
+			window.open('/simpozij/booth', '_parent');
 			
 			});
 			
@@ -89,7 +89,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 		//2	
 		_root.sazetci_btn.addEventListener('click', function(){
 		
-			window.open('/simpozij/summary', '_self');
+			window.open('/simpozij/summary', '_parent');
 			
 			});
 		_root.sazetci_btn.cursor = "pointer";
@@ -116,7 +116,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 		//4
 		_root.posteri_btn.addEventListener('click', function(){
 		
-			window.open('/simpozij/exibition', '_self');
+			window.open('/simpozij/exibition', '_parent');
 			
 			});
 		_root.posteri_btn.cursor = "pointer";
@@ -124,7 +124,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 		//5
 		_root.program_btn.addEventListener('click', function(){
 		
-			window.open('/simpozij/webinars', '_self');
+			window.open('/simpozij/webinars', '_parent');
 			
 			});
 		_root.program_btn.cursor = "pointer";
