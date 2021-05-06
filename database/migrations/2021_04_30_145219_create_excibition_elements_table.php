@@ -17,6 +17,7 @@ class CreateExcibitionElementsTable extends Migration
             $table->id();
             $table->string('excibition_name');
             $table->text('excibition_image');
+            $table->text('exhibition_file');
             $table->timestamps();
         });
     }

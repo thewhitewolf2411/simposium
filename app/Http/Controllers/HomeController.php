@@ -228,7 +228,7 @@ class HomeController extends Controller
 
         return response()->json([
             'success'=>true,
-            'exhibition_data'=>$exhibition_data->excibition_image,
+            'exhibition_data'=>$exhibition_data->exhibition_file,
         ]);
     }
 

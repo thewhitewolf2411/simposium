@@ -17,7 +17,7 @@
                     <a class="card-link exibition-box shadow" onclick="getExhibitionData({{$excibitionElement->id}})">
                         <div class="card-body">
                             <div class="exibition-inner">
-
+                                <img src="/storage/exhibition_data/{{$excibitionElement->excibition_image}}" style="width: 100%; height:100%">
                             </div>
                         </div>
                     </a>

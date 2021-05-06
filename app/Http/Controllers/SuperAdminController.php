@@ -135,9 +135,16 @@ class SuperAdminController extends Controller
         $fileNameToStore = $filename.'_'.time().'.'.$extension;
         $path = $data['exhibition_image']->storeAs('public/exhibition_data',$fileNameToStore);
 
+        $filenameWithExt2 = $data['exhibition_file']->getClientOriginalName();
+        $filename2 = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        $extension2 = $data['exhibition_file']->getClientOriginalExtension();
+        $fileNameToStore2 = $filename2.'_'.time().'.'.$extension2;
+        $path = $data['exhibition_file']->storeAs('public/exhibition_data',$fileNameToStore2);
+
         $summary_data = [
             'excibition_name'=>$data['exhibition_name'],
-            'excibition_image'=>$fileNameToStore
+            'excibition_image'=>$fileNameToStore,
+            'exhibition_file'=>$fileNameToStore2,
         ];
 
         try{ExcibitionElement::create($summary_data);return true;}
