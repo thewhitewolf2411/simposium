@@ -16,7 +16,7 @@
 
         <div class="sub-images">
             <div class="orange-round"><img src="{{asset('images/spon/plat/Roche_white-h200.png')}}"></div>
-            <div class="orange-round"><img src="{{asset('images/spon/plat/Pfizer-white-h200.png')}}"></div>
+            <div class="orange-round"><img src="{{asset('images/spon/plat/Pfizer-white-h200.png')}}" style="width: 160px;display: block;position: relative;margin: auto;margin-top: 23px;"></div>
             <div class="orange-round"><img src="{{asset('images/spon/plat/Novartis-white-h200.png')}}"></div>
             <div class="orange-round"><img src="{{asset('images/spon/plat/Bristol-white-h200.png')}}"></div>
             <div class="orange-round"><img src="{{asset('images/spon/plat/02852_MSD_Logo_Horizontal_TealGrey_WHITE-h200.png')}}"></div>
@@ -49,6 +49,7 @@
             <div class="orange-round"><img src="{{asset('images/spon/silv/servier-white-h200-larger.png')}}"></div>
             <div class="orange-round"><img src="{{asset('images/spon/silv/sanofi-white-h200-larger.png')}}"></div>
             <div class="orange-round"><img src="{{asset('images/spon/silv/merck-white-h200-larger.png')}}"></div>
+            <div class="orange-round"><img src="{{asset('images/spon/plat/elpharm-white-h200-larger.png')}}"></div>
             <div class="orange-round"><img src="{{asset('images/spon/silv/inpharm-white-h200-larger.png')}}"></div>
         </div>
 
