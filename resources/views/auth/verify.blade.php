@@ -20,6 +20,8 @@
                         @csrf
                         <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('kliknite ovdje za ponovno slanje') }}</button>.
                     </form>
+                    <br>
+                    <label>ili nas kontaktirajte putem telefona +387 (0) 33 863 666 ili na e-mail adresu: info@purplekey.ba</label>
                 </div>
             </div>
         </div>
