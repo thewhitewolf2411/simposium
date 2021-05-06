@@ -51602,8 +51602,8 @@ var isToday = function isToday(date) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\haris.muslic\Desktop\simposium\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\haris.muslic\Desktop\simposium\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\zulfo\Desktop\xampp\htdocs\simposium\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\zulfo\Desktop\xampp\htdocs\simposium\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
