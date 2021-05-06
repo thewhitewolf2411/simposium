@@ -33,11 +33,12 @@ class AuthServiceProvider extends ServiceProvider
         VerifyEmail::toMailUsing(function ($notifiable, $url) {
             return (new MailMessage)
                 ->greeting('Poštovani,')
-                ->subject('Registracija SWOC')
+                ->subject('Registracija REKOG')
                 ->line('Ljubazno molim da potvrdite svoju e-mail adresu, klikom na dugme u nastavku.')
                 ->line('Hvala na potvrdi Vašeg e-maila. ')
                 ->action('Potvrdi e-mail', $url)
-                ->line(new HtmlString('<br>Ukoliko imate poteškoća s klikom na dugme "Potvrdi e-mail", kopirajte i zalijepite donji URL u svoje web pretraživanje, ćime ćete potvrditi Vašu e-mail adresu. <br>' . $url));
+                ->line(new HtmlString('<br>Ukoliko imate poteškoća s klikom na dugme "Potvrdi e-mail", kopirajte i zalijepite donji URL u svoje web pretraživanje, ćime ćete potvrditi Vašu e-mail adresu. <br>' . $url))
+                ->salutation(new HtmlString('<br>'));
         });
     }
 }
