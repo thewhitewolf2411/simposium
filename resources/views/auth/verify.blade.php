@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <label>{{ __('Prije slijedećeg koraka, molimo Vas da provijerite Vaš mail za verifikacijski link.') }}</label>
+                    <label>{{ __('Prije slijedećeg koraka, molimo Vas da provjerite Vaš mail za verifikacijski link.') }}</label>
                     <label>{{ __('Ako niste dobili mail') }},</label>
                     <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                         @csrf
