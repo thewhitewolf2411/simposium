@@ -11,10 +11,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="authoring-tool" content="Adobe_Animate_CC">
-<title>landing_page</title>
-<!-- write your code here -->
+<link href="../css/app.css" rel="stylesheet">
+<!-- Scripts -->
+<script src="../js/app.js" defer></script>
+
+
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-<script src="landing_page.js?1620139162636"></script>
+<script src="landing_page.js?1620370651359"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -58,11 +61,53 @@ function handleComplete(evt,comp) {
 </script>
 <!-- write your code here -->
 </head>
-<body onload="init();" style="margin:0px;">
+<body onload="init();" style="margin:0px; overflow: hidden;" class="landing-body" id="landing-body">
 	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:1920px; height:1080px">
 		<canvas id="canvas" width="1920" height="1080" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1920px; height:1080px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
 </body>
+
+<div class="modal fade" id="infopult" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Info Pult</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+				<p>Za tehničku podršku dijelimo sa Vama i Vašim zvanicama mail kao i brojeve telefona: </p>
+				<p><a href="mailto:info@purplekey.ba">info@purplekey.ba</a></p>
+				<p>BiH: <a href="tel:+38733863666">+387 (0) 33 863 666</a></p>
+				<p>BiH: <a href="tel:+38761616169">+ 387 61 616 169</a></p>
+				<p>HRV: <a href="tel:+38515544258">+385 (0) 1 554 4258</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="infopult" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Info Pult</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="" style="width:100%">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 </html>

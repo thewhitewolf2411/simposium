@@ -18,7 +18,7 @@ lib.ssMetadata = [
 
 
 
-(lib.e_congress_bg_2 = function() {
+(lib.e_congress_bg_3 = function() {
 	this.initialize(ss["landing_page_atlas_"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
@@ -137,6 +137,20 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 		_root.info_pult_btn.cursor = "pointer";
 			
 		
+		_root.sponzori_btn_1.addEventListener('click', function(){
+		
+			$('#sponzorimodal').modal('show');
+		
+			});
+		_root.sponzori_btn_2.addEventListener('click', function(){
+		
+			$('#sponzorimodal').modal('show');
+		
+			});
+		_root.sponzori_btn_1.cursor = "pointer";
+		_root.sponzori_btn_2.cursor = "pointer";
+			
+		
 		const isToday = (date) => {
 		    const today = new Date()
 		    return date.getDate() === today.getDate() &&
@@ -147,6 +161,20 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
+
+	// sponzori_btn_layer_2
+	this.sponzori_btn_2 = new lib.btn();
+	this.sponzori_btn_2.name = "sponzori_btn_2";
+	this.sponzori_btn_2.setTransform(384.6,263.2,3.4789,1.626,0,0,0,0,0.1);
+
+	this.timeline.addTween(cjs.Tween.get(this.sponzori_btn_2).wait(1));
+
+	// sponzori_btn_layer_1
+	this.sponzori_btn_1 = new lib.btn();
+	this.sponzori_btn_1.name = "sponzori_btn_1";
+	this.sponzori_btn_1.setTransform(1536.15,261.95,3.4311,1.601,0,0,0,0,0.1);
+
+	this.timeline.addTween(cjs.Tween.get(this.sponzori_btn_1).wait(1));
 
 	// info_pult_layer
 	this.info_pult_btn = new lib.btn();
@@ -191,7 +219,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.timeline.addTween(cjs.Tween.get(this.standovi_btn).wait(1));
 
 	// background
-	this.instance = new lib.e_congress_bg_2();
+	this.instance = new lib.e_congress_bg_3();
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
@@ -208,7 +236,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/landing_page_atlas_.png?1620139162606", id:"landing_page_atlas_"}
+		{src:"images/landing_page_atlas_.png?1620370651335", id:"landing_page_atlas_"}
 	],
 	preloads: []
 };
