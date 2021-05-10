@@ -15,15 +15,17 @@
             <div class="card">
                 <div class="card-header">{{ __('Interaktivni štandovi naših sponzora') }}</div>
 
+                <div class="d-flex flex-row">
                 @foreach($booths as $booth)
 
-                    <a href="/simpozij/booth/{{$booth->id}}" class="webinar-link" style="text-align:inherit;">
+                    <a href="/simpozij/booth/{{$booth->id}}" class="webinar-link w-100" style="text-align:inherit;">
                         <div class="card-body d-flex">
-                            <img src="/storage/input_image/{{$booth->image_path}}" style="max-height:100px; margin:0 auto;">
+                            <img src="/storage/input_image/{{$booth->image_path}}" style="max-height:250px; margin:0 auto;">
                         </div>
                     </a>
 
                 @endforeach
+                </div>
 
             </div>
         </div>
