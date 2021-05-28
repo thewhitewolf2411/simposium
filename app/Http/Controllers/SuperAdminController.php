@@ -12,6 +12,7 @@ use App\User;
 use App\Sponsors;
 use App\Summary;
 use App\ExcibitionElement;
+use App\Video;
 use Exception;
 
 class SuperAdminController extends Controller
@@ -36,6 +37,10 @@ class SuperAdminController extends Controller
 
     public function showAddSummary(){
         return view('dashboard.create.summary');
+    }
+
+    public function showAddVideoPage(){
+        return view('dashboard.create.video');
     }
 
     //add Post Route
@@ -183,6 +188,29 @@ class SuperAdminController extends Controller
             return false;
         }
 
+    }
+
+    public function addVideo(Request $request){
+        if($this->_addVideo($request->all())){
+            return redirect()->back()->with('success', 'Video succesfully added.');
+        }
+        else{
+            return redirect()->back()->with('fail', 'Something went wrong. Please try again.');
+        }
+    }
+
+    private function _addVideo(array $data){
+        $video_data = [
+            'video_day'=>$data['video_day'],
+            'video_name'=>$data['video_name'],
+            'video_link'=>$data['video_link']
+        ];
+
+        try{Video::create($video_data);return true;}
+        catch(Exception $e){
+            #dd($e);
+            return false;
+        }
     }
 
 }

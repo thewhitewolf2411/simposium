@@ -34,7 +34,7 @@
                                 <label for="summary_file" class="col-md-4 col-form-label text-md-right">{{ __('Fajl sažetka:') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="summary_file" type="file" class="form-control" name="summary_file" required >
+                                    <input id="summary_file" type="text" class="form-control" name="summary_file" required >
                                 </div>
                             </div>
 

@@ -107,10 +107,49 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 				window.open('https://zoom.us/j/94918098079', '_blank');
 			}
 			else{
-				alert("Event trenutno nije live.");
+				var videos = "";
+
+				$.ajax({
+					url: "/simposium/getvideos",
+					type:"GET",
+					success:function(response){
+						for(var i=0; i<response.length; i++){
+							var url = "'" + response[i].video_link + "'";
+							var name = "'" + response[i].video_name + "'";
+							$('#video-list').append('<p>' + response[i].video_name + '</p><button class="btn btn-primary" onclick="showVideo(' + name + ',' + url + ')">Pogledaj</button><div class="my-3 border border-bottom"></div>');
+						
+						}
+
+					},
+				});
+
+				$('#videolistmodal').modal('show');
 			}
 			
 			});
+		
+		window.showVideo = function(videoname, videourl){
+			$('#videolistmodal').modal('hide');
+			$('#video-list').empty();
+
+			var video = document.getElementById('video-container');
+			video.src=videourl;
+			//var source = document.createElement('source');
+			//source.setAttribute('id', 'video-source');
+
+			$('#videomodal .modal-title').html(videoname);
+
+			$('#videomodal').modal('show');
+
+		}
+
+		$('#videomodal').on('hidden.bs.modal', function(){
+			$('#videomodal .modal-title').html('');
+			var video = document.getElementById('video-container');
+			video.src='';
+		});
+
+
 		_root.live_video_btn.cursor = "pointer";
 		
 		//4

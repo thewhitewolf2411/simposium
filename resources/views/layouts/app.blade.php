@@ -69,12 +69,10 @@
     </script>
 
 </head>
-<body  onload="myFunction()" @if(Route::is('home')) style="overflow: hidden" @endif>
-    <div class="loader-container" id="loader-container">
-        <div class="loader" id="loader"></div> 
-    </div>
+<body  @if(Route::is('home')) style="overflow: hidden" @endif>
+
     
-    <div id="app" style="display:none;">
+    <div id="app">
 
         @if(Route::is('home') && Auth::user()->level !== 3)
         <header id="on-hover-header">
@@ -101,18 +99,6 @@
         </footer>
         @endif
     </div>
-
-    <script>
-        function myFunction() {
-            setTimeout(function(){
-                document.getElementById("loader").style.display = "none";
-                document.getElementById("loader").style.height = "0";
-                document.getElementById("loader-container").style.height = "0";
-                document.getElementById("app").style.display = "block";
-            }, 300);
-        }
-
-    </script>
 
 
 </body>

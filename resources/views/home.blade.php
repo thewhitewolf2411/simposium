@@ -56,6 +56,11 @@
                             {{ __('Dodaj Sažetak') }}
                         </div>
                     </a>
+                    <a href="/simpozij/addvideo" class="card-link">
+                        <div class="card-body">
+                            {{ __('Dodaj Video') }}
+                        </div>
+                    </a>
                 </div>
                 @endif
             </div>

@@ -15,7 +15,7 @@ $(document).ready(function(){
             window.open('https://zoom.us/j/94918098079', '_blank');
         }
         else{
-            alert("Event trenutno nije live.");
+            alert("Event trenutno nije alert.");
         }
     });
 });

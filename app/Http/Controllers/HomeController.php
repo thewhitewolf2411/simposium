@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Webinar;
 use App\Sponsors;
 use App\Summary;
+use App\Video;
 use Auth;
 
 class HomeController extends Controller
@@ -251,6 +252,10 @@ class HomeController extends Controller
             'success'=>true,
             'summary_data'=>$summary_data->summary_file,
         ]);
+    }
+
+    public function getVideoData(Request $request){
+        return Video::all()->sortBy('video_day')->toArray();
     }
 
     function generate_signature ( $api_key, $api_secret, $meeting_number, $role){
